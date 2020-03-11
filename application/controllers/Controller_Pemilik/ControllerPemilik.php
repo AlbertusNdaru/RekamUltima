@@ -26,6 +26,7 @@ class ControllerPemilik extends CI_Controller
         $nama       = $this->input->post('name');
         $phone      = $this->input->post('phone');
         $Address    = $this->input->post('alamat');
+        
         $JK         = $this->input->post('gender');
         $username   = $this->input->post('username');
         $password   = $this->input->post('password');
