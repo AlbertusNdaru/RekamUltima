@@ -58,6 +58,12 @@ $route['regadmin']  = 'ControllerAdmin/Reg_admin';
 $route['dashboard'] = 'ControllerAdmin/Dashboard';
 $route['logout']    = 'ControllerAdmin/Login/logout';
 
+//Route Pemilik
+$route['landing']    = 'Controller_landingpage/Controller_landingpage/landingpage';
+$route['loginuser']    = 'Controller_landingpage/Controller_landingpage/loginuser';
+$route['registeruser']    = 'Controller_landingpage/Controller_landingpage/registeruser';
+$route['logoutuser']    = 'Controller_landingpage/Controller_landingpage/logoutuser';
+
 // Route REKAM MEDIS
 $route['rekammedis'] = 'Controller_Rekam_Medis/ControllerRekamMedis/get_rekam_medis';
 

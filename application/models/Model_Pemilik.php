@@ -15,6 +15,14 @@ class Model_Pemilik extends CI_Model
         return $getloginbyId;
     }
 
+    function get_pemilik_by_username_password($username,$password)
+    {
+        $this->db->where('Username', $username);
+        $this->db->where('Password', $password);
+        $getpemilik = $this->db->get('pemilik_hewan')->result();
+        return $getpemilik;
+    }
+
     function get_pemilik_by_status()
     {
         $this->db->where("Status", 'Aktif');
