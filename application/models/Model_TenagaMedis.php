@@ -43,9 +43,9 @@ class Model_TenagaMedis extends CI_Model
         return $add_medis;
     }
 
-    function update_medis($idmedis, $datamedis)
+    function update_medis($Id_TenagaMedis, $datamedis)
     {
-        $this->db->where('Id_TenagaMedis', $idmedis);
+        $this->db->where('Id_TenagaMedis', $Id_TenagaMedis);
         $updatemedis = $this->db->update("tenagamedis", $datamedis);
         return $updatemedis;
     }

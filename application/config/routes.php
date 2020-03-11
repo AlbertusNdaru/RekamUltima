@@ -52,37 +52,58 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 
 //Route Admin
-$route['Admin'] = 'ControllerAdmin/Login';
-$route['admin'] = 'ControllerAdmin/Login';
-$route['regadmin'] = 'ControllerAdmin/Reg_admin';
+$route['Admin']     = 'ControllerAdmin/Login';
+$route['admin']     = 'ControllerAdmin/Login';
+$route['regadmin']  = 'ControllerAdmin/Reg_admin';
 $route['dashboard'] = 'ControllerAdmin/Dashboard';
-$route['logout'] = 'ControllerAdmin/Login/logout';
+$route['logout']    = 'ControllerAdmin/Login/logout';
 
 // Route REKAM MEDIS
 $route['rekammedis'] = 'Controller_Rekam_Medis/ControllerRekamMedis/get_rekam_medis';
 
 // Route TENAGA MEDIS
-$route['tenagamedis'] = 'Controller_TenagaMedis/ControllerMedis/get_tenagamedis';
-$route['aksitambahmedis'] = 'Controller_TenagaMedis/ControllerMedis/aksiadd';
-$route['tambahtenagamedis'] = 'Controller_TenagaMedis/ControllerMedis/addmedis';
-$route['formeditmedis/(:any)'] = 'Controller_TenagaMedis/ControllerMedis/viewFormEditMedis/$1';
+$route['tenagamedis']                   = 'Controller_TenagaMedis/ControllerMedis/get_tenagamedis';
+$route['aksitambahmedis']               = 'Controller_TenagaMedis/ControllerMedis/aksiadd';
+$route['tambahtenagamedis']             = 'Controller_TenagaMedis/ControllerMedis/addmedis';
+$route['formeditmedis/(:any)']          = 'Controller_TenagaMedis/ControllerMedis/viewFormEditMedis/$1';
 $route['editstatusmedis/(:any)/(:any)'] = 'Controller_TenagaMedis/ControllerMedis/editStatusmedis/$1/$2';
-$route['deletemedis/(:any)'] = 'Controller_TenagaMedis/ControllerMedis/deletemedis/$1';
+$route['deletemedis/(:any)']            = 'Controller_TenagaMedis/ControllerMedis/deletemedis/$1';
 
 // Route HEWAN
-$route['hewan'] = 'Controller_Hewan/ControllerHewan/get_hewan';
+$route['hewan']                  = 'Controller_Hewan/ControllerHewan/get_hewan';
+$route['aksitambahhewan']        = 'Controller_Hewan/ControllerHewan/aksiadd';
+$route['tambahhewan']            = 'Controller_Hewan/ControllerHewan/addhewan';
+$route['formedithewan/(:any)']   = 'Controller_Hewan/ControllerHewan/viewFormEdithewan/$1';
+$route['deletehewan/(:any)']     = 'Controller_Hewan/ControllerHewan/deletehewan/$1';
 
 // Route PEMILIK HEWAN
-$route['pemilik_hewan'] = 'Controller_Pemilik/ControllerPemilik/get_pemilik_hewan';
+$route['pemilik']                         = 'Controller_Pemilik/ControllerPemilik/get_pemilik_hewan';
+$route['aksitambahpemilik']               = 'Controller_Pemilik/ControllerPemilik/aksiadd';
+$route['tambahpemilik']                   = 'Controller_Pemilik/ControllerPemilik/addpemilik';
+$route['formeditpemilik/(:any)']          = 'Controller_Pemilik/ControllerPemilik/viewFormEditPemilik/$1';
+$route['editstatuspemilik/(:any)/(:any)'] = 'Controller_Pemilik/ControllerPemilik/editstatuspemilik/$1/$2';
+$route['deletepemilik/(:any)']            = 'Controller_Pemilik/ControllerPemilik/deletepemilik/$1';
 
 // Route TINDAKAN
-$route['tindakan'] = 'Controller_Tindakan/ControllerTindakan/get_tindakan';
+$route['tindakan']                  = 'Controller_Tindakan/ControllerTindakan/get_tindakan';
+$route['aksitambahtindakan']        = 'Controller_Tindakan/ControllerTindakan/aksiadd';
+$route['tambahtindakan']            = 'Controller_Tindakan/ControllerTindakan/addtindakan';
+$route['formedittindakan/(:any)']   = 'Controller_Tindakan/ControllerTindakan/viewFormEditTindakan/$1';
+$route['deletetindakan/(:any)']     = 'Controller_Tindakan/ControllerTindakan/deletetindakan/$1';
 
 // Route LEVEL
-$route['level'] = 'Controller_Level/Controller_level/get_level';
+$route['level']                     = 'Controller_Level/Controller_level/get_level';
+$route['aksitambahlevel']           = 'Controller_Level/Controller_level/aksiadd';
+$route['tambahlevel']               = 'Controller_Level/Controller_level/addlevel';
+$route['formeditlevel/(:any)']      = 'Controller_Level/Controller_level/viewFormEditLevel/$1';
+$route['deletelevel/(:any)']        = 'Controller_Level/Controller_level/deletlevel/$1';
 
 // Route LEVEL
-$route['penyakit'] = 'Controller_Penyakit/ControllerPenyakit/get_penyakit';
+$route['penyakit']                  = 'Controller_Penyakit/ControllerPenyakit/get_penyakit';
+$route['aksitambahpenyakit']        = 'Controller_Penyakit/ControllerPenyakit/aksiadd';
+$route['tambahpenyakit']            = 'Controller_Penyakit/ControllerPenyakit/addpenyakit';
+$route['formeditpenyakit/(:any)']   = 'Controller_Penyakit/ControllerPenyakit/viewFormEditPenyakit/$1';
+$route['deletepenyakit/(:any)']     = 'Controller_Penyakit/ControllerPenyakit/deletepenyakit/$1';
 
 
 // DLL

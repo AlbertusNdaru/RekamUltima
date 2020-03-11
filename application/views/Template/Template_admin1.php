@@ -50,7 +50,7 @@
                     <h3 class="menu-title">Page Admin</h3>
                     <li class="active">
                         <a href="<?= base_url('rekammedis') ?>"> <i class="menu-icon fa fa-dashboard"></i>Rekam Medis </a>
-                        <a href="<?= base_url('pemilik_hewan') ?>"> <i class="menu-icon fa fa-dashboard"></i>Pemilik </a>
+                        <a href="<?= base_url('pemilik') ?>"> <i class="menu-icon fa fa-dashboard"></i>Pemilik </a>
                         <a href="<?= base_url('hewan') ?>"> <i class="menu-icon fa fa-dashboard"></i>Hewan </a>
 
                         <!-- Penentu login admin dan tenaga medis jangan diubah !!-->

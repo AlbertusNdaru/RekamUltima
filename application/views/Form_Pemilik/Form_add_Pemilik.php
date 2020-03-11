@@ -1,22 +1,27 @@
 <div class="breadcrumbs">
     <div class="card">
         <div class="card-header">
-            <strong>Tambah Data Tenaga Medis </strong>
+            <strong>Tambah Data Pemilik Hewan </strong>
         </div>
         <div class="card-body">
-            <form name="formaddtenagamedis" id="formvaliditas" action="<?= base_url('Controller_TenagaMedis/ControllerMedis/addmedis') ?>" method="POST">
+            <form name="formaddpemilik" id="formvaliditas" action="<?= base_url('Controller_Pemilik/ControllerPemilik/addpemilik') ?>" method="POST">
                 <div class="row form-group">
-                    <div class="col col-md-3"><label>Nama Tenaga Medis</label></div>
+                    <div class="col col-md-3"><label>Nama Pemilik</label></div>
                     <div class="col-12 col-md-9"><input required type="text" onclick='validasi("NAMA","NAMA")' name="name" id="NAMA" placeholder="Enter Your Name" class="form-control required">
                     </div>
                 </div>
                 <div class="row form-group">
-                    <div class="col col-md-3"><label>Email Tenaga Medis</label></div>
-                    <div class="col-12 col-md-9"><input required type="email" onclick='validasi("EMAIL","EMAIL")' name="email" id="EMAIL" placeholder="Enter Your Email" class="form-control">
+                    <div class="col col-md-3"><label>Username</label></div>
+                    <div class="col-12 col-md-9"><input required type="text" onclick='validasi("USERNAME","USERNAME")' name="username" id="USERNAME" placeholder="Enter Your Username" class="form-control required">
                     </div>
                 </div>
                 <div class="row form-group">
-                    <div class="col col-md-3"><label>No Hp Tenaga Medis</label></div>
+                    <div class="col col-md-3"><label>Password</label></div>
+                    <div class="col-12 col-md-9"><input required type="password" onclick='validasi("PASSWORD","PASSWORD")' name="password" id="PASSWORD" placeholder="Enter Your Password" class="form-control required">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label>No Hp Pemilik</label></div>
                     <div class="col-120 col-md-9"><input required type="text" onclick='validasi("PHONE","NOMER TELEPON")' name="phone" placeholder="Enter Phone Number" id="PHONE" onkeyup="angka(this)" class="form-control">
                     </div>
                 </div>
@@ -30,7 +35,7 @@
                     </div>
                 </div>
                 <label class="row form-group">
-                    <label class="col col-md-3"><label>Alamat Tenaga Medis</label></label>
+                    <label class="col col-md-3"><label>Alamat Pemilik</label></label>
                     <div class="col-12 col-md-9"><textarea required type="text" onclick='validasi("ALAMAT","ALAMAT")' name="alamat" id="ALAMAT" rows="3" placeholder="Input Your Address" class="form-control"></textarea></div>
                 </label>
         </div>
@@ -76,7 +81,7 @@
 
 
     }
-    
+
 
     function angka(e) {
         if (!/^[0-9]+$/.test(e.value)) {

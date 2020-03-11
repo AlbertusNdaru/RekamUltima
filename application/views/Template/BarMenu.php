@@ -7,7 +7,7 @@
         <h3 class="menu-title">Page Admin</h3>
         <li class="active">
             <a href="<?= base_url('rekammedis') ?>">Rekam Medis </a>
-            <a href="<?= base_url('pemilik_hewan') ?>"></i>Pemilik </a>
+            <a href="<?= base_url('pemilik') ?>"></i>Pemilik </a>
             <a href="<?= base_url('hewan') ?>"></i>Hewan </a>
 
             <!-- Penentu login admin dan tenaga medis jangan diubah !!-->
@@ -32,7 +32,7 @@
                 <i class="menu-icon fa fa-glass"></i>My profile</a>
             <ul class="sub-menu children dropdown-menu">
                 <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Login</a></li>
-                <li><i class="menu-icon fa fa-sign-in"></i><a href="page-register.html">Register</a></li>
+                <li><i class="menu-icon fa fa-sign-in"></i><a href="<?= base_url('regadmin') ?>">Register</a></li>
                 <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a></li>
                 <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?= base_url('ControllerAdmin/Login/logout'); ?>">Logout</a></li>
             </ul>

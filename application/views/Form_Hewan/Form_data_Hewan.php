@@ -2,14 +2,14 @@
         <div class="col-sm-4">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1>Dashboard</h1>
+                    <h1>Tambah Data Hewan</h1>
                 </div>
             </div>
         </div>
         <div class="col-sm-8">
             <div class="page-header float-right">
                 <div class="card-body">
-                    <a href="<?= base_url('aksitambahmedis') ?>" class="btn btn-addhewan btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
+                    <a href="<?= base_url('aksitambahhewan') ?>" class="btn btn-addhewan btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
                     <a href="#" class="btn btn-minimize btn-sm btn-primary"><i class="fa fa-sort-down"></i></a>
                 </div>
             </div>
@@ -46,11 +46,11 @@
                                             <td><?= $h->Nama_Pemilik ?></td>
 
                                             <td class="center">
-                                                <a class="btn btn-info" style="width: 69px;" href="#">
+                                                <a class="btn btn-info" style="width: 69px;" href="<?= base_url('formedithewan/' . $h->Id_Hewan . '') ?>">
                                                     <i class="glyphicon glyphicon-edit icon-white"></i>
                                                     Edit
                                                 </a>
-                                                <a class="btn btn-danger" style="width: 69px;" href="#">
+                                                <a class="btn btn-danger" style="width: 69px;" href="<?= base_url('deletehewan/' . $h->Id_Hewan . '') ?>">
                                                     <i class="glyphicon glyphicon-trash icon-white"></i>
                                                     Delete
                                                 </a>

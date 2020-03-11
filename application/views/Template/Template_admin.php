@@ -91,7 +91,7 @@
 
                         <div class="user-menu dropdown-menu">
                             <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> Register</a>
+                            <a class="nav-link" href="<?= base_url('regadmin') ?>"><i class="fa fa-user"></i> Register</a>
                             <a class="nav-link" href="<?= base_url('ControllerAdmin/Login/logout'); ?>"><i class="fa fa-power-off"></i> Logout</a>
                         </div>
                     </div>

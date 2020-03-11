@@ -2,14 +2,14 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Dashboard</h1>
+                <h1>Data Hak Akses</h1>
             </div>
         </div>
     </div>
     <div class="col-sm-8">
         <div class="page-header float-right">
             <div class="card-body">
-                <a href="<?= base_url('aksitambahmedis') ?>" class="btn btn-addhewan btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
+                <a href="<?= base_url('aksitambahlevel') ?>" class="btn btn-addhewan btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
                 <a href="#" class="btn btn-minimize btn-sm btn-primary"><i class="fa fa-sort-down"></i></a>
             </div>
         </div>
@@ -29,7 +29,7 @@
                             <thead>
                                 <tr>
                                     <th>Kode level</th>
-                                    <th>Deskripsi</th>
+                                    <th>Hak Akses</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -39,11 +39,11 @@
                                         <td><?= $l->Id_Level ?></td>
                                         <td><?= $l->Deskripsi ?></td>
                                         <td align="center">
-                                            <a class="btn btn-info" style="width: 69px;" href="#">
+                                            <a class="btn btn-info" style="width: 69px;" href="<?= base_url('formeditlevel/' . $l->Id_Level . '') ?>">
                                                 <i class="glyphicon glyphicon-edit icon-white"></i>
                                                 Edit
                                             </a>
-                                            <a class="btn btn-danger" style="width: 69px;" href="#">
+                                            <a class="btn btn-danger" style="width: 69px;" href="<?= base_url('deletelevel/' . $l->Id_Level . '') ?>">
                                                 <i class="glyphicon glyphicon-trash icon-white"></i>
                                                 Delete
                                             </a>

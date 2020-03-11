@@ -2,14 +2,14 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Dashboard</h1>
+                <h1>Data Tenaga Medis</h1>
             </div>
         </div>
     </div>
     <div class="col-sm-8">
         <div class="page-header float-right">
             <div class="card-body">
-                <a href="<?= base_url('aksitambahmedis') ?>" class="btn btn-addhewan btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
+                <a href="<?= base_url('aksitambahmedis') ?>" class="btn btn-addmedis btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
                 <a href="#" class="btn btn-minimize btn-sm btn-primary"><i class="fa fa-sort-down"></i></a>
             </div>
         </div>

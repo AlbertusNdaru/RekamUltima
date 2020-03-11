@@ -16,12 +16,6 @@ class ControllerMedis extends CI_Controller
         $this->template->load('Template/Template_admin', 'Form_TenagaMedis/Form_data_Medis', $data);
     }
 
-    function viewFormEditMedis($Id_TenagaMedis)
-    {
-        $data['editmedis'] = $this->Model_TenagaMedis->get_medis_by_id($Id_TenagaMedis);
-        $this->template->load('Template/Template_admin', 'Form_TenagaMedis/Form_edit_Medis', $data);
-    }
-
     function aksiadd()
     {
         $this->template->load('Template/Template_admin', 'Form_TenagaMedis/Form_add_Medis');
@@ -54,17 +48,21 @@ class ControllerMedis extends CI_Controller
         }
     }
 
-
+    function viewFormEditMedis($Id_TenagaMedis)
+    {
+        $data['editmedis'] = $this->Model_TenagaMedis->get_medis_by_id($Id_TenagaMedis);
+        $this->template->load('Template/Template_admin', 'Form_TenagaMedis/Form_edit_Medis', $data);
+    }
 
     function editmedis()
     {
 
         $Id_TenagaMedis = $this->input->post('submitid');
         $medis = array(
-            'Nama_TenagaMedis' => $this->input->post('name'),
-            'NoHp_TenagaMedis' => $this->input->post('phone'),
-            'Alamat_TenagaMedis' => $this->input->post('alamat'),
-            'JenisKelamin' => $this->input->post('gender'),
+            'Nama_TenagaMedis'      => $this->input->post('name'),
+            'NoHp_TenagaMedis'      => $this->input->post('phone'),
+            'Alamat_TenagaMedis'    => $this->input->post('alamat'),
+            'JenisKelamin'          => $this->input->post('gender'),
         );
         $editmedis = $this->Model_TenagaMedis->update_medis($Id_TenagaMedis, $medis);
         if ($editmedis) {
