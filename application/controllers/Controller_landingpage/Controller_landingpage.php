@@ -107,14 +107,14 @@ class Controller_landingpage extends CI_Controller
         $password   = $this->input->post('password');
 
         $pemilik = array(
-            'Nama_Pemilik'      => $nama,
-            'NoHp_Pemilik'       => $phone,
-            'Alamat_Pemilik'    => $Address,
-            'Username'          => $username,
-            'Password'          => $password,
-            'Status'            => 'TidakAktif',
-            'date_created'      => get_current_date(),
-            'JenisKelamin'      => $JK
+            'Nama_Pemilik'   => $nama,
+            'NoHp_Pemilik'   => $phone,
+            'Alamat_Pemilik' => $Address,
+            'Username'       => $username,
+            'Password'       => $password,
+            'Status'         => 'TidakAktif',
+            'date_created'   => get_current_date(),
+            'JenisKelamin'   => $JK
 
         );
         $addpemilik = $this->Model_Pemilik->add_pemilik($pemilik);
