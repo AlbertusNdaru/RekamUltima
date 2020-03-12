@@ -70,11 +70,12 @@ $route['editstatusmedis/(:any)/(:any)'] = 'Controller_TenagaMedis/ControllerMedi
 $route['deletemedis/(:any)']            = 'Controller_TenagaMedis/ControllerMedis/deletemedis/$1';
 
 // Route HEWAN
-$route['hewan']                  = 'Controller_Hewan/ControllerHewan/get_hewan';
-$route['aksitambahhewan']        = 'Controller_Hewan/ControllerHewan/aksiadd';
-$route['tambahhewan']            = 'Controller_Hewan/ControllerHewan/addhewan';
-$route['formedithewan/(:any)']   = 'Controller_Hewan/ControllerHewan/viewFormEdithewan/$1';
-$route['deletehewan/(:any)']     = 'Controller_Hewan/ControllerHewan/deletehewan/$1';
+$route['hewan']                         = 'Controller_Hewan/ControllerHewan/get_hewan';
+$route['aksitambahhewan']               = 'Controller_Hewan/ControllerHewan/aksiadd';
+$route['tambahhewan']                   = 'Controller_Hewan/ControllerHewan/addhewan';
+$route['formedithewan/(:any)']          = 'Controller_Hewan/ControllerHewan/viewFormEdithewan/$1';
+$route['editstatushewan/(:any)/(:any)'] = 'Controller_Hewan/ControllerHewan/editstatushewan/$1/$2';
+$route['deletehewan/(:any)']            = 'Controller_Hewan/ControllerHewan/deletehewan/$1';
 
 // Route PEMILIK HEWAN
 $route['pemilik']                         = 'Controller_Pemilik/ControllerPemilik/get_pemilik_hewan';

@@ -38,7 +38,8 @@ class ControllerHewan extends CI_Controller
             'Jenis_Kelamin'     => $JK,
             'Jenis_Hewan'       => $JH,
             'Signalemen'        => $signalemen,
-            'Id_Pemilik'        => $pemiik
+            'Id_Pemilik'        => $pemiik, 
+            'Status'            => 'Mati'
 
         );
         $addhewan = $this->Model_hewan->add_hewan($hewan);
@@ -73,6 +74,21 @@ class ControllerHewan extends CI_Controller
         $edithewan = $this->Model_hewan->update_hewan($Id_Hewan, $hewan);
         if ($edithewan) {
             $this->session->set_flashdata('Status', 'Edit Succes');
+            redirect('hewan');
+        } else {
+            $this->session->set_flashdata('Status', 'Edit Failed');
+            redirect('hewan');
+        }
+    }
+
+    function editstatushewan($Id_Hewan, $status)
+    {
+        $hewan = array(
+            'Status' => $status
+        );
+        $edithewan = $this->Model_hewan->update_hewan($Id_Hewan, $status);
+        if ($edithewan) {
+            $this->session->set_flashdata('Status', 'Edit succes');
             redirect('hewan');
         } else {
             $this->session->set_flashdata('Status', 'Edit Failed');
