@@ -31,3 +31,12 @@ function check_session()
         redirect("Admin");
     }
 }
+
+function check_session_pemilik()
+{
+    if (isset($_SESSION['pemilik'])) {
+        return true;
+    } else {
+        redirect("landing");
+    }
+}

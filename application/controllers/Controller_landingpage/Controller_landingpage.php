@@ -19,6 +19,7 @@ class Controller_landingpage extends CI_Controller
 
     function datahewan()
     {
+        check_session_pemilik();
         $this->load->view("Landingpage/data_hewan");
 
         // echo "sadadsad";
@@ -33,6 +34,7 @@ class Controller_landingpage extends CI_Controller
 
     function register_hewan()
     {
+        check_session_pemilik();
         $this->load->view("Landingpage/register_hewan");
 
         // echo "sadadsad";
@@ -66,6 +68,7 @@ class Controller_landingpage extends CI_Controller
 
     function addhewan()
     {
+        check_session_pemilik();
         $nama       = $this->input->post('nama');
         $JK         = $this->input->post('jeniskelamin');
         $JH         = $this->input->post('jenishewan');
