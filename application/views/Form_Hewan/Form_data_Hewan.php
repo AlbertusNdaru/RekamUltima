@@ -33,6 +33,7 @@
                                         <th>Jenis Hewan</th>
                                         <th>Signalemen / Ciri-ciri Hewan</th>
                                         <th>Nama Pemilik</th>
+                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -44,16 +45,29 @@
                                             <td><?= $h->Jenis_Hewan ?></td>
                                             <td><?= $h->Signalemen ?></td>
                                             <td><?= $h->Nama_Pemilik ?></td>
-
                                             <td class="center">
-                                                <a class="btn btn-info" style="width: 69px;" href="<?= base_url('formedithewan/' . $h->Id_Hewan . '') ?>">
-                                                    <i class="glyphicon glyphicon-edit icon-white"></i>
-                                                    Edit
-                                                </a>
-                                                <a class="btn btn-danger" style="width: 69px;" href="<?= base_url('deletehewan/' . $h->Id_Hewan . '') ?>">
-                                                    <i class="glyphicon glyphicon-trash icon-white"></i>
-                                                    Delete
-                                                </a>
+                                                <span class="label-success label <?php if ($h->Status == 'Hidup') echo 'label-default';
+                                                                                    else echo 'label-danger'; ?>"><?= $h->Status ?></span>
+                                            </td>
+                                            <td class="center">
+                                                <?php if ($h->Status == "Mati") { ?>
+                                                    <a class="btn btn-success" style="width: 94px;" href="<?= base_url('editstatushewan/' . $h->Id_Hewan . '/Hidup') ?>">
+                                                        <i class="glyphicon glyphicon-ok icon-white"></i>
+                                                        Hidup
+                                                    <?php } else { ?>
+                                                        <a class="btn btn-danger" style="width: 94px;" href="<?= base_url('editstatushewan/' . $h->Id_Hewan . '/Mati') ?>">
+                                                            <i class="glyphicon glyphicon-remove icon-white"></i>
+                                                            Mati
+                                                        <?php } ?>
+                                                        </a>
+                                                        <a class="btn btn-info" style="width: 69px;" href="<?= base_url('formedithewan/' . $h->Id_Hewan . '') ?>">
+                                                            <i class="glyphicon glyphicon-edit icon-white"></i>
+                                                            Edit
+                                                        </a>
+                                                        <a class="btn btn-danger" style="width: 69px;" href="<?= base_url('deletehewan/' . $h->Id_Hewan . '') ?>">
+                                                            <i class="glyphicon glyphicon-trash icon-white"></i>
+                                                            Delete
+                                                        </a>
                                             </td>
                                         </tr>
                                     <?php } ?>
