@@ -51,6 +51,7 @@ class ControllerPemilik extends CI_Controller
         }
     }
 
+
     function viewFormEditPemilik($Id_Pemilik)
     {
         $data['editpemilik'] = $this->Model_Pemilik->get_pemilik_by_id($Id_Pemilik);
