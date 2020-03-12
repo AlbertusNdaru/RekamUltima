@@ -19,7 +19,7 @@ class Model_Pemilik extends CI_Model
     {
         $this->db->where('Username', $username);
         $this->db->where('Password', $password);
-        $getpemilik = $this->db->get('pemilik_hewan')->result();
+        $getpemilik = $this->db->get('pemilik_hewan')->row();
         return $getpemilik;
     }
 

@@ -63,9 +63,13 @@ $route['landing']    = 'Controller_landingpage/Controller_landingpage/landingpag
 $route['loginuser']    = 'Controller_landingpage/Controller_landingpage/loginuser';
 $route['registeruser']    = 'Controller_landingpage/Controller_landingpage/registeruser';
 $route['logoutuser']    = 'Controller_landingpage/Controller_landingpage/logoutuser';
+$route['registerhewan']    = 'Controller_landingpage/Controller_landingpage/register_hewan';
+$route['datahewan']    = 'Controller_landingpage/Controller_landingpage/datahewan';
 
 // Route REKAM MEDIS
 $route['rekammedis'] = 'Controller_Rekam_Medis/ControllerRekamMedis/get_rekam_medis';
+$route['viewTambah/(:any)'] = 'Controller_Rekam_Medis/ControllerRekamMedis/viewTambahdataRekamMedis/$1';
+$route['addDetailMedis'] = 'Controller_Rekam_Medis/ControllerRekamMedis/addDetailRM';
 
 // Route TENAGA MEDIS
 $route['tenagamedis']                   = 'Controller_TenagaMedis/ControllerMedis/get_tenagamedis';

@@ -20,7 +20,14 @@ class Model_hewan extends CI_Model
     function add_hewan($dataHewan)
     {
         $add_hewan = $this->db->insert("hewan", $dataHewan);
-        return $add_hewan;
+        if($add_hewan)
+        {
+            return $this->db->insert_id();
+        }
+        else
+        {
+            return $add_hewan;
+        }
     }
 
     function update_hewan($Id_Hewan, $dataHewan)
