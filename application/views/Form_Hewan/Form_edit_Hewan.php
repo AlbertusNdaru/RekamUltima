@@ -4,7 +4,7 @@
             <strong>Tambah Data Hewan </strong>
         </div>
         <div class="card-body">
-            <form name="formaddhewan" id="formvaliditas" action="<?= base_url('Controller_Hewan/ControllerHewan/edithewan') ?>" method="POST">
+            <form name="formedithewan" id="formvaliditas" action="<?= base_url('Controller_Hewan/ControllerHewan/edithewan') ?>" method="POST">
                 <div class="row form-group">
                     <div class="col col-md-3"><label>Nama Hewan</label></div>
                     <div class="col-12 col-md-9"><input required type="text" value="<?= $edithewan->Nama_Hewan?>" onclick='validasi("NAMA","NAMA")' name="nama" id="NAMA" placeholder="Enter Your Name" class="form-control required">

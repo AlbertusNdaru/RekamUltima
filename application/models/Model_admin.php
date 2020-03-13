@@ -30,9 +30,9 @@ class Model_admin extends CI_Model
         return $getloginyuserpass;
     }
 
-    function get_admin_by_id($id)
+    function get_admin_by_id($Id_Admin)
     {
-        $this->db->where('Id_Admin', $id);
+        $this->db->where('Id_Admin', $Id_Admin);
         $getloginbyId = $this->db->get('admin')->row();
         return $getloginbyId;
     }
@@ -56,9 +56,9 @@ class Model_admin extends CI_Model
         return $updateAdmin;
     }
 
-    function delete_admin($idAdmin)
+    function delete_admin($Id_Admin)
     {
-        $this->db->where('Id_Admin', $idAdmin);
+        $this->db->where('Id_Admin', $Id_Admin);
         $deleteAdmin = $this->db->delete("admin");
         return $deleteAdmin;
     }

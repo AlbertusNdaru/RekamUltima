@@ -31,8 +31,6 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="menu-icon fa fa-glass"></i>My profile</a>
             <ul class="sub-menu children dropdown-menu">
-                <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Login</a></li>
-                <li><i class="menu-icon fa fa-sign-in"></i><a href="<?= base_url('regadmin') ?>">Register</a></li>
                 <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a></li>
                 <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?= base_url('ControllerAdmin/Login/logout'); ?>">Logout</a></li>
             </ul>
