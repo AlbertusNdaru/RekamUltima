@@ -17,10 +17,6 @@ function get_current_date_img($format = null)
     return $date->format('YmdHis');
 }
 
-function base_url_img()
-{
-    return 'http://localhost/Silab_UGM/assets/gambar_alat/';
-}
 
 
 function check_session()

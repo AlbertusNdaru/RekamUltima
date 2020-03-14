@@ -11,6 +11,7 @@ class Profil extends CI_Controller
     }
     function vieweditprofil($Id_Admin)
     {
+        check_session();
         $data['admin'] = $this->Model_admin->get_admin_by_id($Id_Admin);
         $this->template->load('Template/Template_admin', 'Form_admin/Form_profil', $data);
     }

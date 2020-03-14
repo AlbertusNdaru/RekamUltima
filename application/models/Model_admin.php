@@ -37,9 +37,9 @@ class Model_admin extends CI_Model
         return $getloginbyId;
     }
 
-    function get_admin_by_id_tenagamedis($id)
+    function get_admin_by_id_tenagamedis($Id_Admin)
     {
-        $this->db->where("Id_TenagaMedis", $id);
+        $this->db->where("Id_TenagaMedis", $Id_Admin);
         $getdatakaryawan = $this->db->get('admin')->row();
         return $getdatakaryawan;
     }
@@ -49,9 +49,9 @@ class Model_admin extends CI_Model
         $this->db->insert('admin', $dataAdmin);
     }
 
-    function update_admin($idAdmin, $dataAdmin)
+    function update_admin($Id_Admin, $dataAdmin)
     {
-        $this->db->where('Id_Admin', $idAdmin);
+        $this->db->where('Id_Admin', $Id_Admin);
         $updateAdmin = $this->db->update("admin", $dataAdmin);
         return $updateAdmin;
     }
