@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered"">
                             <thead>
                                 <tr>
                                     <th>Nama Pemilik</th>
