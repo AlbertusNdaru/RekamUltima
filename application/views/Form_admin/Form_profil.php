@@ -12,7 +12,12 @@
                 </div>
                 <div class="row form-group">
                     <div class="col col-md-3"><label>Password</label></div>
-                    <div class="col-12 col-md-9"><input required type="password" value="<?= $editprofil->Password ?>" name="password" class="form-control required">
+                    <div class="col-12 col-md-9"><input required type="password" value="<?= $editprofil->Password ?>" name="password1" class="form-control required">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label>Password</label></div>
+                    <div class="col-12 col-md-9"><input required type="password" value="<?= $editprofil->Password ?>" name="password2" class="form-control required">
                     </div>
                 </div>
         </div>

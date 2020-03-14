@@ -2,15 +2,7 @@
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
-                <h1>Data Rekam Medis</h1>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-8">
-        <div class="page-header float-right">
-            <div class="card-body">
-                <a href="<?= base_url('aksitambahmedis') ?>" class="btn btn-addhewan btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
-                <a href="#" class="btn btn-minimize btn-sm btn-primary"><i class="fa fa-sort-down"></i></a>
+                <h1>Detail Rekam Medis</h1>
             </div>
         </div>
     </div>
@@ -21,15 +13,30 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <strong class="card-title">Data Table</strong>
+                        <strong class="card-title">Kartu Rekam Medis Hewan</strong>
                     </div>
                     <div class="card-body">
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label>Nama Pemilik</label></div>
+                            <div class="col-6 col-md-3"><input required type="text" name="anamnesa" class="form-control required">
+                            <div class="col col-md-3"><label>Nama Hewan</label></div>
+                            <div class="col-6 col-md-3"><input required type="text" name="anamnesa" class="form-control required">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3"><label>No Hp</label></div>
+                            <div class="col-6 col-md-3"><input required type="text" name="anamnesa" class="form-control required">
+                            <div class="col col-md-3"><label>Signalemen</label></div>
+                            <div class="col-6 col-md-3"><input required type="text" name="anamnesa" class="form-control required">
+                            </div>
+                        </div>
                         <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Kode Rekam Medis</th>
-                                    <th>Nama Hewan</th>
-                                    <th>Action</th>
+                                    <th>Tanggal</th>
+                                    <th>Anamnesa</th>
+                                    <th>Diagnosa / Penyakit</th>
+                                    <th>Terapi/Tindakan</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,7 +45,7 @@
                                         <td><?= $rm->Id_RekamMedis ?></td>
                                         <td><?= $rm->Nama_Hewan ?></td>
                                         <td class="center">
-                                            <a class="btn btn-info" style="width: 80px;" href="<?= base_url('viewTambah/').$rm->Id_RekamMedis?>">
+                                            <a class="btn btn-info" style="width: 80px;" href="<?= base_url('viewTambah/') . $rm->Id_RekamMedis ?>">
                                                 <i class="glyphicon glyphicon-edit icon-white"></i>
                                                 Tambah
                                             </a>

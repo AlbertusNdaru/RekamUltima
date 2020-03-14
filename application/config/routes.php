@@ -53,12 +53,12 @@ $route['default_controller'] = 'welcome';
 
 
 //Route Admin
-$route['Admin']     = 'ControllerAdmin/Login';
-$route['admin']     = 'ControllerAdmin/Login';
-$route['regadmin']  = 'ControllerAdmin/Reg_admin';
-$route['dashboard'] = 'ControllerAdmin/Dashboard';
-$route['logout']    = 'ControllerAdmin/Login/logout';
-$route['profil/(:any)']    = 'ControllerAdmin/Profil/vieweditprofil/$1';
+$route['Admin']                 = 'ControllerAdmin/Login';
+$route['admin']                 = 'ControllerAdmin/Login';
+$route['regadmin']              = 'ControllerAdmin/Reg_admin';
+$route['dashboard']             = 'ControllerAdmin/Dashboard';
+$route['logout']                = 'ControllerAdmin/Login/logout';
+$route['viewprofile/(:any)']    = 'ControllerAdmin/Profil/vieweditprofil/$1';
 
 //Route Pemilik
 $route['landing']           = 'Controller_landingpage/Controller_landingpage/landingpage';

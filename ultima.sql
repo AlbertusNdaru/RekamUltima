@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2020 at 11:34 PM
+-- Generation Time: Mar 14, 2020 at 03:13 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -87,19 +87,21 @@ CREATE TABLE IF NOT EXISTS `hewan` (
   `Jenis_Hewan` varchar(128) NOT NULL,
   `Signalemen` varchar(128) NOT NULL,
   `Id_Pemilik` int(11) DEFAULT NULL,
-  `Image` varchar(256) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+  `Image` varchar(256) DEFAULT NULL,
+  `Status` varchar(128) NOT NULL DEFAULT 'Hidup'
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hewan`
 --
 
-INSERT INTO `hewan` (`Id_Hewan`, `Nama_Hewan`, `Jenis_Kelamin`, `Jenis_Hewan`, `Signalemen`, `Id_Pemilik`, `Image`) VALUES
-(1, 'Petra', 'L', 'L', 'Putih Bersih, Campuran Persia dan Anggora', 3, NULL),
-(2, 'Ziggy', 'Jantan', 'Kucing', 'Siam, Abu,xxx', 2, NULL),
-(3, 'Blacky', 'Jantan', 'Anjing', 'Gaktau', 2, NULL),
-(4, 'Blacky3', 'Jantan', 'Kucing', 'gaktau eh ', 2, NULL),
-(5, 'Kumis', 'Jantan', 'Kucing', 'Oren, nakal', 2, NULL);
+INSERT INTO `hewan` (`Id_Hewan`, `Nama_Hewan`, `Jenis_Kelamin`, `Jenis_Hewan`, `Signalemen`, `Id_Pemilik`, `Image`, `Status`) VALUES
+(1, 'Petra', 'L', 'L', 'Putih Bersih, Campuran Persia dan Anggora', 3, NULL, 'Mati'),
+(2, 'Ziggy', 'Jantan', 'Kucing', 'Siam, Abu,xxx', 2, NULL, 'Mati'),
+(3, 'Blacky', 'Jantan', 'Anjing', 'Gaktau', 2, NULL, 'Mati'),
+(4, 'Blacky3', 'Jantan', 'Kucing', 'gaktau eh ', 2, NULL, 'Mati'),
+(5, 'Kumis', 'Jantan', 'Kucing', 'Oren, nakal', 2, NULL, 'Mati'),
+(6, 'Kumis', 'Betina', 'Anjing', 'ff', 3, NULL, 'Mati');
 
 -- --------------------------------------------------------
 
@@ -214,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `tenagamedis` (
   `Status` varchar(128) NOT NULL DEFAULT 'TidakAktif',
   `date_created` date NOT NULL,
   `Email` varchar(128) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tenagamedis`
@@ -326,7 +328,7 @@ MODIFY `Id_DRM` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 -- AUTO_INCREMENT for table `hewan`
 --
 ALTER TABLE `hewan`
-MODIFY `Id_Hewan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `Id_Hewan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `kritik`
 --
@@ -356,7 +358,7 @@ MODIFY `Id_RekamMedis` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `tenagamedis`
 --
 ALTER TABLE `tenagamedis`
-MODIFY `Id_TenagaMedis` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+MODIFY `Id_TenagaMedis` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `tindakan`
 --

@@ -50,14 +50,14 @@
                                                                                     else echo 'label-danger'; ?>"><?= $h->Status ?></span>
                                             </td>
                                             <td class="center">
-                                                <?php if ($h->Status == "Mati") { ?>
-                                                    <a class="btn btn-success" style="width: 94px;" href="<?= base_url('editstatushewan/' . $h->Id_Hewan . '/Hidup') ?>">
+                                                <?php if ($h->Status == "Hidup") { ?>
+                                                    <a class="btn btn-danger" style="width: 94px;" href="<?= base_url('editstatushewan/' . $h->Id_Hewan . '/Mati') ?>">
                                                         <i class="glyphicon glyphicon-ok icon-white"></i>
-                                                        Hidup
+                                                        Mati
                                                     <?php } else { ?>
-                                                        <a class="btn btn-danger" style="width: 94px;" href="<?= base_url('editstatushewan/' . $h->Id_Hewan . '/Mati') ?>">
+                                                        <a class="btn btn-success" style="width: 94px;" href="<?= base_url('editstatushewan/' . $h->Id_Hewan . '/Hidup') ?>">
                                                             <i class="glyphicon glyphicon-remove icon-white"></i>
-                                                            Mati
+                                                            Hidup
                                                         <?php } ?>
                                                         </a>
                                                         <a class="btn btn-info" style="width: 69px;" href="<?= base_url('formedithewan/' . $h->Id_Hewan . '') ?>">
