@@ -17,10 +17,13 @@ class Controller_landingpage extends CI_Controller
         // echo "sadadsad";
     }
 
-    function datahewan()
+    function datahewan($Id_Pemilik)
     {
         check_session_pemilik();
-        $this->load->view("Landingpage/data_hewan");
+        $data['hewan'] = $this->Model_hewan->get_hewan();
+        $this->db->where('Id_Pemilik', $Id_Pemilik);
+        //$hewan = $this->Model_pemilik->get_pemilik_by_id($Id_Pemilik);
+        $this->load->view("Landingpage/data_hewan", $data);
 
         // echo "sadadsad";
     }

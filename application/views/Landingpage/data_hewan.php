@@ -14,81 +14,11 @@
             </div>
         </div>
         <div class="row" style="margin:auto;">
+        <?php foreach($hewan as $h){ ?>
             <div class="col-sm-6 col-lg-3">
                 <div class="single_blog_item">
                     <div class="single_blog_img">
-                        <img src="img/doctor/doctor_1.png" alt="doctor">
-                        <div class="social_icon">
-                            <ul>
-                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="single_text">
-                        <div class="single_blog_text">
-                            <h3>DR Adam Billiard</h3>
-                            <p>Heart specialist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="single_blog_item">
-                    <div class="single_blog_img">
-                        <img src="img/doctor/doctor_4.png" alt="doctor">
-                        <div class="social_icon">
-                            <ul>
-                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="single_text">
-                        <div class="single_blog_text">
-                            <h3>DR Adam Billiard</h3>
-                            <p>Medicine specialist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="single_blog_item">
-                    <div class="single_blog_img">
-                        <img src="img/doctor/doctor_2.png" alt="doctor">
-                        <div class="social_icon">
-                            <ul>
-                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="single_text">
-                        <div class="single_blog_text">
-                            <h3>DR Fred Macyard</h3>
-                            <p>CHeart specialist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="single_blog_item">
-                    <div class="single_blog_img">
-                        <img src="img/doctor/doctor_3.png" alt="doctor">
-                        <div class="social_icon">
-                            <ul>
-                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                            </ul>
-                        </div>
+                        <img src="<?= base_url('assets/landingpage/'); ?>img/doctor/doctor_3.png" alt="doctor">
                     </div>
                     <div class="single_text">
                         <div class="single_blog_text">
@@ -98,90 +28,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="single_blog_item">
-                    <div class="single_blog_img">
-                        <img src="img/doctor/doctor_1.png" alt="doctor">
-                        <div class="social_icon">
-                            <ul>
-                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="single_text">
-                        <div class="single_blog_text">
-                            <h3>DR Adam Billiard</h3>
-                            <p>Heart specialist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="single_blog_item">
-                    <div class="single_blog_img">
-                        <img src="img/doctor/doctor_4.png" alt="doctor">
-                        <div class="social_icon">
-                            <ul>
-                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="single_text">
-                        <div class="single_blog_text">
-                            <h3>DR Adam Billiard</h3>
-                            <p>Medicine specialist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="single_blog_item">
-                    <div class="single_blog_img">
-                        <img src="img/doctor/doctor_2.png" alt="doctor">
-                        <div class="social_icon">
-                            <ul>
-                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="single_text">
-                        <div class="single_blog_text">
-                            <h3>DR Fred Macyard</h3>
-                            <p>CHeart specialist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="single_blog_item">
-                    <div class="single_blog_img">
-                        <img src="img/doctor/doctor_3.png" alt="doctor">
-                        <div class="social_icon">
-                            <ul>
-                                <li><a href="#"> <i class="ti-facebook"></i> </a></li>
-                                <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
-                                <li><a href="#"> <i class="ti-instagram"></i> </a></li>
-                                <li><a href="#"> <i class="ti-skype"></i> </a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="single_text">
-                        <div class="single_blog_text">
-                            <h3>DR Justin Stuard</h3>
-                            <p>Heart specialist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <?php } ?>
         </div>
     </div>
 </section>

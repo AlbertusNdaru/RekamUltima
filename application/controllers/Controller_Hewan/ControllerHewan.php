@@ -21,8 +21,7 @@ class ControllerHewan extends CI_Controller
 
     function aksiadd()
     {
-        $datapemilik['pemilik_hewan'] = $this->Model_pemilik->get_pemilik();
-        $this->template->load('Template/Template_admin', 'Form_Hewan/Form_add_Hewan', $datapemilik);
+        $this->template->load('Template/Template_admin', 'Form_Hewan/Form_add_Hewan');
     }
 
     function addhewan()

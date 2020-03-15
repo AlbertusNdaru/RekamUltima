@@ -20,7 +20,7 @@ class Reg_admin extends CI_Controller
     function add_admin()
     {
 
-        $username        = $this->input->post('username');
+        //$username        = $this->input->post('username');
         $password        = $this->input->post('password');
         $id_level        = $this->input->post('level');
         $email           = $this->input->post('email');
@@ -31,7 +31,7 @@ class Reg_admin extends CI_Controller
                 redirect('regadmin');
             } else {
                 $data = array(
-                    'Username' => $username,
+                    'Username' => $this->input->post('username'),
                     'Password' => $password,
                     'Status' => 'Aktif',
                     'date_created' => time(),

@@ -17,15 +17,19 @@ class Model_hewan extends CI_Model
         return $getloginbyId;
     }
 
+    function get_hewan_by_pemilik($Id_Pemilik)
+    {
+        $this->db->where("Id_Pemilik", $Id_Pemilik);
+        $getdatapemilik = $this->db->get('hewan')->row();
+        return $getdatapemilik;
+    }
+
     function add_hewan($dataHewan)
     {
         $add_hewan = $this->db->insert("hewan", $dataHewan);
-        if($add_hewan)
-        {
+        if ($add_hewan) {
             return $this->db->insert_id();
-        }
-        else
-        {
+        } else {
             return $add_hewan;
         }
     }

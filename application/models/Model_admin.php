@@ -40,8 +40,8 @@ class Model_admin extends CI_Model
     function get_admin_by_id_tenagamedis($Id_Admin)
     {
         $this->db->where("Id_TenagaMedis", $Id_Admin);
-        $getdatakaryawan = $this->db->get('admin')->row();
-        return $getdatakaryawan;
+        $getdatamedis = $this->db->get('admin')->row();
+        return $getdatamedis;
     }
 
     function add_admin($dataAdmin)
