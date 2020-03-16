@@ -10,6 +10,15 @@ class Model_Rekam_Medis extends CI_Model
         return $dataRekam;
     }
 
+    function get_rekam_medis_byid($id_rekam)
+    {
+        $this->db->select('b.Nama_Hewan, a.Id_RekamMedis');
+        $this->db->from('rekam_medis as a');
+        $this->db->join('hewan as b','b.Id_Hewan = a.Id_Hewan');
+        $this->db->where('a.Id_RekamMedis', $id_rekam);
+        return $this->db->get()->row();
+    }
+
     // function get_rekam_medis_baru()
     // {
     //     $this->db->select('a.*, b.Nama_Hewan');

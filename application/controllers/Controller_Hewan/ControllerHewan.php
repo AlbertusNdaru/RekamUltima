@@ -45,6 +45,10 @@ class ControllerHewan extends CI_Controller
         );
         $addhewan = $this->Model_hewan->add_hewan($hewan);
         if ($addhewan) {
+            $rekammedis = array(
+                'Id_Hewan' => $addhewan
+            );
+            $this->Model_Rekam_Medis->addRekamMedis($rekammedis);
             $this->session->set_flashdata('Status', 'Input Success');
             redirect('hewan');
         } else {

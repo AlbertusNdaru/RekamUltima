@@ -1,7 +1,7 @@
 <div class="breadcrumbs">
     <div class="card">
         <div class="card-header">
-            <strong>Tambah Detail Rekam Medis</strong>
+            <strong>Tambah Detail Rekam Medis => "<?= $rekam->Nama_Hewan ?>"</strong>
         </div>
         <div class="card-body">
             <form name="formaddDetailMedis" id="formvaliditas" action="<?= base_url('addDetailMedis') ?>" method="POST">
@@ -57,7 +57,7 @@
                 </div>
         </div>
         <div class="modal-footer">
-            <button type="submit" name="idrekam" value="<?= $idrekam ?>" class="btn btn-primary btn-sm">
+            <button type="submit" name="idrekam" value="<?= $rekam->Id_RekamMedis ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-dot-circle-o"></i> Tambah
             </button>
             <button type="reset" class="btn btn-danger btn-sm">

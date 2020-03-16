@@ -22,7 +22,7 @@ class ControllerRekamMedis extends CI_Controller
 
     function viewTambahdataRekamMedis($idrekam)
     {
-        $data['idrekam']     = $idrekam;
+        $data['rekam']     = $this->Model_Rekam_Medis->get_rekam_medis_byid($idrekam);
         $data['penyakit']    = $this->Model_Penyakit->get_Penyakit();
         $data['tindakan']    = $this->Model_Tindakan->get_tindakan();
         $data['tenagamedis'] = $this->Model_TenagaMedis->get_medis();
