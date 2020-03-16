@@ -1,37 +1,34 @@
+<!--::header part start::-->
+<?php include "header.php"; ?>
+<!-- Header part end-->
 
-    <!--::header part start::-->
-    <?php include "header.php";?>
-    <!-- Header part end-->
+<!-- banner part start-->
+<section class="banner_part">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-xl-5">
+                <div class="banner_text">
+                    <div class="banner_text_iner">
+                        <h5>We are here for your care</h5>
+                        <h1>Pet Shop & Clinic Ultima</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Quis ipsum suspendisse ultrices gravida.Risus cmodo viverra </p>
+                        <a href="#" class="btn_2">Make an appointment</a>
 
-    <!-- banner part start-->
-    <section class="banner_part">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 col-xl-5">
-                    <div class="banner_text">
-                        <div class="banner_text_iner">
-                            <h5>We are here for your care</h5>
-                            <h1>Best Care &
-                                Better Doctor</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua. Quis ipsum suspendisse ultrices gravida.Risus cmodo viverra </p>
-                            <a href="#" class="btn_2">Make an appointment</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="banner_img">
-                        <img src="img/banner_img.png" alt="">
                     </div>
                 </div>
             </div>
+            <div class="col-lg-7">
+                <div class="banner_img">
+                    <img src="<?= base_url('assets/images/'); ?>image3.jpg" alt="">
+                </div>
+            </div>
         </div>
-    </section>
-    <!-- banner part start-->
+    </div>
+</section>
+<!-- banner part start-->
 
-    <!-- footer part start-->
-    <?php include "footer.php";?>
-    <!-- footer part end-->
-
+<!-- footer part start-->
+<?php include "footer.php"; ?>
+<!-- footer part end-->
