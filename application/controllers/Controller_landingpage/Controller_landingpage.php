@@ -13,41 +13,29 @@ class Controller_landingpage extends CI_Controller
     function landingpage()
     {
         $this->load->view("Landingpage/landingpage");
-
-        // echo "sadadsad";
     }
 
     function datahewan($Id_Pemilik)
     {
         check_session_pemilik();
-        $data['hewan'] = $this->Model_hewan->get_hewan();
-        $this->db->where('Id_Pemilik', $Id_Pemilik);
-        //$hewan = $this->Model_pemilik->get_pemilik_by_id($Id_Pemilik);
+        $data['hewan'] = $this->Model_hewan->get_hewan_by_pemilik($Id_Pemilik);
         $this->load->view("Landingpage/data_hewan", $data);
-
-        // echo "sadadsad";
     }
 
     function loginuser()
     {
         $this->load->view("Landingpage/login");
-
-        // echo "sadadsad";
     }
 
     function register_hewan()
     {
         check_session_pemilik();
         $this->load->view("Landingpage/register_hewan");
-
-        // echo "sadadsad";
     }
 
     function registeruser()
     {
         $this->load->view("Landingpage/register");
-
-        // echo "sadadsad";
     }
 
     function validasilogin()

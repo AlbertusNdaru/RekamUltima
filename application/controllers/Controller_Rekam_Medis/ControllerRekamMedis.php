@@ -27,19 +27,18 @@ class ControllerRekamMedis extends CI_Controller
         $data['tindakan']    = $this->Model_Tindakan->get_tindakan();
         $data['tenagamedis'] = $this->Model_TenagaMedis->get_medis();
         $this->template->load('Template/Template_admin', 'Form_Rekam_Medis/Form_add_detail_RM', $data);
-
     }
 
     function addDetailRM()
     {
         $dataRM = array(
-                    "Anamnesa"       => $_POST['anamnesa'],
-                    "BeratBadan"     => $_POST['bb'],
-                    "SuhuTubuh"      => $_POST['suhu'],
-                    "Id_Penyakit"    => $_POST['penyakit'],
-                    "Id_RekamMedis"  => $_POST['idrekam'],
-                    "Id_Tindakan"    => $_POST['tindakan'],
-                    "Id_TenagaMedis" => $_POST['tenagamedis']
+            "Anamnesa"       => $_POST['anamnesa'],
+            "BeratBadan"     => $_POST['bb'],
+            "SuhuTubuh"      => $_POST['suhu'],
+            "Id_Penyakit"    => $_POST['penyakit'],
+            "Id_RekamMedis"  => $_POST['idrekam'],
+            "Id_Tindakan"    => $_POST['tindakan'],
+            "Id_TenagaMedis" => $_POST['tenagamedis']
         );
         $validate = $this->Model_Rekam_Medis->addDetaiRM($dataRM);
         if ($validate) {

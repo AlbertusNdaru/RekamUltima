@@ -22,8 +22,8 @@
                     </div>
                     <div class="single_text">
                         <div class="single_blog_text">
-                            <h3>DR Justin Stuard</h3>
-                            <p>Heart specialist</p>
+                            <h3><?= $h->Nama_Hewan?></h3>
+                            <p><?= $h->Jenis_Hewan?></p>
                         </div>
                     </div>
                 </div>

@@ -66,7 +66,7 @@ $route['loginuser']         = 'Controller_landingpage/Controller_landingpage/log
 $route['registeruser']      = 'Controller_landingpage/Controller_landingpage/registeruser';
 $route['logoutuser']        = 'Controller_landingpage/Controller_landingpage/logoutuser';
 $route['registerhewan']     = 'Controller_landingpage/Controller_landingpage/register_hewan';
-$route['datahewan']         = 'Controller_landingpage/Controller_landingpage/datahewan';
+$route['datahewan/(:any)']  = 'Controller_landingpage/Controller_landingpage/datahewan/$1';
 
 // Route REKAM MEDIS
 $route['rekammedis']        = 'Controller_Rekam_Medis/ControllerRekamMedis/get_rekam_medis';

@@ -20,7 +20,7 @@ class Model_hewan extends CI_Model
     function get_hewan_by_pemilik($Id_Pemilik)
     {
         $this->db->where("Id_Pemilik", $Id_Pemilik);
-        $getdatapemilik = $this->db->get('hewan')->row();
+        $getdatapemilik = $this->db->get('hewan')->result();
         return $getdatapemilik;
     }
 

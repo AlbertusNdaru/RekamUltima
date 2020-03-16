@@ -64,7 +64,7 @@
                                         <a class="dropdown-item" href="<?= base_url('registerhewan') ?>">Registrasi Hewan</a>
                                     </li>
                                     <li class="nav-item active">
-                                        <a class="dropdown-item" href="<?= base_url('datahewan')?>">Data Hewan</a>
+                                        <a class="dropdown-item" href="<?= base_url('datahewan/'.$_SESSION['pemilik']->Id_Pemilik)?>">Data Hewan</a>
                                     </li>
                                     <li class="nav-item active">
                                         <a class="dropdown-item" href="elements.html">Rekam Medis Hewan</a>
