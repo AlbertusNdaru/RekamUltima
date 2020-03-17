@@ -64,10 +64,13 @@
                                         <a class="dropdown-item" href="<?= base_url('registerhewan') ?>">Registrasi Hewan</a>
                                     </li>
                                     <li class="nav-item active">
-                                        <a class="dropdown-item" href="<?= base_url('datahewan/'.$_SESSION['pemilik']->Id_Pemilik)?>">Data Hewan</a>
+                                        <a class="dropdown-item" href="<?= base_url('datahewan/' . $_SESSION['pemilik']->Id_Pemilik) ?>">Data Hewan</a>
                                     </li>
                                     <li class="nav-item active">
                                         <a class="dropdown-item" href="elements.html">Rekam Medis Hewan</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="dropdown-item" href="#">Kritik/Saran</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                     <a class="nav-link" href="about.html">about</a>
@@ -102,7 +105,7 @@
                             </ul>
                         </div>
                         <?php if (isset($_SESSION["pemilik"])) { ?>
-                            <a class="btn_2 d-none d-lg-block" href="#" style="margin-right: 10px"><?= $_SESSION['pemilik']->Nama_Pemilik?></a>
+                            <a class="btn_2 d-none d-lg-block" href="#" style="margin-right: 10px"><?= $_SESSION['pemilik']->Nama_Pemilik ?></a>
                             <a class="btn_2 d-none d-lg-block" href="<?= base_url('logoutuser') ?>">LOGOUT</a>
                         <?php } else { ?>
                             <a class="btn_2 d-none d-lg-block" style="margin-right: 10px" href="<?= base_url("loginuser") ?>">LOGIN</a>

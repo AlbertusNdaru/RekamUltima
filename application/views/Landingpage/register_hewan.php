@@ -32,6 +32,9 @@
                             <div class="form-group col-md-12">
                                 <textarea required class="form-control" id="Textarea" rows="4" name="signalemen" placeholder="Signalemen"></textarea>
                             </div>
+                            <div class="form-group col-md-12">
+                                <input required class="form-control" id="image" rows="4" name="image" placeholder="image"></textarea>
+                            </div>
                         </div>
                         <div class="regerv_btn">
                             <button type="submit" class="btn_2">Proses</button>

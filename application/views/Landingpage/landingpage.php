@@ -11,10 +11,9 @@
                     <div class="banner_text_iner">
                         <h5>We are here for your care</h5>
                         <h1>Pet Shop & Clinic Ultima</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Quis ipsum suspendisse ultrices gravida.Risus cmodo viverra </p>
-                        <a href="#" class="btn_2">Make an appointment</a>
+                        <p> Pet Shop Ultima terletak di JL wonosari Km 8, Potorono, Banguntapan, Bantul, Yogyakarta.</p>
+                        <p>Buka dari jam 09.00 AM - 09.00 PM</p>
+                        <a href="#" class="btn_2">Hotline +62 899-9120-150</a>
 
                     </div>
                 </div>
