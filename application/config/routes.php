@@ -60,7 +60,7 @@ $route['dashboard']             = 'ControllerAdmin/Dashboard';
 $route['logout']                = 'ControllerAdmin/Login/logout';
 $route['viewprofile/(:any)']    = 'ControllerAdmin/Profil/vieweditprofil/$1';
 
-//Route Pemilik
+//Route Halaman Pemilik
 $route['landing']           = 'Controller_landingpage/Controller_landingpage/landingpage';
 $route['loginuser']         = 'Controller_landingpage/Controller_landingpage/loginuser';
 $route['registeruser']      = 'Controller_landingpage/Controller_landingpage/registeruser';
@@ -72,6 +72,11 @@ $route['datahewan/(:any)']  = 'Controller_landingpage/Controller_landingpage/dat
 $route['rekammedis']        = 'Controller_Rekam_Medis/ControllerRekamMedis/get_rekam_medis';
 $route['viewTambah/(:any)'] = 'Controller_Rekam_Medis/ControllerRekamMedis/viewTambahdataRekamMedis/$1';
 $route['addDetailMedis']    = 'Controller_Rekam_Medis/ControllerRekamMedis/addDetailRM';
+
+// Route Kritik
+$route['kritik']                = 'Controller_Kritik/ControllerKritik/get_kritik';
+$route['aksitambahkritik']      = 'Controller_Kritik/ControllerKritik/aksiadd';
+$route['deletekritik']          = 'Controller_Kritik/ControllerKritik/deletekritik';
 
 // Route TENAGA MEDIS
 $route['tenagamedis']                   = 'Controller_TenagaMedis/ControllerMedis/get_tenagamedis';

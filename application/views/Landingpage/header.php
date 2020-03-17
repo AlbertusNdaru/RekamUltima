@@ -70,7 +70,7 @@
                                         <a class="dropdown-item" href="elements.html">Rekam Medis Hewan</a>
                                     </li>
                                     <li class="nav-item active">
-                                        <a class="dropdown-item" href="#">Kritik/Saran</a>
+                                        <a class="dropdown-item" href="<?= base_url('aksitambahkritik') ?>">Kritik/Saran</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                     <a class="nav-link" href="about.html">about</a>
