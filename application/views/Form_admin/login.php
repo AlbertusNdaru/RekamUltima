@@ -9,13 +9,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login Page Rekam Medis Ultima</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
-
+    <title>Login Admin Ultima</title>
+    <link rel="icon" href="<?= base_url('assets/landingpage/'); ?>img/favicon.png">
 
     <link rel="stylesheet" href="<?= base_url('assets/') ?>vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendors/font-awesome/css/font-awesome.min.css">

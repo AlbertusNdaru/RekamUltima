@@ -6,6 +6,7 @@ class ControllerKritik extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Model_kritik');
+        $this->load->model('Model_Pemilik');
     }
 
 
@@ -21,14 +22,16 @@ class ControllerKritik extends CI_Controller
         $this->load->view('Landingpage/Form_add_kritik');
     }
 
-    function addkritik()
+    function addkritik($Id_Pemilik)
     {
         check_session_pemilik();
         $saran       = $this->input->post('saran');
         $kritik         = $this->input->post('kritik');
+        $pemilik = $this->Model_Pemilik->get_pemilik_by_id($Id_Pemilik);
 
         $kritik = array(
             'Kritik'       => $kritik,
+            'Id_Pemilik'   => $pemilik,
             'Saran'        => $saran
 
         );

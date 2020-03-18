@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2020 at 03:13 PM
+-- Generation Time: Mar 18, 2020 at 09:17 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -34,17 +34,18 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `date_created` date NOT NULL,
   `Id_TenagaMedis` int(11) DEFAULT NULL,
   `Id_Level` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`Id_Admin`, `Username`, `Password`, `Status`, `date_created`, `Id_TenagaMedis`, `Id_Level`) VALUES
-(1, 'Ndaru', '12345', 'Aktif', '0000-00-00', 8, 1),
+(1, 'Ndaru', '12345', 'Aktif', '0000-00-00', 2, 1),
 (2, 'raizen', '12345', 'Aktif', '0000-00-00', 1, 2),
 (3, 'Admin', '12345', 'Aktif', '2020-03-04', NULL, 1),
-(4, 'nurul', '12345', 'Aktif', '0000-00-00', 11, 1);
+(4, 'nurul', '12345', 'Aktif', '0000-00-00', 4, 1),
+(5, 'nurul', '123', 'Aktif', '0000-00-00', 3, 2);
 
 -- --------------------------------------------------------
 
@@ -69,10 +70,10 @@ CREATE TABLE IF NOT EXISTS `detail_rm` (
 --
 
 INSERT INTO `detail_rm` (`Id_DRM`, `Anamnesa`, `BeratBadan`, `SuhuTubuh`, `Id_Penyakit`, `Id_RekamMedis`, `Id_Tindakan`, `Id_TenagaMedis`, `Tgl_Berobat`) VALUES
-(1, '0', 22, 36, 1, 2, 1, 8, '0000-00-00'),
-(2, 'Diare, muntah kuning', 2, 1, 1, 2, 1, 11, '0000-00-00'),
+(1, '0', 22, 36, 1, 2, 1, 2, '0000-00-00'),
+(2, 'Diare, muntah kuning', 2, 1, 1, 2, 1, 4, '0000-00-00'),
 (3, 'svc', 0.2, 1, 1, 2, 1, 1, '0000-00-00'),
-(4, 'xc', 0.9, 1.5, 1, 3, 1, 11, '0000-00-00');
+(4, 'xc', 0.9, 1.5, 1, 3, 1, 4, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -89,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `hewan` (
   `Id_Pemilik` int(11) DEFAULT NULL,
   `Image` varchar(256) DEFAULT NULL,
   `Status` varchar(128) NOT NULL DEFAULT 'Hidup'
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `hewan`
@@ -101,7 +102,9 @@ INSERT INTO `hewan` (`Id_Hewan`, `Nama_Hewan`, `Jenis_Kelamin`, `Jenis_Hewan`, `
 (3, 'Blacky', 'Jantan', 'Anjing', 'Gaktau', 2, NULL, 'Mati'),
 (4, 'Blacky3', 'Jantan', 'Kucing', 'gaktau eh ', 2, NULL, 'Mati'),
 (5, 'Kumis', 'Jantan', 'Kucing', 'Oren, nakal', 2, NULL, 'Mati'),
-(6, 'Kumis', 'Betina', 'Anjing', 'ff', 3, NULL, 'Mati');
+(6, 'Kumis', 'Betina', 'Anjing', 'ff', 3, NULL, 'Mati'),
+(7, 'Potek', 'Betina', 'Sapi', 'Terdapat titik hitam diantara mata', 4, NULL, 'Hidup'),
+(8, 'Gundul', 'Jantan', 'Ayam', 'Jambul putih', 2, NULL, 'Hidup');
 
 -- --------------------------------------------------------
 
@@ -111,9 +114,10 @@ INSERT INTO `hewan` (`Id_Hewan`, `Nama_Hewan`, `Jenis_Kelamin`, `Jenis_Hewan`, `
 
 CREATE TABLE IF NOT EXISTS `kritik` (
 `Id_Kritik` int(11) NOT NULL,
-  `Isi` varchar(128) NOT NULL,
+  `Kritik` varchar(128) DEFAULT NULL,
   `Date` date NOT NULL,
-  `Id_Pemilik` int(11) NOT NULL
+  `Id_Pemilik` int(11) NOT NULL,
+  `Saran` varchar(128) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -151,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `pemilik_hewan` (
   `Status` varchar(128) NOT NULL DEFAULT 'TidakAktif',
   `date_created` date NOT NULL,
   `JenisKelamin` varchar(128) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pemilik_hewan`
@@ -159,7 +163,8 @@ CREATE TABLE IF NOT EXISTS `pemilik_hewan` (
 
 INSERT INTO `pemilik_hewan` (`Id_Pemilik`, `Nama_Pemilik`, `NoHp_Pemilik`, `Alamat_Pemilik`, `Username`, `Password`, `Status`, `date_created`, `JenisKelamin`) VALUES
 (2, 'mujib', '089685646734', 'yogys', 'mujib', '12345', 'TidakAktif', '2020-03-10', 'L'),
-(3, 'zujajah Nur Rahmah', '08008765890', 'tampungan', 'jajah', '12345', 'TidakAktif', '2020-03-10', 'P');
+(3, 'zujajah Nur Rahmah', '08008765890', 'tampungan', 'jajah', '12345', 'TidakAktif', '2020-03-10', 'P'),
+(4, 'Petra', '081250206551', 'bantul', 'petra', '12345', 'TidakAktif', '2020-03-16', 'L');
 
 -- --------------------------------------------------------
 
@@ -191,7 +196,7 @@ INSERT INTO `penyakit` (`Id_Penyakit`, `Nama_Penyakit`, `Gejala`) VALUES
 CREATE TABLE IF NOT EXISTS `rekam_medis` (
 `Id_RekamMedis` int(11) NOT NULL,
   `Id_Hewan` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `rekam_medis`
@@ -199,7 +204,9 @@ CREATE TABLE IF NOT EXISTS `rekam_medis` (
 
 INSERT INTO `rekam_medis` (`Id_RekamMedis`, `Id_Hewan`) VALUES
 (2, 4),
-(3, 5);
+(3, 5),
+(4, 7),
+(5, 8);
 
 -- --------------------------------------------------------
 
@@ -216,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `tenagamedis` (
   `Status` varchar(128) NOT NULL DEFAULT 'TidakAktif',
   `date_created` date NOT NULL,
   `Email` varchar(128) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tenagamedis`
@@ -224,9 +231,9 @@ CREATE TABLE IF NOT EXISTS `tenagamedis` (
 
 INSERT INTO `tenagamedis` (`Id_TenagaMedis`, `Nama_TenagaMedis`, `NoHp_TenagaMedis`, `Alamat_TenagaMedis`, `JenisKelamin`, `Status`, `date_created`, `Email`) VALUES
 (1, 'zujajah Nur Rahmah', '089685646734', 'Gambiran', 'L', 'TidakAktif', '2020-01-30', 'zujajahnurahmah@gmail.com'),
-(8, 'Ndaru', '081329040621', 'SDASDA', 'L', 'Aktif', '0000-00-00', 'ndarualbert21@gmail.com'),
-(9, 'Hijrah Eni', '081250206551', 'Kembangkarum XIV, Donokerto, Turi, Sleman, Yogyakarta', 'P', 'TidakAktif', '2020-03-07', 'Hijrah@gmail.com'),
-(11, 'Nurul Basyiroh pandriana', '085743305436', 'Sendowolor 003/007, Kedungkeris, Nglipar, Gunungkidul', 'P', 'Aktif', '2020-03-07', 'pandriana.nurul@gmail.com');
+(2, 'Ndaru', '081329040621', 'SDASDA', 'L', 'Aktif', '0000-00-00', 'ndarualbert21@gmail.com'),
+(3, 'Hijrah Eni', '081250206551', 'Kembangkarum XIV, Donokerto, Turi, Sleman, Yogyakarta', 'P', 'TidakAktif', '2020-03-07', 'Hijrah@gmail.com'),
+(4, 'Nurul Basyiroh pandriana', '085743305436', 'Sendowolor 003/007, Kedungkeris, Nglipar, Gunungkidul', 'P', 'Aktif', '2020-03-07', 'pandriana.nurul@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -318,7 +325,7 @@ ALTER TABLE `tindakan`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-MODIFY `Id_Admin` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `Id_Admin` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `detail_rm`
 --
@@ -328,7 +335,7 @@ MODIFY `Id_DRM` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 -- AUTO_INCREMENT for table `hewan`
 --
 ALTER TABLE `hewan`
-MODIFY `Id_Hewan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `Id_Hewan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `kritik`
 --
@@ -343,7 +350,7 @@ MODIFY `Id_Level` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 -- AUTO_INCREMENT for table `pemilik_hewan`
 --
 ALTER TABLE `pemilik_hewan`
-MODIFY `Id_Pemilik` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `Id_Pemilik` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `penyakit`
 --
@@ -353,12 +360,12 @@ MODIFY `Id_Penyakit` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 -- AUTO_INCREMENT for table `rekam_medis`
 --
 ALTER TABLE `rekam_medis`
-MODIFY `Id_RekamMedis` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `Id_RekamMedis` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tenagamedis`
 --
 ALTER TABLE `tenagamedis`
-MODIFY `Id_TenagaMedis` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `Id_TenagaMedis` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tindakan`
 --
