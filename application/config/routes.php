@@ -77,6 +77,7 @@ $route['addDetailMedis']    = 'Controller_Rekam_Medis/ControllerRekamMedis/addDe
 
 // Route Kritik
 $route['kritik']                = 'Controller_Kritik/ControllerKritik/get_kritik';
+$route['kritik_admin']           = 'ControllerAdmin/Dashboard/get_kritik_admin';
 $route['aksitambahkritik']      = 'Controller_Kritik/ControllerKritik/aksiadd';
 $route['deletekritik']          = 'Controller_Kritik/ControllerKritik/deletekritik';
 

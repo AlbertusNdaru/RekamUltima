@@ -9,6 +9,7 @@
             <a href="<?= base_url('rekammedis') ?>">Rekam Medis </a>
             <a href="<?= base_url('pemilik') ?>"></i>Pemilik </a>
             <a href="<?= base_url('hewan') ?>"></i>Hewan </a>
+            <a href="<?= base_url('kritik_admin') ?>"></i>Kritik </a>
 
             <!-- Penentu login admin dan tenaga medis jangan diubah !!-->
             <?php if ($_SESSION['Admin']->Id_Level == '1') { ?>

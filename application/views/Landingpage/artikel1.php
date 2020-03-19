@@ -21,7 +21,7 @@
 <section class="blog_area single-post-area section_padding">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 posts-list">
+            <div class="col-lg-8 posts-list">
                 <div class="single-post">
                     <div class="feature-img">
                         <img class="img-fluid" src="<?= base_url('assets/images/'); ?>artikel1.jpg" alt="">
@@ -45,7 +45,7 @@
                             yang baru lahir, mereka memiliki antibody maternal yang diturunkan langsung dari induk sebagai perisai
                             pertahanan yang dapat melindungi diri mereka dari paparan penyakit.</p>
 
-                        <img class="img-fluid" src="<?= base_url('assets/images/'); ?>artikel1.1.jpg"></br>
+                        <center><img class="img-fluid" src="<?= base_url('assets/images/'); ?>artikel1.1.jpg"></br> </center>
                         <p> Maternal antibodi ini akan terus menurun hingga menuju masa kritis sehingga tidak mampu memberikan pertahanan tubuh.
                             Nah di saat inilah peran vaksin bagi hewan peliharaan sangat dibutuhkan.</p>
                         <p>
