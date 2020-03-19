@@ -7,6 +7,7 @@ class Profil extends CI_Controller
         parent::__construct();
         $this->load->model('Model_admin');
         $this->load->library('Template');
+        $this->load->library('form_validation');
         check_session();
     }
     function vieweditprofil($Id_Admin)
@@ -18,6 +19,14 @@ class Profil extends CI_Controller
 
     function editprofil()
     {
+        $this->form_validation->set_rules('password1', 'Password', 'required|trim
+        |min_length[3]|matches[password2]', [
+            'matches' => 'Password dont match!',
+            'min_length' => 'Password to short!'
+        ]);
+
+        $this->form_validation->set_rules('password2', 'Password', 'required|trim
+        |min_length[3]|matches[password2]');
 
         $Id_Admin = $this->input->post('submitid');
         $admin = array(
