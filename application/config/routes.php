@@ -72,6 +72,7 @@ $route['rekammedisdetail/(:any)']  = 'Controller_landingpage/Controller_landingp
 
 // Route REKAM MEDIS
 $route['rekammedis']        = 'Controller_Rekam_Medis/ControllerRekamMedis/get_rekam_medis';
+$route['detailrekammedis/(:any)']        = 'Controller_Rekam_Medis/ControllerRekamMedis/get_id_rekam_byHewan/$1';
 $route['viewTambah/(:any)'] = 'Controller_Rekam_Medis/ControllerRekamMedis/viewTambahdataRekamMedis/$1';
 $route['addDetailMedis']    = 'Controller_Rekam_Medis/ControllerRekamMedis/addDetailRM';
 

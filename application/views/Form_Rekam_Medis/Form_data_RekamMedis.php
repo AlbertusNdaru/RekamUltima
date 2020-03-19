@@ -42,7 +42,7 @@
                                                 <i class="glyphicon glyphicon-edit icon-white"></i>
                                                 Tambah
                                             </a>
-                                            <a class="btn btn-primary" style="width: 80px;" href="#">
+                                            <a class="btn btn-primary" style="width: 80px;" href="<?= base_url('detailrekammedis/') . $rm->Id_RekamMedis ?>">
                                                 <i class="glyphicon glyphicon-trash icon-white"></i>
                                                 Detail
                                             </a>
