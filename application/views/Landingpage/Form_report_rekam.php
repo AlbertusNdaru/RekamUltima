@@ -28,13 +28,14 @@ include APPPATH . 'views/Landingpage/laporan.php';
                         <thead>
                             <tr>
                                 <th>No.</th>
+                                <th>Tanggal</th>
                                 <th>Anamnesa</th>
                                 <th>Berat Badan</th>
                                 <th>Suhu Tubuh</th>
                                 <th>Penyakit</th>
                                 <th>Tindakan</th>
                                 <th>Tenaga Medis</th>
-                                <th>Tanggal</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -43,13 +44,14 @@ include APPPATH . 'views/Landingpage/laporan.php';
                             foreach ($record as $r) { ?>
                                 <tr class="gradeU">
                                     <td align="center"><?php echo $no ?></td>
+                                    <td align="center"><?php echo $r->Tgl_Berobat ?></td>
                                     <td align="center"><?php echo $r->Anamnesa ?></td>
                                     <td align="center"><?php echo $r->BeratBadan ?></td>
                                     <td align="center"><?php echo $r->SuhuTubuh ?></td>
                                     <td align="center"><?php echo $r->Nama_Penyakit ?></td>
                                     <td align="center"><?php echo $r->Nama_Tindakan ?></td>
                                     <td align="center"><?php echo $r->Nama_TenagaMedis ?></td>
-                                    <td align="center"><?php echo $r->Tgl_Berobat ?></td>
+
                                 </tr>
                             <?php $no++;
                             } ?>

@@ -10,9 +10,16 @@ class Model_Rekam_Medis extends CI_Model
         return $dataRekam;
     }
 
+    function get_rekam_medis_byid($Id_RekamMedis)
+    {
+        $this->db->where('Id_RekamMedis', $Id_RekamMedis);
+        $getloginbyId = $this->db->get("rekam_medis")->row();
+        return $getloginbyId;
+    }
+
     function get_id_rekam_byHewan($id_hewan)
     {
-        $this->db->where('Id_Hewan',$id_hewan);
+        $this->db->where('Id_Hewan', $id_hewan);
         return $this->db->get('rekam_medis')->result();
     }
 
@@ -20,13 +27,13 @@ class Model_Rekam_Medis extends CI_Model
     {
         $this->db->select('a.*, b.Nama_Hewan, c.Nama_Penyakit,d.Nama_Tindakan,e.Nama_TenagaMedis');
         $this->db->from('detail_rm as a');
-        $this->db->join('rekam_medis as f','f.Id_RekamMedis = a.Id_RekamMedis');
-        $this->db->join('hewan as b','b.Id_Hewan = f.Id_Hewan');
-        $this->db->join('penyakit as c','c.Id_Penyakit = a.Id_Penyakit');
-        $this->db->join('tindakan as d','d.Id_Tindakan = a.Id_Tindakan');
-        $this->db->join('tenagamedis as e','e.Id_TenagaMedis = a.Id_TenagaMedis');
+        $this->db->join('rekam_medis as f', 'f.Id_RekamMedis = a.Id_RekamMedis');
+        $this->db->join('hewan as b', 'b.Id_Hewan = f.Id_Hewan');
+        $this->db->join('penyakit as c', 'c.Id_Penyakit = a.Id_Penyakit');
+        $this->db->join('tindakan as d', 'd.Id_Tindakan = a.Id_Tindakan');
+        $this->db->join('tenagamedis as e', 'e.Id_TenagaMedis = a.Id_TenagaMedis');
         $this->db->where('f.Id_Hewan', $id_hewan);
-        return$this->db->get()->result();
+        return $this->db->get()->result();
         // return$this->db->last_query(); 
     }
 
@@ -42,7 +49,7 @@ class Model_Rekam_Medis extends CI_Model
 
     function addRekamMedis($data)
     {
-        return $this->db->insert('rekam_medis',$data);
+        return $this->db->insert('rekam_medis', $data);
     }
 
     function addDetaiRM($data)

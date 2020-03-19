@@ -28,8 +28,8 @@
                         <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Kode level</th>
-                                    <th>Hak Akses</th>
+                                    <th>Kritik</th>
+                                    <th>Saran</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -39,7 +39,7 @@
                                         <td><?= $k->Kritik ?></td>
                                         <td><?= $k->Saran ?></td>
                                         <td align="center">
-                                            <a class="btn btn-danger" style="width: 69px;" href="<?= base_url('deletelevel/' . $k->Id_Level . '') ?>">
+                                            <a class="btn btn-danger" style="width: 69px;" href="<?= base_url('deletelevel/' . $k->Id_Kritik . '') ?>">
                                                 <i class="glyphicon glyphicon-trash icon-white"></i>
                                                 Delete
                                             </a>
