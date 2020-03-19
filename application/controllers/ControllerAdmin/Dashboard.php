@@ -9,7 +9,8 @@ class Dashboard extends CI_Controller
         $this->load->model('Model_hewan');
         $this->load->model('Model_TenagaMedis');
         $this->load->model('Model_Pemilik');
-
+        $this->load->model('Model_kritik');
+        $this->load->library('Template');
         check_session();
     }
     function index()
@@ -18,5 +19,11 @@ class Dashboard extends CI_Controller
         $data['jumlahmedis'] = $this->Model_TenagaMedis->get_medis();
         $data['jumlahpemilik'] = $this->Model_Pemilik->get_pemilik();
         $this->template->load('Template/Template_admin', 'Form_admin/dashboard', $data);
+    }
+
+    function get_kritik_admin()
+    {
+        $data['kritik'] = $this->Model_kritik->get_kritik();
+        $this->template->load('Template/Template_admin', 'Form_Kritik/Form_Kritik', $data);
     }
 }
