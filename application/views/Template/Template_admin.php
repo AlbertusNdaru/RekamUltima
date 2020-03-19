@@ -53,7 +53,7 @@
                 <a class="navbar-brand hidden" href="./"><img src="<?= base_url('assets/'); ?>images/logo2.png" alt="Logo"></a>
             </div>
 
-        <?php include "BarMenu.php" ;?>
+            <?php include "BarMenu.php"; ?>
         </nav>
     </aside><!-- /#left-panel -->
 
@@ -69,7 +69,7 @@
             <div class="header-menu">
 
 
-            <div class="col-sm-7">
+                <div class="col-sm-7">
                     <!-- <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a> -->
                 </div>
                 <div class="col-sm-5">
@@ -80,7 +80,7 @@
                         </button>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+                            <a class="nav-link" href="<?= base_url('editprofile/') . $admin->Id_admin ?>"><i class="fa fa-user"></i> My Profile</a>
                             <a class="nav-link" href="<?= base_url('regadmin') ?>"><i class="fa fa-user"></i> Register</a>
                             <a class="nav-link" href="<?= base_url('ControllerAdmin/Login/logout'); ?>"><i class="fa fa-power-off"></i> Logout</a>
                         </div>
@@ -90,7 +90,7 @@
         </header><!-- /header -->
         <!-- Header-->
 
-        <?= $contents?>
+        <?= $contents ?>
 
 
     </div><!-- /#right-panel -->

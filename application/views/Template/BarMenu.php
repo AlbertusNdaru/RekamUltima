@@ -29,10 +29,10 @@
         <h3 class="menu-title">Profile</h3>
         <!-- /.Profile -->
         <li class="menu-item-has-children dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="menu-icon fa fa-glass"></i>My profile</a>
             <ul class="sub-menu children dropdown-menu">
-                <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a></li>
+                <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?= base_url('editprofile') . $admin->Id_admin ?>">Edit Profile</a></li>
                 <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?= base_url('ControllerAdmin/Login/logout'); ?>">Logout</a></li>
             </ul>
         </li>

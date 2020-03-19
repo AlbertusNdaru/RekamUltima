@@ -22,10 +22,10 @@ class Profil extends CI_Controller
         $Id_Admin = $this->input->post('submitid');
         $admin = array(
             'Username'    => $this->input->post('username'),
-            'Password' => $this->input->post('password'),
+            'Password' => $this->input->post('password1'),
 
         );
-        $editadmin = $this->Model_hewan->update_hewan($Id_Admin, $admin);
+        $editadmin = $this->Model_admin->update_admin($Id_Admin, $admin);
         if ($editadmin) {
             $this->session->set_flashdata('Status', 'Edit Succes');
             redirect('dashboard');

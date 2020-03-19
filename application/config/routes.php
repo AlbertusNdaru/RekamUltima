@@ -58,7 +58,7 @@ $route['admin']                 = 'ControllerAdmin/Login';
 $route['regadmin']              = 'ControllerAdmin/Reg_admin';
 $route['dashboard']             = 'ControllerAdmin/Dashboard';
 $route['logout']                = 'ControllerAdmin/Login/logout';
-$route['viewprofile/(:any)']    = 'ControllerAdmin/Profil/vieweditprofil/$1';
+$route['editprofile/(:any)']    = 'ControllerAdmin/Profil/vieweditprofil/$1';
 
 //Route Halaman Pemilik
 $route['landing']           = 'Controller_landingpage/Controller_landingpage/landingpage';

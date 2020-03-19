@@ -19,25 +19,25 @@
                         <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                <th>Tanggal</th>
-                                <th>Anamnesa</th>
-                                <th>Berat Badan</th>
-                                <th>Suhu Tubuh</th>
-                                <th>Penyakit</th>
-                                <th>Tindakan</th>
-                                <th>Tenaga Medis</th>
+                                    <th>Tanggal</th>
+                                    <th>Anamnesa</th>
+                                    <th>Berat Badan</th>
+                                    <th>Suhu Tubuh</th>
+                                    <th>Penyakit</th>
+                                    <th>Tindakan</th>
+                                    <th>Tenaga Medis</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($detail_rm as $rm) { ?>
                                     <tr>
-                                    <td align="center"><?php echo $rm->Tgl_Berobat ?></td>
-                                    <td align="center"><?php echo $rm->Anamnesa ?></td>
-                                    <td align="center"><?php echo $rm->BeratBadan ?></td>
-                                    <td align="center"><?php echo $rm->SuhuTubuh ?></td>
-                                    <td align="center"><?php echo $rm->Nama_Penyakit ?></td>
-                                    <td align="center"><?php echo $rm->Nama_Tindakan ?></td>
-                                    <td align="center"><?php echo $rm->Nama_TenagaMedis ?></td>
+                                        <td align="center"><?= $rm->Tgl_Berobat ?></td>
+                                        <td align="center"><?= $rm->Anamnesa ?></td>
+                                        <td align="center"><?= $rm->BeratBadan ?></td>
+                                        <td align="center"><?= $rm->SuhuTubuh ?></td>
+                                        <td align="center"><?= $rm->Nama_Penyakit ?></td>
+                                        <td align="center"><?= $rm->Nama_Tindakan ?></td>
+                                        <td align="center"><?= $rm->Nama_TenagaMedis ?></td>
                                     </tr>
                                 <?php } ?>
                             </tbody>
