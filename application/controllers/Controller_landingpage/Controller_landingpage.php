@@ -119,4 +119,9 @@ class Controller_landingpage extends CI_Controller
             // echo $addpemilik;
         }
     }
+
+    function artikel1()
+    {
+        $this->load->view("Landingpage/artikel1");
+    }
 }
