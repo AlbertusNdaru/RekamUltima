@@ -22,6 +22,26 @@ class Controller_landingpage extends CI_Controller
         $this->load->view("Landingpage/data_hewan", $data);
     }
 
+    function rekammedis($Id_Pemilik)
+    {
+        check_session_pemilik();
+        $data['hewan'] = $this->Model_hewan->get_hewan_by_pemilik($Id_Pemilik);
+        $this->load->view("Landingpage/rekam_medis", $data);
+    }
+
+    function ViewPDFRekam($id_hewan)
+    {
+        check_session_pemilik();
+        $data['record']=  $this->Model_Rekam_Medis->get_detail_rm_byPemilik($id_hewan);
+        $data['hewan']=  $this->Model_hewan->get_hewan_by_id($id_hewan);
+        $config           = array('format' => 'Folio', 'orientation' => 'L');
+        $mpdf   = new \Mpdf\Mpdf($config);
+        $html   = $this->load->view('Landingpage/Form_report_rekam',$data,true);
+        $mpdf->WriteHTML($html);
+        $mpdf->Output();
+    }
+
+
     function loginuser()
     {
         $this->load->view("Landingpage/login");

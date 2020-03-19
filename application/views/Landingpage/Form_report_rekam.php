@@ -1,18 +1,22 @@
 <?php
-include APPPATH . 'views/Form_report/laporan.php';
+include APPPATH . 'views/Landingpage/laporan.php';
 
 ?>
+
+<!-- <head>
+    <title>
+    <?= $hewan->Nama_Hewan ?>
+    </title>
+</head> -->
 <div>
     <div align="center">
-        <img style="display: block;margin-left: auto;margin-right: auto;width: 100px;" src="<?php echo base_url() ?>assets/img/logo.png">
-        <div>
-            <h2 align="center">
-                Rekam Medis <br>
-                <?= $hewan->Nama_Hewan?>
-                <small><?= date('d-m-y') ?></small>
-            </h2>
-        </div>
+        <img style="display: block;margin-left: auto;margin-right: auto;width: 100px;" src="<?php echo base_url() ?>assets/landingpage/img/logo.png">
+        <h2 align="center">
+            Rekam Medis <br>
+            <?= $hewan->Nama_Hewan ?>
+        </h2>
     </div>
+</div>
 </div>
 <!-- /. ROW  -->
 <div>
@@ -24,10 +28,13 @@ include APPPATH . 'views/Form_report/laporan.php';
                         <thead>
                             <tr>
                                 <th>No.</th>
-                                <th>Nama Alat</th>
-                                <th>Nomor Rak</th>
-                                <th>Kategori</th>
-                                <th>Stok</th>
+                                <th>Anamnesa</th>
+                                <th>Berat Badan</th>
+                                <th>Suhu Tubuh</th>
+                                <th>Penyakit</th>
+                                <th>Tindakan</th>
+                                <th>Tenaga Medis</th>
+                                <th>Tanggal</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,10 +43,13 @@ include APPPATH . 'views/Form_report/laporan.php';
                             foreach ($record as $r) { ?>
                                 <tr class="gradeU">
                                     <td align="center"><?php echo $no ?></td>
-                                    <td align="left"><?php echo $r->Name ?></td>
-                                    <td align="center"><?php echo $r->Number_of_rack ?></td>
-                                    <td align="center"><?php echo $r->NamaKategori ?></td>
-                                    <td align="center"><?php echo $r->stok ?></td>
+                                    <td align="center"><?php echo $r->Anamnesa ?></td>
+                                    <td align="center"><?php echo $r->BeratBadan ?></td>
+                                    <td align="center"><?php echo $r->SuhuTubuh ?></td>
+                                    <td align="center"><?php echo $r->Nama_Penyakit ?></td>
+                                    <td align="center"><?php echo $r->Nama_Tindakan ?></td>
+                                    <td align="center"><?php echo $r->Nama_TenagaMedis ?></td>
+                                    <td align="center"><?php echo $r->Tgl_Berobat ?></td>
                                 </tr>
                             <?php $no++;
                             } ?>
@@ -52,15 +62,7 @@ include APPPATH . 'views/Form_report/laporan.php';
                                 <td align="center">Yogyakarta, <?= date('d-M-Y'); ?></td>
                             </tr>
                             <tr class="gradeU">
-
-                                <td align="center"> Admin</td>
-                            </tr>
-                            <tr class="gradeU">
-
-                                <td align="center"> <br></td>
-                            </tr>
-                            <tr class="gradeU">
-                                <td align="center"> <?= $_SESSION['Admin']->namakaryawan ?></td>
+                                <td align="center"> Admin Ultima</td>
                             </tr>
                         </tbody>
                     </table>

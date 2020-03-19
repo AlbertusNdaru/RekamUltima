@@ -67,7 +67,7 @@
                                         <a class="dropdown-item" href="<?= base_url('datahewan/' . $_SESSION['pemilik']->Id_Pemilik) ?>">Data Hewan</a>
                                     </li>
                                     <li class="nav-item active">
-                                        <a class="dropdown-item" href="elements.html">Rekam Medis Hewan</a>
+                                        <a class="dropdown-item" href="<?= base_url('rekammedis/' . $_SESSION['pemilik']->Id_Pemilik) ?>">Rekam Medis Hewan</a>
                                     </li>
                                     <li class="nav-item active">
                                         <a class="dropdown-item" href="<?= base_url('aksitambahkritik') ?>">Kritik/Saran</a>
