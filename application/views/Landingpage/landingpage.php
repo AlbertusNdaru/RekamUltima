@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="blog_details">
-                            <a class="d-inline-block" href="<?= base_url('#'); ?>">
+                            <a class="d-inline-block" href="<?= base_url('Controller_landingpage/controller_landingpage/artikel1'); ?>">
                                 <h2>Pentingnya Vaksin untuk Anjing dan Kucing</h2>
                             </a>
                             <p> Hewan peliharaan bukan hanya sekadar untuk mencari kesenangan, seorang pemilik juga harus bertanggung jawab
