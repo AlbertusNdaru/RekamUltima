@@ -13,14 +13,14 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-right">
+        <!-- <div class="row justify-content-right">
             <div class="col-xl-12">
                 <div class="section_tittle text-right">
                     <h2>DATA HEWAN</h2>
-                    <!-- <p>Face replenish sea good winged bearing years air divide wasHave night male also</p> -->
+                    <p>Face replenish sea good winged bearing years air divide wasHave night male also</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row" style="margin:auto;">
             <?php foreach ($hewan as $h) { ?>
                 <div class="col-sm-6 col-lg-3">

@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         <div class="regerv_btn">
-                            <button type="submit" class="btn_2">Tambah</button>
+                            <button type="submit" name="id_pemilik" value="<?= $_SESSION['pemilik']->Id_Pemilik ?>" class="btn_2">Tambah</button>
                         </div>
                     </form>
                 </div>

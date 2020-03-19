@@ -37,6 +37,7 @@ class Reg_admin extends CI_Controller
                     'date_created' => time(),
                     'Id_TenagaMedis' => $datatenagamedis->Id_TenagaMedis,
                     'Id_Level' => $id_level,
+                    'date_created' => get_current_date()
                 );
                 $reg_admin = $this->Model_admin->add_admin($data);
                 if ($reg_admin) {

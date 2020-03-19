@@ -22,17 +22,18 @@ class ControllerKritik extends CI_Controller
         $this->load->view('Landingpage/Form_add_kritik');
     }
 
-    function addkritik($Id_Pemilik)
+    function addkritik()
     {
         check_session_pemilik();
-        $saran       = $this->input->post('saran');
-        $kritik         = $this->input->post('kritik');
-        $pemilik = $this->Model_Pemilik->get_pemilik_by_id($Id_Pemilik);
+        $saran   = $this->input->post('saran');
+        $kritik  = $this->input->post('kritik');
+        $pemilik = $this->input->post('id_pemilik');
 
         $kritik = array(
-            'Kritik'       => $kritik,
-            'Id_Pemilik'   => $pemilik,
-            'Saran'        => $saran
+            'Kritik'     => $kritik,
+            'Id_Pemilik' => $pemilik,
+            'Saran'      => $saran,
+            'Date'       => get_current_date()
 
         );
 
