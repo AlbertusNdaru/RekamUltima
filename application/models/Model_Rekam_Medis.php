@@ -12,9 +12,11 @@ class Model_Rekam_Medis extends CI_Model
 
     function get_rekam_medis_byid($Id_RekamMedis)
     {
-        $this->db->where('Id_RekamMedis', $Id_RekamMedis);
-        $getloginbyId = $this->db->get("rekam_medis")->row();
-        return $getloginbyId;
+        $this->db->select('b.Nama_Hewan, a.Id_RekamMedis');
+        $this->db->from('rekam_medis as a');
+        $this->db->join('hewan as b','b.Id_Hewan = a.Id_Hewan');
+        $this->db->where('a.Id_RekamMedis', $Id_RekamMedis);
+        return $this->db->get()->row();
     }
 
     function get_id_rekam_byHewan($id_hewan)

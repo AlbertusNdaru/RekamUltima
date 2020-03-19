@@ -29,10 +29,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($rekam_medis as $rm) { ?>
+                                <?php foreach ($detail_rm as $rm) { ?>
                                     <tr>
-                                        <td><?= $rm->Id_RekamMedis ?></td>
-                                        <td><?= $rm->Nama_Hewan ?></td>
+                                    <td align="center"><?php echo $rm->Tgl_Berobat ?></td>
+                                    <td align="center"><?php echo $rm->Anamnesa ?></td>
+                                    <td align="center"><?php echo $rm->BeratBadan ?></td>
+                                    <td align="center"><?php echo $rm->SuhuTubuh ?></td>
+                                    <td align="center"><?php echo $rm->Nama_Penyakit ?></td>
+                                    <td align="center"><?php echo $rm->Nama_Tindakan ?></td>
+                                    <td align="center"><?php echo $rm->Nama_TenagaMedis ?></td>
                                     </tr>
                                 <?php } ?>
                             </tbody>

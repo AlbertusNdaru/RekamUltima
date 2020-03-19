@@ -20,9 +20,9 @@ class ControllerRekamMedis extends CI_Controller
         $this->template->load('Template/Template_admin', 'Form_Rekam_Medis/Form_data_RekamMedis', $data);
     }
 
-    function get_detail_rekam_medis()
+    function get_detail_rekam_medis($id_hewam)
     {
-        $data['detail_rm'] = $this->Model_Rekam_Medis->get_id_rekam_byHewan();
+        $data['detail_rm'] = $this->Model_Rekam_Medis->get_detail_rm_byPemilik($id_hewam);
         $this->template->load('Template/Template_admin', 'Form_Rekam_Medis/Form_detail_RekamMedis', $data);
     }
 
