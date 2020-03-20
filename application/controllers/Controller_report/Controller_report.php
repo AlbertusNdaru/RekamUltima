@@ -20,6 +20,26 @@ class Controller_report extends CI_Controller
         $mpdf->Output();
     }
 
+    function report_RekamMedis()
+    {
+        $data['record']=  $this->Model_report->get_detail_rm_byPemilik();
+        $config           = array('format' => 'Folio', 'orientation' => 'L');
+        $mpdf   = new \Mpdf\Mpdf($config);
+        $html   = $this->load->view('Form_report/Form_report_rekamMedis',$data,true);
+        $mpdf->WriteHTML($html);
+        $mpdf->Output();
+    }
+
+    function report_Kritik()
+    {
+        $data['record']=  $this->Model_report->get_kritik();
+        $config           = array('format' => 'Folio', 'orientation' => 'L');
+        $mpdf   = new \Mpdf\Mpdf($config);
+        $html   = $this->load->view('Form_report/Form_report_kritik',$data,true);
+        $mpdf->WriteHTML($html);
+        $mpdf->Output();
+    }
+
 
 
 

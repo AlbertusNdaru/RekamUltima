@@ -62,6 +62,8 @@ $route['editprofile/(:any)']    = 'ControllerAdmin/Profil/vieweditprofil/$1';
 
 //Route Laporan
 $route['LaporanHewan']  = 'Controller_report/Controller_report/report_Hewan';
+$route['LaporanRekam']  = 'Controller_report/Controller_report/report_RekamMedis';
+$route['LaporanKritik']  = 'Controller_report/Controller_report/report_Kritik';
 
 //Route Halaman Pemilik
 $route['landing']           = 'Controller_landingpage/Controller_landingpage/landingpage';

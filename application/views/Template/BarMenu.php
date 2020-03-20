@@ -23,8 +23,8 @@
         <!-- /.Laporan -->
         <li class="active">
             <a href="<?= base_url('LaporanHewan')?>" target="blank">Hewan</a>
-            <a href="#">Rekam Medis</a>
-            <a href="#">Kritik & Saran</a>
+            <a href="<?= base_url('LaporanRekam')?>" target="blank">Rekam Medis</a>
+            <a href="<?= base_url('LaporanKritik')?>" target="blank">Kritik & Saran</a>
         </li>
         <h3 class="menu-title">Profile</h3>
         <!-- /.Profile -->
