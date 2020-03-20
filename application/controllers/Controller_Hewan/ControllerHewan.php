@@ -7,6 +7,7 @@ class ControllerHewan extends CI_Controller
         parent::__construct();
         $this->load->model('Model_hewan');
         $this->load->model('Model_pemilik');
+        $this->load->model('Model_Rekam_Medis');
         $this->load->library('Template');
         check_session();
     }

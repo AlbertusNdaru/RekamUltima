@@ -12,17 +12,17 @@
                 </div>
                 <div class="row form-group">
                     <div class="col col-md-3"><label>Password</label></div>
-                    <div class="col-12 col-md-9"><input required type="password" onclick='validasi("PASSWORD1","PASSWORD1")' value="<?= $admin->Password ?>" name="password1" class="form-control required">
+                    <div class="col-12 col-md-9"><input required type="password" id="pass1" value="<?= $admin->Password ?>" name="password1" class="form-control required">
                     </div>
                 </div>
                 <div class="row form-group">
-                    <div class="col col-md-3"><label>Verifikasi form_validationPassword</label></div>
-                    <div class="col-12 col-md-9"><input required type="password" onclick='validasi("PASSWORD2","PASSWORD2")' value="<?= $admin->Password ?>" name="password2" class="form-control required">
+                    <div class="col col-md-3"><label>Verifikasi Password</label></div>
+                    <div class="col-12 col-md-9"><input required type="password" id="pass2" onchange="validatepassword()" value="<?= $admin->Password ?>" name="password2" class="form-control required">
                     </div>
                 </div>
         </div>
         <div class="modal-footer">
-            <button type="submit" name="submitid" value="<?= $admin->Id_Admin ?>" class="btn btn-primary btn-sm">
+            <button type="submit" id="btnsubmit" name="submitid" value="<?= $admin->Id_Admin ?>" class="btn btn-primary btn-sm">
                 <i class="fa fa-dot-circle-o"></i> Submit
             </button>
 
@@ -30,38 +30,29 @@
         </div>
     </div>
     <script>
-        $('#PASSWORD1').keypress(function(event) {
-            var charCode = window.event.keyCode;
-            return (((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) || charCode == 32 || charCode == 46)
-
-        });
-
         var form = document.querySelector("#formvaliditas");
 
-
-        function validasi(textbox, text) {
-            var input = document.getElementById(textbox);
-
-            var cek = form.checkValidity()
-            if (cek == false) {
-                input.oninvalid = function(e) {
-                    if (e.target.validity.valueMissing) {
-                        e.target.setCustomValidity(text + " WAJIB DIISI");
-                        return;
-                    }else if (e.target.validity.ValueNoMatch){
-                        e.target.setCustomValidity(text + "Password Tidak Cocok");
-                        return;
-                    }
-                }
-                input.oninput = function(e) {
-                    e.target.setCustomValidity("")
-                }
-                form.reportValidity();
-                console.log(cek);
+        function validatepassword() {
+            var pas1 = $('#pass1').val();
+            var pas2 = $('#pass2').val();
+            var val = $("#pass2")[0];
+            var input = document.getElementById('pass2');
+            // console.log(pas1 + "  " + pas2);
+            val.oninput = function(e) {
+                e.target.setCustomValidity("")
             }
 
+            if (pas1 != pas2) {
 
+                val.setCustomValidity("Password Tidak Cocok");
+                $('#btnsubmit').attr('disabled', 'true')
+                form.reportValidity();
+            } else {
+                $('#btnsubmit').removeAttr('disabled')
+                val.setCustomValidity("");
+            }
         }
+
 
 
         function angka(e) {

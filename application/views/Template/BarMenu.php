@@ -22,7 +22,7 @@
         <h3 class="menu-title">Laporan</h3>
         <!-- /.Laporan -->
         <li class="active">
-            <a href="#">Hewan</a>
+            <a href="<?= base_url('LaporanHewan')?>" target="blank">Hewan</a>
             <a href="#">Rekam Medis</a>
             <a href="#">Kritik & Saran</a>
         </li>

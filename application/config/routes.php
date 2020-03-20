@@ -60,6 +60,9 @@ $route['dashboard']             = 'ControllerAdmin/Dashboard';
 $route['logout']                = 'ControllerAdmin/Login/logout';
 $route['editprofile/(:any)']    = 'ControllerAdmin/Profil/vieweditprofil/$1';
 
+//Route Laporan
+$route['LaporanHewan']  = 'Controller_report/Controller_report/report_Hewan';
+
 //Route Halaman Pemilik
 $route['landing']           = 'Controller_landingpage/Controller_landingpage/landingpage';
 $route['loginuser']         = 'Controller_landingpage/Controller_landingpage/loginuser';
