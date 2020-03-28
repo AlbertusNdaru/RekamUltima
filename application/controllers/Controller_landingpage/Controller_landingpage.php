@@ -8,18 +8,12 @@ class Controller_landingpage extends CI_Controller
         $this->load->model('Model_Pemilik');
         $this->load->model('Model_hewan');
         $this->load->model('Model_Rekam_Medis');
+        check_session_pemilik();
     }
 
     function landingpage()
     {
         $this->load->view("Landingpage/landingpage");
-    }
-
-    function datahewan($Id_Pemilik)
-    {
-        check_session_pemilik();
-        $data['hewan'] = $this->Model_hewan->get_hewan_by_pemilik($Id_Pemilik);
-        $this->load->view("Landingpage/data_hewan", $data);
     }
 
     function rekammedis($Id_Pemilik)
@@ -32,15 +26,14 @@ class Controller_landingpage extends CI_Controller
     function ViewPDFRekam($id_hewan)
     {
         check_session_pemilik();
-        $data['record']=  $this->Model_Rekam_Medis->get_detail_rm_byPemilik($id_hewan);
-        $data['hewan']=  $this->Model_hewan->get_hewan_by_id($id_hewan);
+        $data['record'] =  $this->Model_Rekam_Medis->get_detail_rm_byPemilik($id_hewan);
+        $data['hewan'] =  $this->Model_hewan->get_hewan_by_id($id_hewan);
         $config           = array('format' => 'Folio', 'orientation' => 'L');
         $mpdf   = new \Mpdf\Mpdf($config);
-        $html   = $this->load->view('Landingpage/Form_report_rekam',$data,true);
+        $html   = $this->load->view('Landingpage/Form_report_rekam', $data, true);
         $mpdf->WriteHTML($html);
         $mpdf->Output();
     }
-
 
     function loginuser()
     {
@@ -53,6 +46,64 @@ class Controller_landingpage extends CI_Controller
         $this->load->view("Landingpage/register_hewan");
     }
 
+    function Viewedithewan($Id_Hewan)
+    {
+        $data['edithewan'] = $this->Model_hewan->get_hewan_by_id($Id_Hewan);
+        $data['pemilik_hewan'] = $this->Model_Pemilik->get_pemilik();
+        $this->load->view("Landingpage/edit_data_hewan", $data);
+    }
+
+    function edithewan()
+    {
+
+        $Id_Hewan = $this->input->post('submitid');
+        $hewan = array(
+            'Nama_hewan'    => $this->input->post('nama'),
+            'Jenis_Kelamin' => $this->input->post('jeniskelamin'),
+            'Jenis_Hewan'   => $this->input->post('jenishewan'),
+            'Signalemen'    => $this->input->post('signalemen'),
+            'Id_Pemilik'    => $this->input->post('pemilik'),
+
+
+        );
+        $edithewan = $this->Model_hewan->update_hewan($Id_Hewan, $hewan);
+        if ($edithewan) {
+            $this->session->set_flashdata('Status', 'Edit Succes');
+            redirect('datahewan');
+        } else {
+            $this->session->set_flashdata('Status', 'Edit Failed');
+            redirect('datahewan');
+        }
+    }
+
+    function vieweditprofile($Id_Pemilik)
+    {
+        check_session_pemilik();
+        $data['pemilik_hewan'] = $this->Model_Pemilik->get_pemilik_by_id($Id_Pemilik);
+        $this->load->view("Landingpage/edit_profile_pemilik", $data);
+    }
+
+    function editpemilik()
+    {
+
+        $Id_Pemilik = $this->input->post('submitid');
+        $pemilik = array(
+            'Nama_Pemilik'      => $this->input->post('name'),
+            'NoHp_Pemilik'      => $this->input->post('phone'),
+            'Alamat_Pemilik'    => $this->input->post('alamat'),
+            'Username'          => $this->input->post('username'),
+            'Password'          => $this->input->post('password'),
+            'JenisKelamin'      => $this->input->post('gender')
+        );
+        $edithewan = $this->Model_hewan->update_hewan($Id_Pemilik, $pemilik);
+        if ($edithewan) {
+            $this->session->set_flashdata('Status', 'Edit Succes');
+            redirect('rekammedis');
+        } else {
+            $this->session->set_flashdata('Status', 'Edit Failed');
+            redirect('rekammedis');
+        }
+    }
     function registeruser()
     {
         $this->load->view("Landingpage/register");

@@ -14,10 +14,20 @@
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="card">
                     <div class="card-header text-center">
-                        <strong class="card-title">Jumlah Pemilik Terdaftar</strong>
+                        <strong class="card-title">Jumlah Pemilik</strong>
                     </div>
 
                     <div class="text-center"><?= count($jumlahpemilik) ?></div>
+                </div>
+            </div>
+            <!-- JUMLAH PEMILIK Aktif !-->
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <strong class="card-title">Jumlah Pemilik Aktif</strong>
+                    </div>
+
+                    <div class="text-center"><?= count($jumlahpemilikaktif) ?></div>
                 </div>
             </div>
 
@@ -25,9 +35,9 @@
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="card">
                     <div class="card-header text-center">
-                        <strong class="card-title">Jumlah Tenaga Medis</strong>
+                        <strong class="card-title">Total Seluruh Hewan</strong>
                     </div>
-                    <div class="text-center"><?= count($jumlahmedis) ?></div>
+                    <div class="text-center"><?= count($jumlahhewan) ?></div>
                 </div>
             </div>
 
@@ -35,10 +45,21 @@
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="card">
                     <div class="card-header text-center">
+                        <strong class="card-title">Total Hewan Hidup</strong>
+                    </div>
+
+                    <div class="text-center"><?= count($jumlahhewanhidup) ?></div>
+                </div>
+            </div>
+
+            <!-- JUMLAH HEWAN HIDUP !-->
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <div class="card">
+                    <div class="card-header text-center">
                         <strong class="card-title">Total Hewan Mati</strong>
                     </div>
 
-                    <div class="text-center"><?= count($jumlahhewan) ?></div>
+                    <div class="text-center"><?= count($jumlahhewanmati) ?></div>
                 </div>
             </div>
 
@@ -46,10 +67,10 @@
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="card">
                     <div class="card-header text-center">
-                        <strong class="card-title">Total Hewan Kucing Hidup</strong>
+                        <strong class="card-title">Total Hewan Kucing</strong>
                     </div>
 
-                    <div class="text-center"><?= count($jumlahhewan) ?></div>
+                    <div class="text-center"><?= count($jumlahhewankucing) ?></div>
                 </div>
             </div>
 
@@ -57,10 +78,10 @@
             <div class="col-md-3 col-sm-4 col-xs-6">
                 <div class="card">
                     <div class="card-header text-center">
-                        <strong class="card-title">Total Hewan Anjing Hidup</strong>
+                        <strong class="card-title">Total Hewan Anjing</strong>
                     </div>
 
-                    <div class="text-center"><?= count($jumlahhewan) ?></div>
+                    <div class="text-center"><?= count($jumlahhewanmati) ?></div>
                 </div>
             </div>
 
@@ -71,7 +92,7 @@
                         <strong class="card-title">Total Hewan Ayam Hidup</strong>
                     </div>
 
-                    <div class="text-center"><?= count($jumlahhewan) ?></div>
+                    <div class="text-center"><?= count($jumlahhewanmati) ?></div>
                 </div>
             </div>
 

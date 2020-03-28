@@ -15,10 +15,10 @@
                     <div class="col-12 col-md-9">
                         <select name="jeniskelamin" class="form-control selectpicker">
                             <option>Choose Gender</option>
-                            <option value="L" <?php if ($edithewan->Jenis_Kelamin == "Jantan") {
+                            <option value="Jantam" <?php if ($edithewan->Jenis_Kelamin == "Jantan") {
                                                     echo 'selected';
                                                 } ?>>Jantan</option>
-                            <option value="P" <?php if ($edithewan->Jenis_Kelamin == "Betina") {
+                            <option value="Betina" <?php if ($edithewan->Jenis_Kelamin == "Betina") {
                                                     echo 'selected';
                                                 } ?>>Betina</option>
                         </select>
@@ -29,19 +29,19 @@
                     <div class="col-12 col-md-9">
                         <select name="jenishewan" class="form-control selectpicker">
                             <option>Pilih Jenis Hewan</option>
-                            <option value="L" <?php if ($edithewan->Jenis_Hewan == "Kucing") {
+                            <option value="Kucing" <?php if ($edithewan->Jenis_Hewan == "Kucing") {
                                                     echo 'selected';
                                                 } ?>>Kucing</option>
-                            <option value="P" <?php if ($edithewan->Jenis_Hewan == "Anjing") {
+                            <option value="Anjing" <?php if ($edithewan->Jenis_Hewan == "Anjing") {
                                                     echo 'selected';
                                                 } ?>>Anjing</option>
-                            <option value="P" <?php if ($edithewan->Jenis_Hewan == "Ayam") {
+                            <option value="Ayam" <?php if ($edithewan->Jenis_Hewan == "Ayam") {
                                                     echo 'selected';
                                                 } ?>>Ayam</option>
-                            <option value="P" <?php if ($edithewan->Jenis_Hewan == "Sapi") {
+                            <option value="Sapi" <?php if ($edithewan->Jenis_Hewan == "Sapi") {
                                                     echo 'selected';
                                                 } ?>>Sapi</option>
-                            <option value="P" <?php if ($edithewan->Jenis_Hewan == "Kuda") {
+                            <option value="Kuda" <?php if ($edithewan->Jenis_Hewan == "Kuda") {
                                                     echo 'selected';
                                                 } ?>>Kuda</option>
                         </select>

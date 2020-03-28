@@ -8,7 +8,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-8">
                 <div class="section_tittle text-center">
-                    <h2>REKAM MEDIS HEWAN</h2>
+                    <h2>HEWAN & REKAM MEDISNYA</h2>
                     <!-- <p>Face replenish sea good winged bearing years air divide wasHave night male also</p> -->
                 </div>
             </div>
@@ -29,13 +29,14 @@
                             <img href="#" src="<?= base_url('assets/landingpage/'); ?>img/doctor/doctor_3.png" alt="doctor">
                             <div class="social_icon">
                                 <ul>
-                                    <li><a href="<?= base_url('rekammedisdetail/').$h->Id_Hewan?>" target="blank"> REKAM MEDIS </a></li>
+                                    <li><a href="<?= base_url('rekammedisdetail/') . $h->Id_Hewan ?>" target="blank"> REKAM MEDIS </a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="single_text">
                             <div class="single_blog_text">
-                                <h3><?= $h->Nama_Hewan ?></h3>
+                                <h3><a href="<?= base_url('Viewedithewan/') . $h->Id_Hewan ?>"> Edit Profile</a></h3>
+                                <h4><?= $h->Nama_Hewan ?></h4>
                                 <p><?= $h->Jenis_Hewan ?></p>
                             </div>
                         </div>

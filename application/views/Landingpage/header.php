@@ -61,20 +61,26 @@
                             <ul class="navbar-nav align-items-center">
                                 <?php if (isset($_SESSION['pemilik'])) { ?>
                                     <li class="nav-item active">
-                                        <a class="dropdown-item" href="<?= base_url('registerhewan') ?>">Registrasi Hewan</a>
+                                        <a class="dropdown-item" href="<?= base_url('registerhewan') ?>">Data Hewan</a>
                                     </li>
                                     <li class="nav-item active">
-                                        <a class="dropdown-item" href="<?= base_url('datahewan/' . $_SESSION['pemilik']->Id_Pemilik) ?>">Data Hewan</a>
-                                    </li>
-                                    <li class="nav-item active">
-                                        <a class="dropdown-item" href="<?= base_url('rekammedis/' . $_SESSION['pemilik']->Id_Pemilik) ?>">Rekam Medis Hewan</a>
+                                        <a class="dropdown-item" href="<?= base_url('datahewan/' . $_SESSION['pemilik']->Id_Pemilik) ?>">Rekam Medis & Data Hewan</a>
                                     </li>
                                     <li class="nav-item active">
                                         <a class="dropdown-item" href="<?= base_url('aksitambahkritik') ?>">Kritik/Saran</a>
                                     </li>
-                                    <!-- <li class="nav-item">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            My Profile
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="<?= base_url('edituser') ?>">Ubah Pemilik</a>
+                                            <a class="dropdown-item" href="dep.html">Ubah Password</a>
+                                        </div>
+                                    </li>
+                                    <!-- <a class="nav-item">
                                     <a class="nav-link" href="about.html">about</a>
-                                </li>
+                                </a>
                                 <li class="nav-item">
                                     <a class="nav-link" href="Doctor.html">Doctors</a>
                                 </li> -->
@@ -104,6 +110,7 @@
                                 </li> -->
                             </ul>
                         </div>
+
                         <?php if (isset($_SESSION["pemilik"])) { ?>
                             <a class="btn_2 d-none d-lg-block" href="#" style="margin-right: 10px"><?= $_SESSION['pemilik']->Nama_Pemilik ?></a>
                             <a class="btn_2 d-none d-lg-block" href="<?= base_url('logoutuser') ?>">LOGOUT</a>
@@ -112,6 +119,7 @@
                             <a class="btn_2 d-none d-lg-block" href="<?= base_url("registeruser") ?>">REGISTER</a>
                         <?php } ?>
                     </nav>
+
                 </div>
             </div>
         </div>

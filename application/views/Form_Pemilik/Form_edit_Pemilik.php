@@ -4,7 +4,7 @@
             <strong>Edit Data Pemilik Hewan </strong>
         </div>
         <div class="card-body">
-            <form name="formaddpemilik" id="formvaliditas" action="<?= base_url('Controller_Pemilik/ControllerPemilik/editpemilik') ?>" method="POST">
+            <form name="formeditpemilik" id="formvaliditas" action="<?= base_url('Controller_Pemilik/ControllerPemilik/editpemilik') ?>" method="POST">
                 <div class="row form-group">
                     <div class="col col-md-3"><label>Nama Pemilik</label></div>
                     <div class="col-12 col-md-9"><input required type="text" name="name" class="form-control required" value="<?php echo $editpemilik->Nama_Pemilik ?>">

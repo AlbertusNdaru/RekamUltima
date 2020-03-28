@@ -47,4 +47,24 @@ class Model_hewan extends CI_Model
         $deletehewan = $this->db->delete("hewan");
         return $deletehewan;
     }
+
+    function get_hewan_by_status_mati()
+    {
+        $this->db->where("Status", 'Mati');
+        $getkucingmati = $this->db->get('hewan')->result();
+        return $getkucingmati;
+    }
+    function get_hewan_by_status_hidup()
+    {
+        $this->db->where("Status", 'Hidup');
+        $getkucinghidup = $this->db->get('hewan')->result();
+        return $getkucinghidup;
+    }
+
+    function get_hewan_by_kucing()
+    {
+        $this->db->where("Jenis_Hewan", 'Kucing');
+        $getkucing = $this->db->get('hewan')->result();
+        return $getkucing;
+    }
 }

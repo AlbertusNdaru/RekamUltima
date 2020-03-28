@@ -45,15 +45,12 @@
                         <h2 align="center">Register Admin</h2>
                         </br>
                         <div class="form-group">
-                            <label>Username</label>
                             <input type="text" class="form-control" placeholder="Username" name="username">
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
                             <input type="password" class="form-control" placeholder="Password" name="password">
                         </div>
                         <div class="form-group">
-                            <label>Email Tenaga Medis</label>
                             <input type="email" class="form-control" placeholder="Email Tenaga Medis" name="email">
                         </div>
                         <div class="select-list">

@@ -17,25 +17,15 @@
                 <a href="<?= base_url('level') ?>"></i>Hak Akses </a>
                 <a href="<?= base_url('tenagamedis') ?>"></i>Tenaga Medis </a>
                 <a href="<?= base_url('penyakit') ?>"></i>Penyakit </a>
-            <?php } ?>
+
         </li>
         <h3 class="menu-title">Laporan</h3>
         <!-- /.Laporan -->
         <li class="active">
-            <a href="<?= base_url('LaporanHewan')?>" target="blank">Hewan</a>
-            <a href="<?= base_url('LaporanRekam')?>" target="blank">Rekam Medis</a>
-            <a href="<?= base_url('LaporanKritik')?>" target="blank">Kritik & Saran</a>
+            <a href="<?= base_url('LaporanHewan') ?>" target="blank">Hewan</a>
+            <a href="<?= base_url('LaporanRekam') ?>" target="blank">Rekam Medis</a>
+            <a href="<?= base_url('LaporanKritik') ?>" target="blank">Kritik & Saran</a>
         </li>
-        <h3 class="menu-title">Profile</h3>
-        <!-- /.Profile -->
-        <li class="menu-item-has-children dropdown">
-            <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="menu-icon fa fa-glass"></i>My profile</a>
-            <ul class="sub-menu children dropdown-menu">
-                <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?= base_url('editprofile/') .$_SESSION['Admin']->Id_Admin ?>">Edit Profile</a></li>
-                <li><i class="menu-icon fa fa-paper-plane"></i><a href="<?= base_url('ControllerAdmin/Login/logout'); ?>">Logout</a></li>
-            </ul>
-        </li>
-
+    <?php } ?>
     </ul>
 </div><!-- /.navbar-collapse -->

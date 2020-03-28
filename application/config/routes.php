@@ -66,14 +66,15 @@ $route['LaporanRekam']  = 'Controller_report/Controller_report/report_RekamMedis
 $route['LaporanKritik']  = 'Controller_report/Controller_report/report_Kritik';
 
 //Route Halaman Pemilik
-$route['landing']           = 'Controller_landingpage/Controller_landingpage/landingpage';
-$route['loginuser']         = 'Controller_landingpage/Controller_landingpage/loginuser';
-$route['registeruser']      = 'Controller_landingpage/Controller_landingpage/registeruser';
-$route['logoutuser']        = 'Controller_landingpage/Controller_landingpage/logoutuser';
-$route['registerhewan']     = 'Controller_landingpage/Controller_landingpage/register_hewan';
-$route['datahewan/(:any)']  = 'Controller_landingpage/Controller_landingpage/datahewan/$1';
-$route['rekammedis/(:any)']  = 'Controller_landingpage/Controller_landingpage/rekammedis/$1';
-$route['rekammedisdetail/(:any)']  = 'Controller_landingpage/Controller_landingpage/ViewPDFRekam/$1';
+$route['landing']                   = 'Controller_landingpage/Controller_landingpage/landingpage';
+$route['loginuser']                 = 'Controller_landingpage/Controller_landingpage/loginuser';
+$route['registeruser']              = 'Controller_landingpage/Controller_landingpage/registeruser';
+$route['logoutuser']                = 'Controller_landingpage/Controller_landingpage/logoutuser';
+$route['edituser/(:any)']           = 'Controller_landingpage/Controller_landingpage/vieweditprofile/$1';
+$route['registerhewan']             = 'Controller_landingpage/Controller_landingpage/register_hewan';
+$route['Viewedithewan/(:any)']      = 'Controller_landingpage/Controller_landingpage/Viewedithewan/$1';
+$route['datahewan/(:any)']          = 'Controller_landingpage/Controller_landingpage/rekammedis/$1';
+$route['rekammedisdetail/(:any)']   = 'Controller_landingpage/Controller_landingpage/ViewPDFRekam/$1';
 
 // Route REKAM MEDIS
 $route['rekammedis']        = 'Controller_Rekam_Medis/ControllerRekamMedis/get_rekam_medis';
