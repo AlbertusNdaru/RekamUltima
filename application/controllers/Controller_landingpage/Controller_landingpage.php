@@ -8,7 +8,7 @@ class Controller_landingpage extends CI_Controller
         $this->load->model('Model_Pemilik');
         $this->load->model('Model_hewan');
         $this->load->model('Model_Rekam_Medis');
-        check_session_pemilik();
+        
     }
 
     function landingpage()
@@ -76,10 +76,10 @@ class Controller_landingpage extends CI_Controller
         }
     }
 
-    function vieweditprofile($Id_Pemilik)
+    function vieweditprofile()
     {
         check_session_pemilik();
-        $data['pemilik_hewan'] = $this->Model_Pemilik->get_pemilik_by_id($Id_Pemilik);
+        $data['pemilik_hewan'] = $this->Model_Pemilik->get_pemilik_by_id($_SESSION['pemilik']->Id_Pemilik);
         $this->load->view("Landingpage/edit_profile_pemilik", $data);
     }
 
@@ -102,10 +102,10 @@ class Controller_landingpage extends CI_Controller
             redirect('landing');
         }
     }
-    function vieweditpassword($Id_Pemilik)
+    function vieweditpassword()
     {
         check_session_pemilik();
-        $data['pemilik_hewan'] = $this->Model_Pemilik->get_pemilik_by_id($Id_Pemilik);
+        $data['pemilik_hewan'] = $this->Model_Pemilik->get_pemilik_by_id($_SESSION['pemilik']->Id_Pemilik);
         $this->load->view("Landingpage/edit_password", $data);
     }
 
