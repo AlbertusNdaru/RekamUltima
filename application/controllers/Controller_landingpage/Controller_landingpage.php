@@ -91,19 +91,42 @@ class Controller_landingpage extends CI_Controller
             'Nama_Pemilik'      => $this->input->post('name'),
             'NoHp_Pemilik'      => $this->input->post('phone'),
             'Alamat_Pemilik'    => $this->input->post('alamat'),
-            'Username'          => $this->input->post('username'),
-            'Password'          => $this->input->post('password'),
             'JenisKelamin'      => $this->input->post('gender')
         );
         $edithewan = $this->Model_hewan->update_hewan($Id_Pemilik, $pemilik);
         if ($edithewan) {
             $this->session->set_flashdata('Status', 'Edit Succes');
-            redirect('rekammedis');
+            redirect('landing');
         } else {
             $this->session->set_flashdata('Status', 'Edit Failed');
-            redirect('rekammedis');
+            redirect('landing');
         }
     }
+    function vieweditpassword($Id_Pemilik)
+    {
+        check_session_pemilik();
+        $data['pemilik_hewan'] = $this->Model_Pemilik->get_pemilik_by_id($Id_Pemilik);
+        $this->load->view("Landingpage/edit_password", $data);
+    }
+
+    function editpassword()
+    {
+
+        $Id_Pemilik = $this->input->post('submitid');
+        $pemilik = array(
+            'Username'          => $this->input->post('username'),
+            'Password'          => $this->input->post('password')
+        );
+        $edithewan = $this->Model_hewan->update_hewan($Id_Pemilik, $pemilik);
+        if ($edithewan) {
+            $this->session->set_flashdata('Status', 'Edit Succes');
+            redirect('landing');
+        } else {
+            $this->session->set_flashdata('Status', 'Edit Failed');
+            redirect('landing');
+        }
+    }
+
     function registeruser()
     {
         $this->load->view("Landingpage/register");

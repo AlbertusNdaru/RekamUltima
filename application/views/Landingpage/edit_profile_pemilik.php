@@ -38,7 +38,7 @@
                         </label>
                 </div>
                 <div class="regerv_btn">
-                    <button type="submit" name="submitid" value="<?= $editpemilik->Id_Pemilik ?>" class="btn_2">Proses</button>
+                    <button type="submit" name="submitid" value="<?= $editpemilik->Id_Pemilik ?>" class="btn_2">Edit</button>
                 </div>
                 </form>
         </div>

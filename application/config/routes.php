@@ -71,6 +71,7 @@ $route['loginuser']                 = 'Controller_landingpage/Controller_landing
 $route['registeruser']              = 'Controller_landingpage/Controller_landingpage/registeruser';
 $route['logoutuser']                = 'Controller_landingpage/Controller_landingpage/logoutuser';
 $route['edituser/(:any)']           = 'Controller_landingpage/Controller_landingpage/vieweditprofile/$1';
+$route['editpassword/(:any)']       = 'Controller_landingpage/Controller_landingpage/vieweditpassword/$1';
 $route['registerhewan']             = 'Controller_landingpage/Controller_landingpage/register_hewan';
 $route['Viewedithewan/(:any)']      = 'Controller_landingpage/Controller_landingpage/Viewedithewan/$1';
 $route['datahewan/(:any)']          = 'Controller_landingpage/Controller_landingpage/rekammedis/$1';
