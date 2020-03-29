@@ -1,8 +1,8 @@
 <?php include "header.php"; ?>
 <!-- breadcrumb start-->
 <!--::regervation_part start::-->
-<section class="regervation_part section_padding">
-    <div class="container">
+<section class="section_padding">
+    <div class=" container">
         <div class="row align-items-center regervation_content">
             <diva align="center" class="col-lg-8" style="margin: auto;">
                 <div class="regervation_part_iner">

@@ -11,16 +11,6 @@
                     </div>
                 </div>
                 <div class="row form-group">
-                    <div class="col col-md-3"><label>Username</label></div>
-                    <div class="col-12 col-md-9"><input required type="text" name="username" class="form-control required" value="<?php echo $editpemilik->Username ?>">
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <div class="col col-md-3"><label>Password</label></div>
-                    <div class="col-12 col-md-9"><input required type="password" name="password" class="form-control required" value="<?php echo $editpemilik->Password ?>">
-                    </div>
-                </div>
-                <div class="row form-group">
                     <div class="col col-md-3"><label>No Hp Pemilik</label></div>
                     <div class="col-120 col-md-9"><input required type="text" name="phone" onkeyup="angka(this)" class="form-control" value="<?php echo $editpemilik->NoHp_Pemilik ?>">
                     </div>
@@ -46,7 +36,7 @@
         </div>
         <div class="modal-footer">
             <button type="submit" name="sumitid" value="<?= $editpemilik->Id_Pemilik ?>" class="btn btn-primary btn-sm">
-                <i class="fa fa-dot-circle-o"></i> Submit
+                <i class="fa fa-dot-circle-o"></i> Update
             </button>
 
             </form>

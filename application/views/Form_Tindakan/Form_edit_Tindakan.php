@@ -4,7 +4,7 @@
             <strong>Edit Data Tindakan </strong>
         </div>
         <div class="card-body">
-            <form name="formaddtindakan" id="formvaliditas" action="<?= base_url('Controller_Tindakan/ControllerTindakan/edittindakan') ?>" method="POST">
+            <form name="formedittindakan" id="formvaliditas" action="<?= base_url('Controller_Tindakan/ControllerTindakan/edittindakan') ?>" method="POST">
                 <div class="row form-group">
                     <div class="col col-md-3"><label>Nama Tindakan</label></div>
                     <div class="col-12 col-md-9"><input required type="text" name="tindakan" value="<?php echo $edittindakan->Nama_Tindakan ?>" class="form-control required">

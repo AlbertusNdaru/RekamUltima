@@ -6,14 +6,15 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-8">
-        <div class="page-header float-right">
-            <div class="card-body">
-                <a href="<?= base_url('aksitambahpemilik') ?>" class="btn btn-addhewan btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
-                <a href="#" class="btn btn-minimize btn-sm btn-primary"><i class="fa fa-sort-down"></i></a>
+    <?php if ($_SESSION['Admin']->Id_Level == '1') { ?>
+        <div class="col-sm-8">
+            <div class="page-header float-right">
+                <div class="card-body">
+                    <a href="<?= base_url('aksitambahpemilik') ?>" class="btn btn-addhewan btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
+                </div>
             </div>
         </div>
-    </div>
+    <?php } ?>
 </div>
 
 <div class="content mt-3">
@@ -60,14 +61,16 @@
                                             Tidak Aktif
                                         <?php } ?>
                                         </a>
-                                        <a class="btn btn-info" style="width: 69px;" href="<?= base_url('formeditpemilik/' . $ph->Id_Pemilik . '') ?>">
-                                            <i class="glyphicon glyphicon-edit icon-white"></i>
-                                            Edit
-                                        </a>
-                                        <a class="btn btn-danger" style="width: 69px;" href="<?= base_url('deletepemilik/' . $ph->Id_Pemilik . '') ?>">
-                                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                                            Delete
-                                        </a>
+                                        <?php if ($_SESSION['Admin']->Id_Level == '1') { ?>
+                                            <a class="btn btn-info" style="width: 69px;" href="<?= base_url('formeditpemilik/' . $ph->Id_Pemilik . '') ?>">
+                                                <i class="glyphicon glyphicon-edit icon-white"></i>
+                                                Edit
+                                            </a>
+                                            <a class="btn btn-danger" style="width: 69px;" href="<?= base_url('deletepemilik/' . $ph->Id_Pemilik . '') ?>">
+                                                <i class="glyphicon glyphicon-trash icon-white"></i>
+                                                Delete
+                                            </a>
+                                        <?php } ?>
                             </td>
                             </tr>
                         <?php } ?>

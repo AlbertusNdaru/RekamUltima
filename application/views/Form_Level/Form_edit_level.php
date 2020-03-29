@@ -4,7 +4,7 @@
             <strong>Edit Data Hak Akses </strong>
         </div>
         <div class="card-body">
-            <form name="formaddtindakan" id="formvaliditas" action="<?= base_url('Controller_Level/Controller_level/editlevel') ?>" method="POST">
+            <form name="formeditlevel" id="formvaliditas" action="<?= base_url('Controller_Level/Controller_level/editlevel') ?>" method="POST">
                 <div class="row form-group">
                     <div class="col col-md-3"><label>Hak Akses</label></div>
                     <div class="col-12 col-md-9"><input required type="text" name="hakakses" value="<?php echo $editlevel->Deskripsi ?>" class="form-control required">

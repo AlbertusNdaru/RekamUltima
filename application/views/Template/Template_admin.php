@@ -46,11 +46,10 @@
         <nav class="navbar navbar-expand-sm navbar-default">
 
             <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
+                <a class="navbar-brand" href="<?= base_url('dashboard') ?>"> <img src="<?= base_url('assets/landingpage/'); ?>img/logo.png" alt="logo"> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="./"><img src="<?php echo base_url() ?>assets/landingpage/img/logo.png" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="<?= base_url('assets/'); ?>images/logo2.png" alt="Logo"></a>
             </div>
 
             <?php include "BarMenu.php"; ?>
@@ -76,12 +75,13 @@
                     <div class="user-area dropdown float-right">
                         <button href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img class="user-avatar rounded-circle" src="<?= base_url('assets/'); ?>images/admin.jpg" alt="User Avatar">
+                            <br>
+                            <br>
                             <span class="hidden-sm hidden-xs"> <?= $_SESSION['Admin']->Username ?></span>
                         </button>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="<?= base_url('editprofile/') . $_SESSION['Admin']->Id_Admin ?>"><i class="fa fa-user"></i> My Profile</a>
-                            <a class="nav-link" href="<?= base_url('regadmin') ?>"><i class="fa fa-user"></i> Register</a>
+                            <a class="nav-link" href="<?= base_url('editprofile/') . $_SESSION['Admin']->Id_Admin ?>"><i class="fa fa-user"></i> Change Password</a>
                             <a class="nav-link" href="<?= base_url('ControllerAdmin/Login/logout'); ?>"><i class="fa fa-power-off"></i> Logout</a>
                         </div>
                     </div>

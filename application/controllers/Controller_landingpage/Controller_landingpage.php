@@ -8,7 +8,6 @@ class Controller_landingpage extends CI_Controller
         $this->load->model('Model_Pemilik');
         $this->load->model('Model_hewan');
         $this->load->model('Model_Rekam_Medis');
-        
     }
 
     function landingpage()
@@ -93,7 +92,7 @@ class Controller_landingpage extends CI_Controller
             'Alamat_Pemilik'    => $this->input->post('alamat'),
             'JenisKelamin'      => $this->input->post('gender')
         );
-        $edithewan = $this->Model_hewan->update_hewan($Id_Pemilik, $pemilik);
+        $edithewan = $this->Model_Pemilik->update_pemilik($Id_Pemilik, $pemilik);
         if ($edithewan) {
             $this->session->set_flashdata('Status', 'Edit Succes');
             redirect('landing');
@@ -115,9 +114,9 @@ class Controller_landingpage extends CI_Controller
         $Id_Pemilik = $this->input->post('submitid');
         $pemilik = array(
             'Username'          => $this->input->post('username'),
-            'Password'          => $this->input->post('password')
+            'Password'          => $this->input->post('password1')
         );
-        $edithewan = $this->Model_hewan->update_hewan($Id_Pemilik, $pemilik);
+        $edithewan = $this->Model_Pemilik->update_pemilik($Id_Pemilik, $pemilik);
         if ($edithewan) {
             $this->session->set_flashdata('Status', 'Edit Succes');
             redirect('landing');

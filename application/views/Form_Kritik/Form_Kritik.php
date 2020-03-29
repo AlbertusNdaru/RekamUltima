@@ -6,14 +6,6 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-8">
-        <div class="page-header float-right">
-            <div class="card-body">
-                <a href="<?= base_url('aksitambahlevel') ?>" class="btn btn-addhewan btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
-                <a href="#" class="btn btn-minimize btn-sm btn-primary"><i class="fa fa-sort-down"></i></a>
-            </div>
-        </div>
-    </div>
 </div>
 <div class="content mt-3">
     <div class="animated fadeIn">
@@ -39,10 +31,12 @@
                                         <td><?= $k->Kritik ?></td>
                                         <td><?= $k->Saran ?></td>
                                         <td align="center">
-                                            <a class="btn btn-danger" style="width: 69px;" href="<?= base_url('deletelevel/' . $k->Id_Kritik . '') ?>">
-                                                <i class="glyphicon glyphicon-trash icon-white"></i>
-                                                Delete
-                                            </a>
+                                            <?php if ($_SESSION['Admin']->Id_Level == '1') { ?>
+                                                <a class="btn btn-danger" style="width: 69px;" href="<?= base_url('deletelevel/' . $k->Id_Kritik . '') ?>">
+                                                    <i class="glyphicon glyphicon-trash icon-white"></i>
+                                                    Delete
+                                                </a>
+                                            <?php } ?>
                                         </td>
                                     </tr>
                                 <?php } ?>

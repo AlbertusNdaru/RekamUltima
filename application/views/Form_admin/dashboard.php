@@ -95,43 +95,19 @@
                     <div class="text-center"><?= count($jumlahhewanmati) ?></div>
                 </div>
             </div>
+            <?php if ($_SESSION['Admin']->Id_Level == '2') { ?>
+                <!-- CARD INFORMASI !-->
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <strong class="card-title">Tambah Data Rekam Medis</strong>
+                        </div>
 
-            <!-- CARD INFORMASI !-->
-            <div class="row" style="margin-top: 20px">
-                <div class="col-md-4">
-                    <div class="card card-outline">
-                        <div class="card-body text-center">
-                            <h4 class="text-link">Kunjungi Laboratorium</h4>
-                            <hr>
-                            <div type="button" class="bg-success"><i class="fa fa-check-square"></i></div>
-                            <br>
-                            Ingin tau tentang lab terkait lebih jauh? Anda dapat menghubungi kami atau lab terkait, sesuai dengan rencana kunjungan Anda.
+                        <div class="text-center"><button class="btn"><a href="<?= base_url('rekammedis') ?>">Tambah</a></button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card card-outline">
-                        <div class="card-body text-center">
-                            <h4 class="text-link">Kunjungi Laboratorium</h4>
-                            <hr>
-                            <div type="button" class="bg-success"><i class="fa fa-check-square"></i></div>
-                            <br>
-                            Ingin tau tentang lab terkait lebih jauh? Anda dapat menghubungi kami atau lab terkait, sesuai dengan rencana kunjungan Anda.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-outline">
-                        <div class="card-body text-center">
-                            <h4 class="text-link">Kunjungi Laboratorium</h4>
-                            <hr>
-                            <div type="button" class="bg-success"><i class="fa fa-check-square"></i></div>
-                            <br>
-                            Ingin tau tentang lab terkait lebih jauh? Anda dapat menghubungi kami atau lab terkait, sesuai dengan rencana kunjungan Anda.
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
 
         </div>
     </div>

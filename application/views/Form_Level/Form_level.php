@@ -10,7 +10,6 @@
         <div class="page-header float-right">
             <div class="card-body">
                 <a href="<?= base_url('aksitambahlevel') ?>" class="btn btn-addhewan btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
-                <a href="#" class="btn btn-minimize btn-sm btn-primary"><i class="fa fa-sort-down"></i></a>
             </div>
         </div>
     </div>
