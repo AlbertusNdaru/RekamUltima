@@ -25,9 +25,10 @@ class Reg_admin extends CI_Controller
         $id_level        = $this->input->post('level');
         $email           = $this->input->post('email');
         $datatenagamedis = $this->Model_TenagaMedis->get_medis_by_email($email);
-        if ($datatenagamedis) {
+        if ($datatenagamedis = $email) {
             if ($this->Model_admin->get_admin_by_id_tenagamedis($datatenagamedis->Id_TenagaMedis)) {
-                $this->session->set_flashdata('Error', 'Email Sudah Terdaftar Menjadi Admin');
+                $this->session->set_flashdata('Error', '<div class="alert alert-danger" role="alert">
+                Email Sudah Terdaftar</div>');
                 redirect('regadmin');
             } else {
                 $data = array(
@@ -45,10 +46,9 @@ class Reg_admin extends CI_Controller
                 }
             }
         } else {
-            $this->session->set_flashdata('Error', 'Email Salah, atau belum terdaftar');
+            $this->session->set_flashdata('Error', '<div class="alert alert-danger" role="alert">
+            Email Salah !</div>');
             redirect('regadmin');
         }
-
-        redirect('admin');
     }
 }

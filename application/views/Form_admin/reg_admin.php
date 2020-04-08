@@ -44,6 +44,7 @@
                     <form action="<?= base_url('ControllerAdmin/Reg_Admin/add_admin'); ?>" method="POST">
                         <h2 align="center">Register Admin</h2>
                         </br>
+                        <?= $this->session->flashdata('Error'); ?>
                         <div class="form-group">
                             <input required type="text" class="form-control" placeholder="Username" name="username" onclick='validasi("USERNAME","USERNAME")' id="USERNAME">
                         </div>

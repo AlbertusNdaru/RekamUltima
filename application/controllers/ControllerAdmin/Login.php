@@ -23,7 +23,7 @@ class Login extends CI_Controller
         $password = $_POST['password'];
         $getAdmin = $this->Model_admin->get_admin_by_admin($username, $password);
 
-        // penentu status aktif belum
+        // penentu password
         if ($getAdmin) {
             $this->session->set_userdata('Admin', $getAdmin);
             redirect('dashboard');

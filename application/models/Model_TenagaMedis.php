@@ -25,7 +25,6 @@ class Model_TenagaMedis extends CI_Model
     function get_medis_by_status()
     {
         $this->db->where("Status", 'Aktif');
-        $this->db->where('deleted', 0);
         $getMedisById = $this->db->get('tenagamedis')->row();
         return $getMedisById;
     }
