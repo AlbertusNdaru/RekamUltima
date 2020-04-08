@@ -5,11 +5,10 @@
         </div>
         <div class="card-body">
             <form name="formaddDetailMedis" id="formvaliditas" action="<?= base_url('addDetailMedis') ?>" method="POST">
-                <div class="row form-group">
-                    <div class="col col-md-3"><label>Anamnesa</label></div>
-                    <div class="col-12 col-md-9"><input required type="text" onclick='validasi("ANAMNESA","ANAMNESA")' name="anamnesa" id="ANAMNESA" placeholder="Enter Anamnesa" class="form-control required">
-                    </div>
-                </div>
+                <label class="row form-group">
+                    <label class="col col-md-3"><label>Anamnesa</label></label>
+                    <div class="col-12 col-md-9"><textarea required type="text" onclick='validasi("ANAMNESA","ANAMNESA")' name="anamnesa" id="ANAMNESA" rows="3" class="form-control"></textarea></div>
+                </label>
                 <div class="row form-group">
                     <div class="col col-md-3"><label>Berat Badan</label></div>
                     <div class="col-12 col-md-9"><input required type="number" onchange="setTwoNumberDecimal" step="any" onclick='validasi("BB","BB")' name="bb" id="EMAIL" class="form-control">
@@ -43,6 +42,11 @@
                         </select>
                     </div>
                 </div>
+
+                <label class="row form-group">
+                    <label class="col col-md-3"><label>Injeksi atau Resep</label></label>
+                    <div class="col-12 col-md-9"><textarea required type="text" onclick='validasi("RESEP","RESEP")' name="resep" id="RESEP" rows="3" class="form-control"></textarea></div>
+                </label>
 
                 <div class="row form-group">
                     <div class="col col-md-3"><label>Tenaga Medis</label></div>

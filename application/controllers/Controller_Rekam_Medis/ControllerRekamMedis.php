@@ -45,7 +45,8 @@ class ControllerRekamMedis extends CI_Controller
             "Id_RekamMedis"  => $_POST['idrekam'],
             "Id_Tindakan"    => $_POST['tindakan'],
             "Id_TenagaMedis" => $_POST['tenagamedis'],
-            "Tgl_Berobat"    => get_current_date()
+            "Tgl_Berobat"    => get_current_date(),
+            "Resep"          => $_POST['resep']
         );
         $validate = $this->Model_Rekam_Medis->addDetaiRM($dataRM);
         if ($validate) {

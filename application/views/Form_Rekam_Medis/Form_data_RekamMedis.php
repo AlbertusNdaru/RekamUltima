@@ -29,6 +29,7 @@
                                 <tr>
                                     <th>Kode Rekam Medis</th>
                                     <th>Nama Hewan</th>
+                                    <th>Nama Pemilik</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -37,6 +38,7 @@
                                     <tr>
                                         <td><?= $rm->Id_RekamMedis ?></td>
                                         <td><?= $rm->Nama_Hewan ?></td>
+                                        <td><?= $rm->Nama_Pemilik ?></td>
                                         <td class="center">
                                             <a class="btn btn-info" style="width: 80px;" href="<?= base_url('viewTambah/') . $rm->Id_RekamMedis ?>">
                                                 <i class="glyphicon glyphicon-edit icon-white"></i>

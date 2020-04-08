@@ -14,17 +14,17 @@
                             </div>
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3"><label>Password</label></div>
-                            <div class="col-12 col-md-9"><input required type="password" name="password1" id="pass1" class="form-control required" value="<?php echo $pemilik_hewan->Password ?>">
+                            <div class="col col-md-3"><label>Password Baru</label></div>
+                            <div class="col-12 col-md-9"><input required type="password" name="password1" id="pass1" class="form-control required">
                             </div>
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3"><label>Password</label></div>
-                            <div class="col-12 col-md-9"><input required type="password" name="password2" id="pass2" onchange="validatepassword()" class="form-control required" value="<?php echo $pemilik_hewan->Password ?>">
+                            <div class="col col-md-3"><label>Password Verifikasi</label></div>
+                            <div class="col-12 col-md-9"><input required type="password" name="password2" id="pass2" onchange="validatepassword()" class="form-control required">
                             </div>
                         </div>
                         <div class="regerv_btn">
-                            <button type="submit" name="submitid" id="btnedit" value="<?= $pemilik_hewan->Id_Pemilik ?>" class="btn_2">Proses</button>
+                            <button type="submit" name="submitid" id="btnsubmit" value="<?= $pemilik_hewan->Id_Pemilik ?>" class="btn_2">Update</button>
                         </div>
                     </form>
                 </div>
@@ -40,7 +40,7 @@
         var pas1 = $('#pass1').val();
         var pas2 = $('#pass2').val();
         var val = $("#pass2")[0];
-        var input = document.getElementById('pass2');
+        //var input = document.getElementById('pass2');
         // console.log(pas1 + "  " + pas2);
         val.oninput = function(e) {
             e.target.setCustomValidity("")
@@ -49,10 +49,10 @@
         if (pas1 != pas2) {
 
             val.setCustomValidity("Password Tidak Cocok");
-            $('#btnedit').attr('disabled', 'true')
+            $('#btnsubmit').attr('disabled', 'true')
             form.reportValidity();
         } else {
-            $('#btnedit').removeAttr('disabled')
+            $('#btsubmit').removeAttr('disabled')
             val.setCustomValidity("");
         }
     }

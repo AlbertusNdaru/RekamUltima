@@ -33,7 +33,6 @@ include APPPATH . 'views/Landingpage/laporan.php';
                                 <th>Berat Badan</th>
                                 <th>Suhu Tubuh</th>
                                 <th>Penyakit</th>
-                                <th>Tindakan</th>
                                 <th>Tenaga Medis</th>
 
                             </tr>
@@ -49,7 +48,6 @@ include APPPATH . 'views/Landingpage/laporan.php';
                                     <td align="center"><?php echo $r->BeratBadan ?></td>
                                     <td align="center"><?php echo $r->SuhuTubuh ?></td>
                                     <td align="center"><?php echo $r->Nama_Penyakit ?></td>
-                                    <td align="center"><?php echo $r->Nama_Tindakan ?></td>
                                     <td align="center"><?php echo $r->Nama_TenagaMedis ?></td>
 
                                 </tr>

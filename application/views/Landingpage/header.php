@@ -61,7 +61,7 @@
                             <ul class="navbar-nav align-items-center">
                                 <?php if (isset($_SESSION['pemilik'])) { ?>
                                     <li class="nav-item active">
-                                        <a class="dropdown-item" href="<?= base_url('registerhewan') ?>">Data Hewan</a>
+                                        <a class="dropdown-item" href="<?= base_url('registerhewan') ?>">Registrasi Hewan</a>
                                     </li>
                                     <li class="nav-item active">
                                         <a class="dropdown-item" href="<?= base_url('datahewan/' . $_SESSION['pemilik']->Id_Pemilik) ?>">Rekam Medis & Data Hewan</a>

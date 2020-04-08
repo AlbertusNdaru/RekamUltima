@@ -11,18 +11,19 @@
                     </div>
                 </div>
                 <div class="row form-group">
-                    <div class="col col-md-3"><label>Password</label></div>
-                    <div class="col-12 col-md-9"><input required type="password" id="pass1" value="<?= $admin->Password ?>" name="password1" class="form-control required">
+                    <div class="col col-md-3"><label>Password Baru</label></div>
+                    <div class="col-12 col-md-9"><input required type="password" id="pass1"  name="password1" class="form-control required">
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col col-md-3"><label>Verifikasi Password</label></div>
-                    <div class="col-12 col-md-9"><input required type="password" id="pass2" onchange="validatepassword()" value="<?= $admin->Password ?>" name="password2" class="form-control required">
+                    <div class="col-12 col-md-9"><input required type="password" id="pass2" onchange="validatepassword()" name="password2" class="form-control required">
                     </div>
                 </div>
         </div>
         <div class="modal-footer">
-            <button type="submit" id="btnsubmit" name="submitid" value="<?= $admin->Id_Admin ?>" class="btn btn-primary btn-sm">
+            <!-- buttonnya di disabled dulu aja biar gak bisa update kalo belum ke isi -->
+            <button type="submit" disabled id="btnsubmit" name="submitid" value="<?= $admin->Id_Admin ?>" class="btn btn-primary btn-sm">
                 Update
             </button>
 
@@ -33,23 +34,22 @@
         var form = document.querySelector("#formvaliditas");
 
         function validatepassword() {
-            var pas1 = $('#pass1').val();
-            var pas2 = $('#pass2').val();
-            var val = $("#pass2")[0];
-            var input = document.getElementById('pass2');
-            // console.log(pas1 + "  " + pas2);
-            val.oninput = function(e) {
-                e.target.setCustomValidity("")
-            }
+            var pas1 = $('#pass1').val(); // -> ambil data dari element dengan id pass1
+            var pas2 = $('#pass2').val();// -> ambil data dari element dengan id pass2
+            var val = $("#pass2")[0]; // ini buat ambil element html yang mau di kasih custom validasi 
+            // bawah iki dipake validasi password e sama tidak 
+            if (pas1 != pas2) // membandingan apa pas1 dan pas2 itu sama atau tidak 
+            {
+                // jika tidak masuk kesini
 
-            if (pas1 != pas2) {
-
-                val.setCustomValidity("Password Tidak Cocok");
-                $('#btnsubmit').attr('disabled', 'true')
-                form.reportValidity();
-            } else {
-                $('#btnsubmit').removeAttr('disabled')
-                val.setCustomValidity("");
+                val.setCustomValidity("Password Tidak Cocok"); // ini dipake custom kata2 validasinya 
+                $('#btnsubmit').attr('disabled', 'true') // ini buat disable button updatenya
+                form.reportValidity(); // buat nampilin kata2 validasinya
+            } else 
+            {
+                //jika sama masuk kesini
+                $('#btnsubmit').removeAttr('disabled') // ini buat remove disablenya atau buat enable button
+                val.setCustomValidity("");// validasi kata2nya di kosongi 
             }
         }
 

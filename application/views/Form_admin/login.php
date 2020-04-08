@@ -38,14 +38,14 @@
                     </div>
                 </div>
                 <div class="login-form ">
-                    <form action="<?= base_url('ControllerAdmin/Login/login'); ?>" method="POST" >
+                    <form action="<?= base_url('ControllerAdmin/Login/login'); ?>" method="POST">
                         <h3 align="center">Please Enter Your Username and Password</h3>
                         <?= $this->session->flashdata('message'); ?>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username" name="username" id="username">
+                            <input required type="text" class="form-control" placeholder="Username" name="username" id="username">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password" name="password" id="password">
+                            <input required type="password" class="form-control" placeholder="Password" name="password" id="password">
                         </div>
                         <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
                         <div class="register-link m-t-15 text-center">
@@ -57,7 +57,7 @@
         </div>
     </div>
 
-   
+
     <script src="<?= base_url('assets/'); ?>vendors/jquery/dist/jquery.min.js"></script>
     <script src="<?= base_url('assets/'); ?>vendors/popper.js/dist/umd/popper.min.js"></script>
     <script src="<?= base_url('assets/'); ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>

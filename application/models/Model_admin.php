@@ -7,9 +7,10 @@ class Model_admin extends CI_Model
         return $getAdmin;
     }
 
-    function get_admin_by_admin($username)
+    function get_admin_by_admin($username, $password)
     {
         $this->db->where("Username", $username);
+        $this->db->where("Password", $password);
         $getloginbyadmin = $this->db->get('admin')->row();
         return $getloginbyadmin;
     }

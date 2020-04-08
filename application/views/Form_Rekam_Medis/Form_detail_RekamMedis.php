@@ -25,6 +25,7 @@
                                     <th>Suhu Tubuh</th>
                                     <th>Penyakit</th>
                                     <th>Tindakan</th>
+                                    <th>Resep</th>
                                     <th>Tenaga Medis</th>
                                 </tr>
                             </thead>
@@ -37,6 +38,7 @@
                                         <td align="center"><?= $rm->SuhuTubuh ?></td>
                                         <td align="center"><?= $rm->Nama_Penyakit ?></td>
                                         <td align="center"><?= $rm->Nama_Tindakan ?></td>
+                                        <td align="center"><?= $rm->Resep ?></td>
                                         <td align="center"><?= $rm->Nama_TenagaMedis ?></td>
                                     </tr>
                                 <?php } ?>

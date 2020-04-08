@@ -45,13 +45,13 @@
                         <h2 align="center">Register Admin</h2>
                         </br>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username" name="username">
+                            <input required type="text" class="form-control" placeholder="Username" name="username" onclick='validasi("USERNAME","USERNAME")' id="USERNAME">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password" name="password">
+                            <input required type="password" class="form-control" placeholder="Password" name="password" onclick='validasi("PASSWORD","PASSWORD")' id="PASSWORD">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email Tenaga Medis" name="email">
+                            <input required type="email" class="form-control" placeholder="Email Tenaga Medis" name="email" onclick='validasi("EMAIL","EMAIL")' id="EMAIL">
                         </div>
                         <div class="select-list">
                             <select required name="level" id="course_type">
@@ -62,7 +62,7 @@
                             </select>
                         </div>
                         </br>
-                        <button type="submit" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
+                        <button type="submit" name="submitid" class="btn btn-primary btn-flat m-b-30 m-t-30">Register</button>
                         <div class="register-link m-t-15 text-center">
                             <p>Already have account ? <a href="<?= base_url('admin') ?>"> Sign in</a></p>
                         </div>
@@ -72,7 +72,44 @@
         </div>
     </div>
 
+    <script>
+        $('#USERNAME').keypress(function(event) {
+            var charCode = window.event.keyCode;
+            return (((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) || charCode == 32 || charCode == 46)
 
+        });
+
+        var form = document.querySelector("#formvaliditas");
+
+
+        function validasi(textbox, text) {
+            var input = document.getElementById(textbox);
+
+            var cek = form.checkValidity()
+            if (cek == false) {
+                input.oninvalid = function(e) {
+                    if (e.target.validity.valueMissing) {
+                        e.target.setCustomValidity(text + " WAJIB DIISI");
+                        return;
+                    }
+                }
+                input.oninput = function(e) {
+                    e.target.setCustomValidity("")
+                }
+                form.reportValidity();
+                console.log(cek);
+            }
+
+
+        }
+
+
+        function angka(e) {
+            if (!/^[0-9]+$/.test(e.value)) {
+                e.value = e.value.substring(0, e.value.length - 1);
+            }
+        }
+    </script>
     <script src="<?= base_url('assets/'); ?>vendors/jquery/dist/jquery.min.js"></script>
     <script src="<?= base_url('assets/'); ?>vendors/popper.js/dist/umd/popper.min.js"></script>
     <script src="<?= base_url('assets/'); ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>

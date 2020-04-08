@@ -3,9 +3,10 @@ class Model_Rekam_Medis extends CI_Model
 {
     function get_rekam_medis()
     {
-        $this->db->select('a.*, b.Nama_Hewan');
+        $this->db->select('a.*, b.Nama_Hewan, b.Id_Pemilik, c.Nama_Pemilik');
         $this->db->from('Rekam_Medis as a');
         $this->db->join('hewan as b', 'b.Id_Hewan=a.Id_Hewan');
+        $this->db->join('pemilik_hewan as c', 'c.Id_Pemilik=b.Id_Pemilik');
         $dataRekam = $this->db->get()->result();
         return $dataRekam;
     }
@@ -14,7 +15,7 @@ class Model_Rekam_Medis extends CI_Model
     {
         $this->db->select('b.Nama_Hewan, a.Id_RekamMedis');
         $this->db->from('rekam_medis as a');
-        $this->db->join('hewan as b','b.Id_Hewan = a.Id_Hewan');
+        $this->db->join('hewan as b', 'b.Id_Hewan = a.Id_Hewan');
         $this->db->where('a.Id_RekamMedis', $Id_RekamMedis);
         return $this->db->get()->row();
     }
