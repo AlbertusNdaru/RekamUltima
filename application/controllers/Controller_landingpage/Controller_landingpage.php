@@ -140,6 +140,7 @@ class Controller_landingpage extends CI_Controller
             $this->session->set_userdata('pemilik', $validate);
             redirect('landing');
         } else {
+            $this->session->set_flashdata('Error', 'Username dan Password yang dimasukan salah');
             redirect('loginuser');
         }
     }
@@ -174,10 +175,10 @@ class Controller_landingpage extends CI_Controller
             );
             $this->Model_Rekam_Medis->addRekamMedis($rekammedis);
             $this->session->set_flashdata('Status', 'Input Success');
-            redirect('landing');
+            redirect('datahewan');
         } else {
             $this->session->set_flashdata('Status', 'Input Failed');
-            redirect('landing');
+            redirect('datahewan');
         }
     }
 
