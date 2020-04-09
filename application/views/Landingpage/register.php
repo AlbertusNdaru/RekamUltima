@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Enter Phone">
-                        <input class="input100" type="text" name="phone" placeholder="Phone">
+                        <input class="input100" type="number" name="phone" placeholder="Phone">
                         <span class="focus-input100" data-placeholder="&#xf2ba;"></span>
                     </div>
 

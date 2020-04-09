@@ -23,6 +23,13 @@ class Model_Pemilik extends CI_Model
         return $getpemilik;
     }
 
+    function get_pemilik_by_username($username)
+    {
+        $this->db->where('Username', $username);
+        $getpemilik = $this->db->get('pemilik_hewan')->row();
+        return $getpemilik;
+    }
+
     function get_pemilik_by_status()
     {
         $this->db->where("Status", 'Aktif');
