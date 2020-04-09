@@ -26,7 +26,7 @@ class Model_Pemilik extends CI_Model
     function get_pemilik_by_status()
     {
         $this->db->where("Status", 'Aktif');
-        $getMedisById = $this->db->get('pemilik_hewan')->row();
+        $getMedisById = $this->db->get('pemilik_hewan')->result();
         return $getMedisById;
     }
     function add_pemilik($dataPemilik)

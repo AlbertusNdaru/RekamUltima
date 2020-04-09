@@ -19,7 +19,6 @@ class Dashboard extends CI_Controller
         $data['jumlahhewanhidup'] = $this->Model_hewan->get_hewan_by_status_hidup();
         $data['jumlahhewanmati'] = $this->Model_hewan->get_hewan_by_status_mati();
         $data['jumlahhewankucing'] = $this->Model_hewan->get_hewan_by_kucing();
-
         $data['jumlahpemilik'] = $this->Model_Pemilik->get_pemilik();
         $data['jumlahpemilikaktif'] = $this->Model_Pemilik->get_pemilik_by_status();
         $this->template->load('Template/Template_admin', 'Form_admin/dashboard', $data);

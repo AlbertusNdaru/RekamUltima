@@ -32,7 +32,7 @@ class Model_TenagaMedis extends CI_Model
     function get_medis_by_email($email)
     {
         $this->db->where("Email", $email);
-        $getAdminByEmail = $this->db->get("tenagamedis")->row();
+        $getAdminByEmail = $this->db->get("tenagamedis")->result();
         return $getAdminByEmail;
     }
 
