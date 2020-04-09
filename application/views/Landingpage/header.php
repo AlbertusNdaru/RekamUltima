@@ -74,7 +74,7 @@
                                             My Profile
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="<?= base_url('edituser') ?>">Ubah Pemilik</a>
+                                            <a class="dropdown-item" href="<?= base_url('edituser') ?>">Profile Pemilik</a>
                                             <a class="dropdown-item" href="<?= base_url('editpassword') ?>">Ubah Password</a>
                                         </div>
                                     </li>

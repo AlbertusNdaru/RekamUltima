@@ -35,7 +35,7 @@
                         </div>
                         <div class="single_text">
                             <div class="single_blog_text">
-                                <h3><a href="<?= base_url('Viewedithewan/') . $h->Id_Hewan ?>"> Edit Profile</a></h3>
+                                <h3><a href="<?= base_url('Viewedithewan/') . $h->Id_Hewan ?>"> Edit Hewan</a></h3>
                                 <h4><?= $h->Nama_Hewan ?></h4>
                                 <p><?= $h->Jenis_Hewan ?></p>
                             </div>
