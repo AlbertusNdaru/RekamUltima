@@ -161,11 +161,11 @@ class Controller_landingpage extends CI_Controller
         $pemiik     = $_SESSION['pemilik']->Id_Pemilik;
 
         $hewan = array(
-            'Nama_Hewan'        => $nama,
-            'Jenis_Kelamin'     => $JK,
-            'Jenis_Hewan'       => $JH,
-            'Signalemen'        => $signalemen,
-            'Id_Pemilik'        => $pemiik
+            'Nama_Hewan'    => $nama,
+            'Jenis_Kelamin' => $JK,
+            'Jenis_Hewan'   => $JH,
+            'Signalemen'    => $signalemen,
+            'Id_Pemilik'    => $pemiik
 
         );
         $addhewan = $this->Model_hewan->add_hewan($hewan);
@@ -190,27 +190,33 @@ class Controller_landingpage extends CI_Controller
         $JK         = $this->input->post('gender');
         $username   = $this->input->post('username');
         $password   = $this->input->post('password');
+        $datapemilik = $this->Model_Pemilik->get_pemilik_by_Number($phone);
 
-        $pemilik = array(
-            'Nama_Pemilik'   => $nama,
-            'NoHp_Pemilik'   => $phone,
-            'Alamat_Pemilik' => $Address,
-            'Username'       => $username,
-            'Password'       => $password,
-            'Status'         => 'TidakAktif',
-            'date_created'   => get_current_date(),
-            'JenisKelamin'   => $JK
-
-        );
-        $addpemilik = $this->Model_Pemilik->add_pemilik($pemilik);
-        if ($addpemilik) {
-            $this->session->set_flashdata('Status', 'Input Succes');
-            redirect('loginuser');
-            // echo $addpemilik;
+        if ($datapemilik) {
+            $this->session->set_flashdata('Error', 'Nomer Telepon Sudah Terdaftar !');
+            redirect('registeruser');
         } else {
-            $this->session->set_flashdata('Status', 'Input Failed');
-            redirect('register');
-            // echo $addpemilik;
+            $pemilik = array(
+                'Nama_Pemilik'   => $nama,
+                'NoHp_Pemilik'   => $phone,
+                'Alamat_Pemilik' => $Address,
+                'Username'       => $username,
+                'Password'       => $password,
+                'Status'         => 'TidakAktif',
+                'date_created'   => get_current_date(),
+                'JenisKelamin'   => $JK
+
+            );
+            $addpemilik = $this->Model_Pemilik->add_pemilik($pemilik);
+            if ($addpemilik) {
+                $this->session->set_flashdata('Status', 'Input Succes');
+                redirect('loginuser');
+                // echo $addpemilik;
+            } else {
+                $this->session->set_flashdata('Status', 'Input Failed');
+                redirect('register');
+                // echo $addpemilik;
+            }
         }
     }
 

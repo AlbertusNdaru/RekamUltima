@@ -1,6 +1,7 @@
 <?php
 class Model_report extends CI_Model
 {
+    
     function get_hewan()
     {
         $this->db->select("a.*, b.Nama_Pemilik");

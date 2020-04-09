@@ -11,7 +11,7 @@
                 </label>
                 <div class="row form-group">
                     <div class="col col-md-3"><label>Berat Badan</label></div>
-                    <div class="col-12 col-md-9"><input required type="number" onchange="setTwoNumberDecimal" step="any" onclick='validasi("BB","BB")' name="bb" id="EMAIL" class="form-control">
+                    <div class="col-12 col-md-9"><input required type="number" onchange="setTwoNumberDecimal" step="any" onclick='validasi("BB","BB")' name="bb" id="BB" class="form-control">
                     </div>
                 </div>
                 <div class="row form-group">
@@ -73,11 +73,11 @@
     </div>
 </div>
 <script>
-    $('#ANAMNESA').keypress(function(event) {
-        var charCode = window.event.keyCode;
-        return (((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) || charCode == 32 || charCode == 46)
+    // $('#ANAMNESA').keypress(function(event) {
+    //     var charCode = window.event.keyCode;
+    //     return (((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) || charCode == 32 || charCode == 46)
 
-    });
+    // });
 
     var form = document.querySelector("#formvaliditas");
 

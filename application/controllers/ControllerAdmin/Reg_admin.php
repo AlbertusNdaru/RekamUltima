@@ -47,7 +47,7 @@ class Reg_admin extends CI_Controller
             }
         } else {
             $this->session->set_flashdata('Error', '<div class="alert alert-danger" role="alert">
-            Email Salah !</div>');
+            Email Tidak Terdaftar !</div>');
             redirect('regadmin');
         }
     }

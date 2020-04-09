@@ -25,9 +25,6 @@ include APPPATH . 'views/Form_report/laporan.php';
         <div>
             <div>
                 <div>
-                    <h2 align="center">
-                        Kritik
-                    </h2>
                     <br>
                     <table border=1>
                         <thead>
@@ -41,7 +38,7 @@ include APPPATH . 'views/Form_report/laporan.php';
                             $total = 0;
                             foreach ($record as $r) { ?>
                                 <tr class="gradeU">
-                                    <td align="center"><?php echo $no ?></td>
+                                    <td align="center" style="width: 10px"><?php echo $no ?></td>
                                     <td align="left"><?php echo $r->Kritik ?></td>
                                 </tr>
                             <?php $no++;
@@ -50,9 +47,6 @@ include APPPATH . 'views/Form_report/laporan.php';
                     </table>
                     <br>
                     <br>
-                    <h2 align="center">
-                        Saran
-                    </h2>
                     <br>
                     <table border=1>
                         <thead>
@@ -66,7 +60,7 @@ include APPPATH . 'views/Form_report/laporan.php';
                             $total = 0;
                             foreach ($record as $r) { ?>
                                 <tr class="gradeU">
-                                    <td align="center"><?php echo $no ?></td>
+                                    <td align="center" style="width: 10px"><?php echo $no ?></td>
                                     <td align="left"><?php echo $r->Saran ?></td>
                                 </tr>
                             <?php $no++;

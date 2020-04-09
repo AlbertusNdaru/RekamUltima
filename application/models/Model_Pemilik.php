@@ -23,9 +23,9 @@ class Model_Pemilik extends CI_Model
         return $getpemilik;
     }
 
-    function get_pemilik_by_username($username)
+    function get_pemilik_by_Number($NoHp_Pemilik)
     {
-        $this->db->where('Username', $username);
+        $this->db->where('NoHp_Pemilik', $NoHp_Pemilik);
         $getpemilik = $this->db->get('pemilik_hewan')->row();
         return $getpemilik;
     }
