@@ -6,11 +6,13 @@
         <div class="row align-items-center regervation_content">
             <diva align="center" class="col-lg-8" style="margin: auto;">
                 <div class="regervation_part_iner">
-                    <form action="<?= base_url('Controller_landingpage/Controller_landingpage/edithewan') ?>" method="POST">
+                    <form action="<?= base_url('Controller_landingpage/Controller_landingpage/edithewan') ?>"
+                        method="POST">
                         <h2>Registrasi Hewan</h2>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <input required type="text" name="nama" class="form-control" id="nama" value="<?= $edithewan->Nama_Hewan ?>" placeholder="Nama Hewan">
+                                <input required type="text" name="nama" class="form-control" id="nama"
+                                    value="<?= $edithewan->Nama_Hewan ?>" placeholder="Nama Hewan">
                             </div>
                             <div class="form-group col-md-12">
                                 <select name="jenishewan" class="form-control selectpicker">
@@ -44,14 +46,16 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-12">
-                                <textarea required class="form-control" id="Textarea" rows="4" name="signalemen" placeholder="Signalemen"><?= $edithewan->Signalemen ?></textarea>
+                                <textarea required class="form-control" id="Textarea" rows="4" name="signalemen"
+                                    placeholder="Signalemen"><?= $edithewan->Signalemen ?></textarea>
                             </div>
                             <!-- <div class="form-group col-md-12">
                                 <input required class="form-control" id="image" rows="4" name="image" placeholder="image"></textarea>
                             </div> -->
                         </div>
                         <div class="regerv_btn">
-                            <button type="submit" name="submitid" value="<?= $edithewan->Id_Hewan ?>" class="btn_2">Edit</button>
+                            <button type="submit" name="submitid" value="<?= $edithewan->Id_Hewan ?>"
+                                class="btn_2">Edit</button>
                         </div>
                     </form>
                 </div>

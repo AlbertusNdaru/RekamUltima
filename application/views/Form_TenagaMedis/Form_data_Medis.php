@@ -9,7 +9,8 @@
     <div class="col-sm-8">
         <div class="page-header float-right">
             <div class="card-body">
-                <a href="<?= base_url('aksitambahmedis') ?>" class="btn btn-addmedis btn-sm btn-primary"><i class="fa fa-plus-circle"></i></a>
+                <a href="<?= base_url('aksitambahmedis') ?>" class="btn btn-addmedis btn-sm btn-primary"><i
+                        class="fa fa-plus-circle"></i></a>
             </div>
         </div>
     </div>
@@ -37,38 +38,48 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($tenagamedis as $m) { ?>
-                                    <tr>
-                                        <td><?= $m->Nama_TenagaMedis ?></td>
-                                        <td><?= $m->NoHp_TenagaMedis ?></td>
-                                        <td><?= $m->Alamat_TenagaMedis ?></td>
-                                        <td><?= $m->JenisKelamin ?></td>
-                                        <td class="center">
-                                            <span class="label-success label <?php if ($m->Status == 'Aktif') echo 'label-default';
+                                <tr>
+                                    <td><?= $m->Nama_TenagaMedis ?></td>
+                                    <td><?= $m->NoHp_TenagaMedis ?></td>
+                                    <td><?= $m->Alamat_TenagaMedis ?></td>
+                                    <td><?= $m->JenisKelamin ?></td>
+                                    <td class="center">
+                                        <span
+                                            class="label-success label <?php if ($m->Status == 'Aktif') echo 'label-default';
                                                                                 else echo 'label-danger'; ?>"><?= $m->Status ?></span>
-                                        </td>
-                                        <td class=" center">
-                                            <?php if ($_SESSION['Admin']->Id_Level == 1) { ?>
-                                                <?php if ($m->Status == "TidakAktif") { ?>
-                                                    <a class="btn btn-success" style="width: 94px;" href="<?= base_url('editstatusmedis/' . $m->Id_TenagaMedis . '/Aktif') ?>">
-                                                        <i class="glyphicon glyphicon-ok icon-white"></i>
-                                                        Aktif
-                                                    <?php } else { ?>
-                                                        <a class="btn btn-danger" style="width: 94px;" href="<?= base_url('editstatusmedis/' . $m->Id_TenagaMedis . '/TidakAktif') ?>">
-                                                            <i class="glyphicon glyphicon-remove icon-white"></i>
-                                                            Off
-                                                        <?php } ?>
-                                                        </a>
-                                                    <?php } ?>
-                                                    <a class="btn btn-info" href="<?= base_url('formeditmedis/' . $m->Id_TenagaMedis . '') ?>">
-                                                        <i class="glyphicon glyphicon-edit icon-white"></i>
-                                                        Edit
-                                                    </a>
-                                                    <a class="btn btn-danger" href="<?= base_url('deletemedis/' . $m->Id_TenagaMedis . '') ?>">
-                                                        <i class="glyphicon glyphicon-trash icon-white"></i>
-                                                        Delete
-                                                    </a>
-                                        </td>
-                                    </tr>
+                                    </td>
+                                    <td class=" center">
+                                        <?php if ($_SESSION['Admin']->Id_Level == 1) { ?>
+                                        <?php if ($m->Status == "TidakAktif") { ?>
+                                        <a class="btn btn-success" style="width: 94px;"
+                                            href="<?= base_url('editstatusmedis/' . $m->Id_TenagaMedis . '/Aktif') ?>">
+                                            <i class="glyphicon glyphicon-ok icon-white"></i>
+                                            Aktif
+                                            <?php } else { ?>
+                                            <a class="btn btn-danger" style="width: 94px;"
+                                                href="<?= base_url('editstatusmedis/' . $m->Id_TenagaMedis . '/TidakAktif') ?>">
+                                                <i class="glyphicon glyphicon-remove icon-white"></i>
+                                                Off
+                                                <?php } ?>
+                                            </a>
+                                            <?php } ?>
+                                            <a class="btn btn-info"
+                                                href="<?= base_url('formeditmedis/' . $m->Id_TenagaMedis . '') ?>">
+                                                <i class="glyphicon glyphicon-edit icon-white"></i>
+                                                Edit
+                                            </a>
+                                            <a class="btn btn-danger"
+                                                href="<?= base_url('deletemedis/' . $m->Id_TenagaMedis . '') ?>">
+                                                <i class="glyphicon glyphicon-trash icon-white"></i>
+                                                Delete
+                                            </a>
+                                            <a class="btn btn-primary"
+                                                href="<?= base_url('regadmin/' . $m->Id_TenagaMedis . '') ?>">
+                                                <i class="glyphicon glyphicon-edit icon-white"></i>
+                                                Jadikan Admin
+                                            </a>
+                                    </td>
+                                </tr>
                                 <?php } ?>
                             </tbody>
                         </table>

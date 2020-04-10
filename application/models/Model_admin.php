@@ -47,7 +47,8 @@ class Model_admin extends CI_Model
 
     function add_admin($dataAdmin)
     {
-        $this->db->insert('admin', $dataAdmin);
+        return $this->db->insert('admin', $dataAdmin);
+
     }
 
     function update_admin($Id_Admin, $dataAdmin)

@@ -25,8 +25,10 @@ class Reg_admin extends CI_Controller
         $id_level        = $this->input->post('level');
         $email           = $this->input->post('email');
         $datatenagamedis = $this->Model_TenagaMedis->get_medis_by_email($email);
-        if ($datatenagamedis) {
-            if ($this->Model_admin->get_admin_by_id_tenagamedis($datatenagamedis->Id_TenagaMedis)) {
+        if (isset($datatenagamedis)) {
+            $validasi = $this->Model_admin->get_admin_by_id_tenagamedis($datatenagamedis->Id_TenagaMedis);
+            if ($validasi) {
+                echo json_encode($this->Model_admin->get_admin_by_id_tenagamedis($datatenagamedis->Id_TenagaMedis));
                 $this->session->set_flashdata('Error', '<div class="alert alert-danger" role="alert">
                 Email Sudah Terdaftar</div>');
                 redirect('regadmin');

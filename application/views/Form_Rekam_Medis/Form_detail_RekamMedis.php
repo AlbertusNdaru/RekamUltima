@@ -31,16 +31,16 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($detail_rm as $rm) { ?>
-                                    <tr>
-                                        <td align="center"><?= $rm->Tgl_Berobat ?></td>
-                                        <td align="center"><?= $rm->Anamnesa ?></td>
-                                        <td align="center"><?= $rm->BeratBadan ?></td>
-                                        <td align="center"><?= $rm->SuhuTubuh ?></td>
-                                        <td align="center"><?= $rm->Nama_Penyakit ?></td>
-                                        <td align="center"><?= $rm->Nama_Tindakan ?></td>
-                                        <td align="center"><?= $rm->Resep ?></td>
-                                        <td align="center"><?= $rm->Nama_TenagaMedis ?></td>
-                                    </tr>
+                                <tr>
+                                    <td align="center"><?= $rm->Tgl_Berobat ?></td>
+                                    <td align="center"><?= $rm->Anamnesa ?></td>
+                                    <td align="center"><?= $rm->BeratBadan ?></td>
+                                    <td align="center"><?= $rm->SuhuTubuh ?></td>
+                                    <td align="center"><?= $rm->Nama_Penyakit ?></td>
+                                    <td align="center"><?= $rm->Nama_Tindakan ?></td>
+                                    <td align="center"><?= $rm->Resep ?></td>
+                                    <td align="center"><?= $rm->Nama_TenagaMedis ?></td>
+                                </tr>
                                 <?php } ?>
                             </tbody>
                         </table>

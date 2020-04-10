@@ -193,7 +193,7 @@ class Controller_landingpage extends CI_Controller
         $datapemilik = $this->Model_Pemilik->get_pemilik_by_Number($phone);
 
         if ($datapemilik) {
-            $this->session->set_flashdata('Error', 'Nomer Telepon Sudah Terdaftar !');
+            $this->session->set_flashdata('Status', 'Nomer Telepon Sudah Terdaftar !');
             redirect('registeruser');
         } else {
             $pemilik = array(
@@ -209,7 +209,7 @@ class Controller_landingpage extends CI_Controller
             );
             $addpemilik = $this->Model_Pemilik->add_pemilik($pemilik);
             if ($addpemilik) {
-                $this->session->set_flashdata('Status', 'Input Succes');
+                $this->session->set_flashdata('Status', 'Berhasil Input');
                 redirect('loginuser');
                 // echo $addpemilik;
             } else {
