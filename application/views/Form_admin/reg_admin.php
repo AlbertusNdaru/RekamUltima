@@ -46,13 +46,13 @@
                         </br>
                         <?= $this->session->flashdata('Error'); ?>
                         <div class="form-group">
-                            <input required type="text" class="form-control" placeholder="Username" name="username" onclick='validasi("USERNAME","USERNAME")' id="USERNAME">
+                            <input required readonly type="text" class="form-control" placeholder="Username" value="<?php $nama = explode(" ",$tenagamedis->Nama_TenagaMedis); echo $nama[0]; ?>" name="username" id="USERNAME">
                         </div>
                         <div class="form-group">
-                            <input required type="password" class="form-control" placeholder="Password" name="password" onclick='validasi("PASSWORD","PASSWORD")' id="PASSWORD">
+                            <input required readonly type="text" class="form-control" placeholder="Password" value="<?= rand(100000,999999)?>" name="password" id="PASSWORD">
                         </div>
                         <div class="form-group">
-                            <input required type="email" class="form-control" placeholder="Email Tenaga Medis" name="email" onclick='validasi("EMAIL","EMAIL")' id="EMAIL">
+                            <input required readonly type="email" class="form-control" placeholder="Email Tenaga Medis" value="<?= $tenagamedis->Email?>" name="email" id="EMAIL">
                         </div>
                         <div class="select-list">
                             <select required name="level" id="course_type">

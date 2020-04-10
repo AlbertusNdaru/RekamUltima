@@ -55,7 +55,7 @@ $route['default_controller'] = 'welcome';
 //Route Admin
 $route['Admin']                 = 'ControllerAdmin/Login';
 $route['admin']                 = 'ControllerAdmin/Login';
-$route['regadmin/(:any)']       = 'ControllerAdmin/Reg_admin/$1';
+$route['regadmin/(:any)']       = 'ControllerAdmin/Reg_admin/regadmin/$1';
 $route['dashboard']             = 'ControllerAdmin/Dashboard';
 $route['logout']                = 'ControllerAdmin/Login/logout';
 $route['editprofile/(:any)']    = 'ControllerAdmin/Profil/vieweditprofil/$1';

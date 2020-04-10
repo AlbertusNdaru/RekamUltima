@@ -10,9 +10,10 @@ class Reg_admin extends CI_Controller
         $this->load->model('Model_TenagaMedis');
     }
 
-    function index()
+    function regadmin($id)
     {
-        $dataRegistrasi['level'] = $this->Model_level->get_level();
+        $dataRegistrasi['level']       = $this->Model_level->get_level();
+        $dataRegistrasi['tenagamedis'] = $this->Model_TenagaMedis->get_medis_by_id($id);
         $this->load->view('Form_admin/reg_admin', $dataRegistrasi);
     }
 
