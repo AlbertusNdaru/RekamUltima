@@ -25,6 +25,25 @@ class Controller_report extends CI_Controller
         $date1 = $_POST['tanggal1'];
         $date2 = $_POST['tanggal2'];
         $data['record'] =  $this->Model_report->get_detail_rm_byPemilik($date1, $date2);
+        $date=date_create($date1);
+        $dateawal = date_format($date,"d-m-Y");
+        $date=date_create($date2);
+        $dateakhir = date_format($date,"d-m-Y");
+        $data["date1"]= $dateawal;
+        $data["date2"]= $dateakhir;
+        $config = array('format' => 'Folio', 'orientation' => 'L');
+        $mpdf   = new \Mpdf\Mpdf($config);
+        $html   = $this->load->view('Form_report/Form_report_rekamMedisByDate', $data, true);
+        $mpdf->WriteHTML($html);
+        $mpdf->Output();
+    }
+    function report_RekamMedis()
+    {
+        $date1 = $_POST['tanggal1'];
+        $date2 = $_POST['tanggal2'];
+        $data['record'] =  $this->Model_report->get_detail_rm_byPemilik($date1, $date2);
+        $data['date1']= $date1;
+        $data['date2']= $date2;
         $config           = array('format' => 'Folio', 'orientation' => 'L');
         $mpdf   = new \Mpdf\Mpdf($config);
         $html   = $this->load->view('Form_report/Form_report_rekamMedis', $data, true);

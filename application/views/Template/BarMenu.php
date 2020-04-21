@@ -22,24 +22,28 @@
         <h3 class="menu-title">Laporan</h3>
         <!-- /.Laporan -->
         <li class="nav-item">
-            <a href="#" target="blank"><i class="nav-link rekammedis"></i> Medis</a>
+            <a href="#" class="tanggalcetak"><i class="nav-link"></i> Medis</a>
             <a href="<?= base_url('LaporanHewan') ?>" target="blank"><i class="fa fa-file"></i> Hewan</a>
             <a href="<?= base_url('LaporanKritik') ?>" target="blank"><i class="fa fa-comments-o"></i> Kritik &
                 Saran</a>
         </li>
         <?php } ?>
     </ul>
-    <div class="modal fade" id="tanggalcetak" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+
+
+
+    <div class="modal fade" id="tanggalcetak" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h3>Cetak Laporan Rekam Medis</h3>
+                    <h5 class="modal-title" id="mediumModalLabel">Cetak Laporan Rekam Medis</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <!-- start body -->
-                    <div class="row">
+                <div class="row">
                         <div class="box col-md-12">
                             <div align="center" class="box-content">
                                 <form name="fromrekammedis"
@@ -52,20 +56,16 @@
                             </div>
                         </div>
                     </div>
-                    <!--/span-->
                 </div>
-                <!--/row-->
-                <!-- end body -->
-                <div class=" modal-footer">
+                <div class="modal-footer">
                     <button type="submit" style="float: right" type="button" class="btn btn-primary">Cetak</button>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
 
     <Script>
-    $('.tanggalpinjam').click(function(e) {
+    $('.tanggalcetak').click(function(e) {
         e.preventDefault();
         $('#tanggalcetak').modal('show');
     });
