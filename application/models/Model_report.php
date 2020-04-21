@@ -12,7 +12,7 @@ class Model_report extends CI_Model
         return $dataHewan;
     }
 
-    function get_detail_rm_byPemilik()
+    function get_detail_rm_byPemilik($date1, $date2)
     {
         $this->db->select('a.*, b.Nama_Hewan, c.Nama_Penyakit,d.Nama_Tindakan,e.Nama_TenagaMedis');
         $this->db->from('detail_rm as a');
@@ -21,8 +21,11 @@ class Model_report extends CI_Model
         $this->db->join('penyakit as c', 'c.Id_Penyakit = a.Id_Penyakit');
         $this->db->join('tindakan as d', 'd.Id_Tindakan = a.Id_Tindakan');
         $this->db->join('tenagamedis as e', 'e.Id_TenagaMedis = a.Id_TenagaMedis','right');
+        $this->db->where('date(a.Tgl_Berobat) >=',$date1);
+        $this->db->where('date(a.Tgl_Berobat) <=',$date2);
+        $detailRmByPemilik = $this->db->get()->result();
         // $this->db->where('f.Id_Hewan', $id_hewan);
-        return $this->db->get()->result();
+        return $detailRmByPemilik;
         // return$this->db->last_query(); 
     }
 

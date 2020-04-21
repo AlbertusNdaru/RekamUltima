@@ -55,6 +55,7 @@ $route['default_controller'] = 'welcome';
 //Route Admin
 $route['Admin']                 = 'ControllerAdmin/Login';
 $route['admin']                 = 'ControllerAdmin/Login';
+$route['regaddmedis']           = 'ControllerAdmin/Reg_admin/regmedis';
 $route['regadmin/(:any)']       = 'ControllerAdmin/Reg_admin/regadmin/$1';
 $route['dashboard']             = 'ControllerAdmin/Dashboard';
 $route['logout']                = 'ControllerAdmin/Login/logout';
@@ -62,7 +63,7 @@ $route['editprofile/(:any)']    = 'ControllerAdmin/Profil/vieweditprofil/$1';
 
 //Route Laporan
 $route['LaporanHewan']  = 'Controller_report/Controller_report/report_Hewan';
-$route['LaporanRekam']  = 'Controller_report/Controller_report/report_RekamMedis';
+$route['LaporanRekam/(:any)']  = 'Controller_report/Controller_report/report_RekamMedisbyDate/$1';
 $route['LaporanKritik']  = 'Controller_report/Controller_report/report_Kritik';
 
 //Route Halaman Pemilik

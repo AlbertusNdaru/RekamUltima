@@ -17,6 +17,11 @@ class Reg_admin extends CI_Controller
         $this->load->view('Form_admin/reg_admin', $dataRegistrasi);
     }
 
+    function regmedis()
+    {
+        $this->load->view('Form_admin/Form_regtm');
+    }
+
 
     function add_admin()
     {
@@ -32,7 +37,7 @@ class Reg_admin extends CI_Controller
                 echo json_encode($this->Model_admin->get_admin_by_id_tenagamedis($datatenagamedis->Id_TenagaMedis));
                 $this->session->set_flashdata('Error', '<div class="alert alert-danger" role="alert">
                 Email Sudah Terdaftar</div>');
-                redirect('regadmin');
+                redirect('regadmin/' . $datatenagamedis->Id_TenagaMedis);
             } else {
                 $data = array(
                     'Username' => $this->input->post('username'),
@@ -51,7 +56,34 @@ class Reg_admin extends CI_Controller
         } else {
             $this->session->set_flashdata('Error', '<div class="alert alert-danger" role="alert">
             Email Tidak Terdaftar !</div>');
-            redirect('regadmin');
+            redirect('regadmin/' . $datatenagamedis->Id_TenagaMedis);
+        }
+    }
+
+    function add_medis()
+    {
+        $nama       = $this->input->post('name');
+        $phone      = $this->input->post('phone');
+        $Address    = $this->input->post('alamat');
+        $JK         = $this->input->post('gender');
+        $email      = $this->input->post('email');
+
+        $tenagamedis = array(
+            'Nama_TenagaMedis'      => $nama,
+            'NoHp_TenagaMedis'      => $phone,
+            'Alamat_TenagaMedis'    => $Address,
+            'JenisKelamin'          => $JK,
+            'Status'                => 'TidakAktif',
+            'date_created'          => get_current_date(),
+            'Email'                 => $email
+        );
+        $addmedis = $this->Model_TenagaMedis->add_medis($tenagamedis);
+        if ($addmedis) {
+            $this->session->set_flashdata('Status', 'Input Succes');
+            redirect('tenagamedis');
+        } else {
+            $this->session->set_flashdata('Status', 'Input Failed');
+            redirect('tenagamedis');
         }
     }
 }

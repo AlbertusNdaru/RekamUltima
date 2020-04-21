@@ -12,35 +12,33 @@ class Controller_report extends CI_Controller
 
     function report_Hewan()
     {
-        $data['record']=  $this->Model_report->get_hewan();
+        $data['record'] =  $this->Model_report->get_hewan();
         $config           = array('format' => 'Folio', 'orientation' => 'L');
         $mpdf   = new \Mpdf\Mpdf($config);
-        $html   = $this->load->view('Form_report/Form_report_hewan',$data,true);
+        $html   = $this->load->view('Form_report/Form_report_hewan', $data, true);
         $mpdf->WriteHTML($html);
         $mpdf->Output();
     }
 
-    function report_RekamMedis()
+    function report_RekamMedisbyDate()
     {
-        $data['record']=  $this->Model_report->get_detail_rm_byPemilik();
+        $date1 = $_POST['tanggal1'];
+        $date2 = $_POST['tanggal2'];
+        $data['record'] =  $this->Model_report->get_detail_rm_byPemilik($date1, $date2);
         $config           = array('format' => 'Folio', 'orientation' => 'L');
         $mpdf   = new \Mpdf\Mpdf($config);
-        $html   = $this->load->view('Form_report/Form_report_rekamMedis',$data,true);
+        $html   = $this->load->view('Form_report/Form_report_rekamMedis', $data, true);
         $mpdf->WriteHTML($html);
         $mpdf->Output();
     }
 
     function report_Kritik()
     {
-        $data['record']=  $this->Model_report->get_kritik();
+        $data['record'] =  $this->Model_report->get_kritik();
         $config           = array('format' => 'Folio', 'orientation' => 'L');
         $mpdf   = new \Mpdf\Mpdf($config);
-        $html   = $this->load->view('Form_report/Form_report_kritik',$data,true);
+        $html   = $this->load->view('Form_report/Form_report_kritik', $data, true);
         $mpdf->WriteHTML($html);
         $mpdf->Output();
     }
-
-
-
-
 }
