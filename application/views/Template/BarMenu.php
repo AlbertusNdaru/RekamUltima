@@ -22,7 +22,7 @@
         <h3 class="menu-title">Laporan</h3>
         <!-- /.Laporan -->
         <li class="nav-item">
-            <a href="#" class="tanggalcetak"><i class="nav-link"></i> Medis</a>
+            <a href="#" class="tanggalcetak"><i class="fa fa-file-text"></i> Medis</a>
             <a href="<?= base_url('LaporanHewan') ?>" target="blank"><i class="fa fa-file"></i> Hewan</a>
             <a href="<?= base_url('LaporanKritik') ?>" target="blank"><i class="fa fa-comments-o"></i> Kritik &
                 Saran</a>
@@ -43,7 +43,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                <div class="row">
+                    <div class="row">
                         <div class="box col-md-12">
                             <div align="center" class="box-content">
                                 <form name="fromrekammedis"
