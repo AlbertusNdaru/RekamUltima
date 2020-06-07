@@ -8,6 +8,14 @@
     </div>
 
     <div class="card-body card-block">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mb-3">Line Chart </h4>
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+        </div>
         <div class="row" style="margin-top:20px">
             <!-- CARD BUTTON !-->
             <!-- JUMLAH PEMILIK TERDAFTAR !-->
@@ -112,3 +120,28 @@
         </div>
     </div>
 </div>
+<script>
+    //line
+var ctxL = document.getElementById("lineChart").getContext('2d');
+var myLineChart = new Chart(ctxL, {
+type: 'line',
+data: {
+labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Agst","Sept","Okt","Nov","Des"],
+datasets: [{
+label: "My First dataset",
+data: [65, 59, 50, 50,0,0,0],
+backgroundColor: [
+'rgba(105, 0, 132, .2)',
+],
+borderColor: [
+'rgba(200, 99, 132, .7)',
+],
+borderWidth: 2
+},
+]
+},
+options: {
+responsive: true
+}
+});
+</script>

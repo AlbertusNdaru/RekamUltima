@@ -35,6 +35,9 @@
     <script src="<?= base_url('assets/'); ?>vendors/jquery/dist/jquery.min.js"></script>
     <script src="<?= base_url('assets/'); ?>vendors/popper.js/dist/umd/popper.min.js"></script>
     <script src="<?= base_url('assets/'); ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--  Chart js -->
+    <script src="<?= base_url('assets/'); ?>vendors/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>assets/js/init-scripts/chart-js/chartjs-init.js"></script>
 
 
 </head>

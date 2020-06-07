@@ -62,7 +62,7 @@ include APPPATH . 'views/Form_report/laporan.php';
                     <table style="width: 100%; margin-left: 75%;">
                         <tbody>
                             <tr class="gradeU">
-                                <td align="center">Yogyakarta, <?= date('d-M-Y'); ?></td>
+                                <td align="center">Yogyakarta, <?= date('d M Y'); ?></td>
                             </tr>
                             <br>
                             <br>

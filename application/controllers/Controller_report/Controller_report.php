@@ -26,9 +26,9 @@ class Controller_report extends CI_Controller
         $date2 = $_POST['tanggal2'];
         $data['record'] =  $this->Model_report->get_detail_rm_byPemilik($date1, $date2);
         $date=date_create($date1);
-        $dateawal = date_format($date,"d-m-Y");
+        $dateawal = date_format($date,"d M Y");
         $date=date_create($date2);
-        $dateakhir = date_format($date,"d-m-Y");
+        $dateakhir = date_format($date,"d M Y");
         $data["date1"]= $dateawal;
         $data["date2"]= $dateakhir;
         $config = array('format' => 'Folio', 'orientation' => 'L');
