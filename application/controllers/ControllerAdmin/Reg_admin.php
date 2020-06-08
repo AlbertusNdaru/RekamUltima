@@ -69,7 +69,7 @@ class Reg_admin extends CI_Controller
         $email      = $this->input->post('email');
         $validasi   = $this->Model_TenagaMedis->get_medis_by_email($email);
 
-        if ($validasi) {
+        if ($email != $validasi) {
             $tenagamedis = array(
                 'Nama_TenagaMedis'      => $nama,
                 'NoHp_TenagaMedis'      => $phone,
@@ -82,14 +82,14 @@ class Reg_admin extends CI_Controller
             $addmedis = $this->Model_TenagaMedis->add_medis($tenagamedis);
             if ($addmedis) {
                 $this->session->set_flashdata('Status', 'Input Succes');
-                redirect('tenagamedis');
+                redirect('admin');
             } else {
                 $this->session->set_flashdata('Status', 'Input Failed');
-                redirect('tenagamedis');
+                redirect('admin');
             }
         } else {
             $this->session->set_flashdata('Error', '<div class="alert alert-danger" role="alert">
-            Email Tidak Terdaftar !</div>');
+            Email Sudah Terdaftar !</div>');
             redirect('regaddmedis');
         }
     }
