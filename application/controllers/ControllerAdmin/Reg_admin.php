@@ -69,7 +69,7 @@ class Reg_admin extends CI_Controller
         $email      = $this->input->post('email');
         $validasi   = $this->Model_TenagaMedis->get_medis_by_email($email);
 
-        if ($email != $validasi) {
+        if ($email =! $validasi) {
             $tenagamedis = array(
                 'Nama_TenagaMedis'      => $nama,
                 'NoHp_TenagaMedis'      => $phone,
