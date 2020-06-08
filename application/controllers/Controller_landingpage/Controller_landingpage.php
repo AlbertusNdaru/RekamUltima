@@ -175,10 +175,10 @@ class Controller_landingpage extends CI_Controller
             );
             $this->Model_Rekam_Medis->addRekamMedis($rekammedis);
             $this->session->set_flashdata('Status', 'Input Success');
-            redirect('datahewan');
+            redirect('landing');
         } else {
             $this->session->set_flashdata('Status', 'Input Failed');
-            redirect('datahewan');
+            redirect('landing');
         }
     }
 

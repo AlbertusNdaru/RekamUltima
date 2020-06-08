@@ -60,6 +60,7 @@
                 <div class="modal-footer">
                     <button type="submit" style="float: right" type="button" class="btn btn-primary">Cetak</button>
                 </div>
+            </form>
             </div>
         </div>
     </div>

@@ -29,22 +29,34 @@ class ControllerMedis extends CI_Controller
         $JK         = $this->input->post('gender');
         $email      = $this->input->post('email');
 
-        $tenagamedis = array(
-            'Nama_TenagaMedis'      => $nama,
-            'NoHp_TenagaMedis'      => $phone,
-            'Alamat_TenagaMedis'    => $Address,
-            'JenisKelamin'          => $JK,
-            'Status'                => 'TidakAktif',
-            'date_created'          => get_current_date(),
-            'Email'                 => $email
-        );
-        $addmedis = $this->Model_TenagaMedis->add_medis($tenagamedis);
-        if ($addmedis) {
-            $this->session->set_flashdata('Status', 'Input Succes');
-            redirect('tenagamedis');
-        } else {
-            $this->session->set_flashdata('Status', 'Input Failed');
-            redirect('tenagamedis');
+
+        $datatenagamedis = $this->Model_TenagaMedis->get_medis_by_email($email);
+        if (isset($datatenagamedis)) 
+        {
+            $this->session->set_flashdata('Status', 'Input Gagal -> Email Sudah Terdaftar');
+            redirect('aksitambahmedis');
+        }
+        else
+        {
+            
+            $tenagamedis = array(
+                'Nama_TenagaMedis'      => $nama,
+                'NoHp_TenagaMedis'      => $phone,
+                'Alamat_TenagaMedis'    => $Address,
+                'JenisKelamin'          => $JK,
+                'Status'                => 'TidakAktif',
+                'date_created'          => get_current_date(),
+                'Email'                 => $email
+            );
+
+            $addmedis = $this->Model_TenagaMedis->add_medis($tenagamedis);
+            if ($addmedis) {
+                $this->session->set_flashdata('Status', 'Berhasil Input ');
+                redirect('tenagamedis');
+            } else {
+                $this->session->set_flashdata('Status', 'Input Gagal');
+                redirect('tenagamedis');
+            }
         }
     }
 

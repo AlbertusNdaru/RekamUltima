@@ -48,7 +48,7 @@
                         <div class="form-group">
                             <input required readonly type="text" class="form-control" placeholder="Username"
                                 value="<?php $nama = explode(" ", $tenagamedis->Nama_TenagaMedis);
-                                                                                                                    echo $nama[0]; ?>" name="username" id="USERNAME">
+                                echo $nama[0]; ?>" name="username" id="USERNAME">
                         </div>
                         <div class="form-group">
                             <input required readonly type="text" class="form-control" placeholder="Password"

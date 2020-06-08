@@ -26,6 +26,10 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
+    <script src="<?= base_url('assets/'); ?>vendors/jquery/dist/jquery.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="<?= base_url('assets/'); ?>assets/js/main.js"></script> -->
 
 
 </head>
@@ -41,7 +45,7 @@
                     </div>
                 </div>
                 <div class="login-form">
-                    <form action="<?= base_url('ControllerAdmin/Reg_Admin/add_medis'); ?>" method="POST">
+                    <form action="<?= base_url('ControllerAdmin/Reg_Admin/add_medis'); ?>" method="POST" id="formvaliditas">
                         <h2 align="center">Register Tenaga Medis</h2>
                         </br>
                         <?= $this->session->flashdata('Error'); ?>
@@ -86,19 +90,14 @@
     </div>
 
     <script>
-    $('#USERNAME').keypress(function(event) {
-        var charCode = window.event.keyCode;
-        return (((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) || charCode == 32 ||
-            charCode == 46)
 
-    });
 
     var form = document.querySelector("#formvaliditas");
 
 
     function validasi(textbox, text) {
         var input = document.getElementById(textbox);
-
+        console.log(textbox);
         var cek = form.checkValidity()
         if (cek == false) {
             input.oninvalid = function(e) {
@@ -124,10 +123,7 @@
         }
     }
     </script>
-    <script src="<?= base_url('assets/'); ?>vendors/jquery/dist/jquery.min.js"></script>
-    <script src="<?= base_url('assets/'); ?>vendors/popper.js/dist/umd/popper.min.js"></script>
-    <script src="<?= base_url('assets/'); ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="<?= base_url('assets/'); ?>assets/js/main.js"></script>
+
 
 
 </body>

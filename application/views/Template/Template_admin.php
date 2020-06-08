@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendors/selectFX/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+    <link  href="<?= base_url('assets/loginuser/'); ?>css/animate.min.css" rel='stylesheet'>
 
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/css/style.css">
 
@@ -38,6 +39,8 @@
     <!--  Chart js -->
     <script src="<?= base_url('assets/'); ?>vendors/chart.js/dist/Chart.bundle.min.js"></script>
     <script src="<?= base_url('assets/'); ?>assets/js/init-scripts/chart-js/chartjs-init.js"></script>
+    <script src="<?= base_url('assets/loginuser/'); ?>js/bootstrap-notify.js"></script>
+    
 
 
 </head>
