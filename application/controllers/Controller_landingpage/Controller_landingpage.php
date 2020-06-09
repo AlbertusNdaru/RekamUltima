@@ -160,7 +160,6 @@ class Controller_landingpage extends CI_Controller
         $JH         = $this->input->post('jenishewan');
         $signalemen = $this->input->post('signalemen');
         $pemiik     = $_SESSION['pemilik']->Id_Pemilik;
-
         $hewan = array(
             'Nama_Hewan'    => $nama,
             'Jenis_Kelamin' => $JK,
@@ -170,19 +169,31 @@ class Controller_landingpage extends CI_Controller
             'Image'         => $imgname
 
         );
-        $addhewan = $this->Model_hewan->add_hewan($hewan);
-        $hasilupload = $this->aksi_upload($imgname);
-        if ($hasilupload ) {
-            $rekammedis = array(
-                'Id_Hewan' => $addhewan
-            );
-            $this->Model_Rekam_Medis->addRekamMedis($rekammedis);
-            $this->session->set_flashdata('Status', 'Input Success');
-            redirect('landing');
-        } else {
-            $this->session->set_flashdata('Status', 'Input Failed');
-            redirect('landing');
+        // echo json_encode($_FILES['imagehewan']['size']);
+        if ($_FILES['imagehewan']['size'] < 2000000 && $_FILES['imagehewan']['size'] != 0)
+        { 
+            $addhewan = $this->Model_hewan->add_hewan($hewan);
+            $hasilupload = $this->aksi_upload($imgname);
+            if ($hasilupload ) {
+                $rekammedis = array(
+                    'Id_Hewan' => $addhewan
+                );
+                $this->Model_Rekam_Medis->addRekamMedis($rekammedis);
+                $this->session->set_flashdata('Status', 'Input Success');
+                redirect('landing');
+                // echo json_encode($_FILES['imagehewan']);
+            } else {
+                $this->session->set_flashdata('Status', 'Input Failed');
+                redirect('landing');
+                // echo json_encode($_FILES('imagehewan'));
+            }
         }
+        else
+        {
+            $this->session->set_flashdata('Status', ' File terlalu besar, max 2MB');
+            redirect('registerhewan');
+        }
+        
     }
 
     function addpemilikfromlanding()
