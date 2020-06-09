@@ -154,6 +154,7 @@ class Controller_landingpage extends CI_Controller
     function addhewan()
     {
         check_session_pemilik();
+        $imgname    = 'Hewan-' . get_current_date_img() . '.jpg';
         $nama       = $this->input->post('nama');
         $JK         = $this->input->post('jeniskelamin');
         $JH         = $this->input->post('jenishewan');
@@ -165,11 +166,13 @@ class Controller_landingpage extends CI_Controller
             'Jenis_Kelamin' => $JK,
             'Jenis_Hewan'   => $JH,
             'Signalemen'    => $signalemen,
-            'Id_Pemilik'    => $pemiik
+            'Id_Pemilik'    => $pemiik,
+            'Image'         => $imgname
 
         );
         $addhewan = $this->Model_hewan->add_hewan($hewan);
-        if ($addhewan) {
+        $hasilupload = $this->aksi_upload($imgname);
+        if ($hasilupload ) {
             $rekammedis = array(
                 'Id_Hewan' => $addhewan
             );
@@ -223,5 +226,25 @@ class Controller_landingpage extends CI_Controller
     function artikel1()
     {
         $this->load->view("Landingpage/artikel1");
+    }
+
+    function aksi_upload($imgname)
+    {
+        $config['upload_path']   = './assets/Foto_hewan/';
+        $config['allowed_types'] = '*';
+        $config['file_name']     = $imgname;
+        //$config['max_size']             = 100;
+        //$config['max_width']            = 1024;
+        //$config['max_height']           = 768;
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('imagehewan')) {
+            $error = array('error'       => $this->upload->display_errors());
+            echo json_encode($error);
+        } else {
+            $data  = array('upload_data' => $this->upload->data());
+            return true;
+        }
     }
 }

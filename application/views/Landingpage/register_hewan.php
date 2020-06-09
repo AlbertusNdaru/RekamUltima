@@ -6,7 +6,7 @@
         <div class="row align-items-center regervation_content">
             <diva align="center" class="col-lg-8" style="margin: auto;">
                 <div class="regervation_part_iner">
-                    <form action="<?= base_url('Controller_landingpage/Controller_landingpage/addhewan') ?>" method="POST">
+                    <form action="<?= base_url('Controller_landingpage/Controller_landingpage/addhewan') ?>" method="POST" enctype="multipart/form-data" >
                         <h2>Registrasi Hewan</h2>
                         <div class="form-row">
                             <div class="form-group col-md-12">
@@ -31,6 +31,9 @@
                             </div>
                             <div class="form-group col-md-12">
                                 <textarea required class="form-control" id="Textarea" rows="4" name="signalemen" placeholder="Signalemen"></textarea>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <Input required type="file" class="form-control" id="img" rows="4" name="imagehewan" placeholder="foto hewan"></Input>
                             </div>
                             <!-- <div class="form-group col-md-12">
                                 <input required class="form-control" id="image" rows="4" name="image" placeholder="image"></textarea>
