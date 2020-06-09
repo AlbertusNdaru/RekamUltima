@@ -26,7 +26,7 @@
                 <div class="col-sm-6 col-lg-3">
                     <div class="single_blog_item">
                         <div class="single_blog_img">
-                            <img href="#" src="<?= base_url('assets/images/'); ?>image2.jpg" alt="doctor">
+                            <img style="width: 260px;" href="#" src="<?= base_url('assets/Foto_hewan/'). $h->Image; ?>" alt="doctor">
                             <div class="social_icon">
                                 <ul>
                                     <li><a href="<?= base_url('rekammedisdetail/') . $h->Id_Hewan ?>" target="blank"> REKAM MEDIS </a></li>
