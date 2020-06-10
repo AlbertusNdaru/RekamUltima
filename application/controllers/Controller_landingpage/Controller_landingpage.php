@@ -56,22 +56,43 @@ class Controller_landingpage extends CI_Controller
     {
 
         $Id_Hewan = $this->input->post('submitid');
-        $hewan = array(
-            'Nama_hewan'    => $this->input->post('nama'),
-            'Jenis_Kelamin' => $this->input->post('jeniskelamin'),
-            'Jenis_Hewan'   => $this->input->post('jenishewan'),
-            'Signalemen'    => $this->input->post('signalemen'),
-            'Id_Pemilik'    => $this->input->post('pemilik'),
-
-
-        );
+        $imgname    = 'Hewan-' . get_current_date_img() . '.jpg';
+        if($_FILES['imagehewan']['name'] != null )
+        {
+            $hewanedit = $this->Model_hewan->get_hewan_by_id($Id_Hewan);
+            if($hewanedit->Image != null)
+            {
+                $this->deleteimage($hewanedit->Image);
+            }
+            $this->aksi_upload($imgname);
+            $hewan = array(
+                'Nama_hewan'    => $this->input->post('nama'),
+                'Jenis_Kelamin' => $this->input->post('jeniskelamin'),
+                'Jenis_Hewan'   => $this->input->post('jenishewan'),
+                'Signalemen'    => $this->input->post('signalemen'),
+                'Id_Pemilik'    => $_SESSION['pemilik']->Id_Pemilik,
+                'Image'         => $imgname
+            );
+        }
+        else
+        {
+            $hewan = array(
+                'Nama_hewan'    => $this->input->post('nama'),
+                'Jenis_Kelamin' => $this->input->post('jeniskelamin'),
+                'Jenis_Hewan'   => $this->input->post('jenishewan'),
+                'Signalemen'    => $this->input->post('signalemen'),
+                'Id_Pemilik'    => $_SESSION['pemilik']->Id_Pemilik     
+            );
+        }
+        
+        // echo json_encode($hewan);
         $edithewan = $this->Model_hewan->update_hewan($Id_Hewan, $hewan);
         if ($edithewan) {
-            $this->session->set_flashdata('Status', 'Edit Succes');
-            redirect('datahewan');
+            $this->session->set_flashdata('Status', 'Edit Success');
+            redirect('datahewan/'.$_SESSION['pemilik']->Id_Pemilik);
         } else {
             $this->session->set_flashdata('Status', 'Edit Failed');
-            redirect('datahewan');
+            redirect('datahewan'.$_SESSION['pemilik']->Id_Pemilik);
         }
     }
 
@@ -257,5 +278,10 @@ class Controller_landingpage extends CI_Controller
             $data  = array('upload_data' => $this->upload->data());
             return true;
         }
+    }
+
+    function deleteimage($name)
+    {
+        unlink('assets/Foto_hewan/'.$name);
     }
 }
