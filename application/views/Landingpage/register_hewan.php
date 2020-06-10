@@ -36,7 +36,7 @@
                                     placeholder="Signalemen"></textarea>
                             </div>
                             <div class="form-group col-md-12">
-                                <Input required type="file" class="form-control" id="img" rows="4" name="imagehewan"
+                                <Input required type="file" class="form-control" id="img" rows="4" max-size="2000000" name="imagehewan"
                                     placeholder="foto hewan"></Input>
                             </div>
                             <!-- <div class="form-group col-md-12">
